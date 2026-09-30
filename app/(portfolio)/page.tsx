@@ -382,9 +382,9 @@ export default function Home() {
           </div>
         </div>
         <Reveal className="mx-auto max-w-[1360px] px-[var(--gutter)] py-12 lg:py-16">
-          <table className="block w-full border-collapse md:table">
+          <table className="block w-full border-collapse lg:table">
             <caption className="sr-only">Client builds</caption>
-            <thead className="hidden md:table-header-group">
+            <thead className="hidden lg:table-header-group">
               <tr className="border-y border-ink text-left text-[14px]">
                 <th scope="col" className="w-[168px] py-2 font-semibold">Preview</th>
                 <th scope="col" className="py-2 pl-5 font-semibold">Business</th>
@@ -393,31 +393,31 @@ export default function Home() {
                 <th scope="col" className="py-2 pl-5 text-right font-semibold">Open</th>
               </tr>
             </thead>
-            <tbody data-r="rows" className="block md:table-row-group">
+            <tbody data-r="rows" className="block lg:table-row-group">
               {demos.map((d) => (
-                <tr key={d.slug} className="grid grid-cols-[112px_1fr] gap-x-4 gap-y-2 border-b border-rule py-4 md:table-row md:py-0">
-                  <td className="row-span-3 md:py-4">
-                    <div className="relative aspect-[16/10] w-[112px] overflow-hidden border border-rule bg-paper-2 md:w-[168px]">
+                <tr key={d.slug} className="grid grid-cols-[112px_1fr] gap-x-4 gap-y-2 border-b border-rule py-4 lg:table-row lg:py-0">
+                  <td className="row-span-3 lg:py-4">
+                    <div className="relative aspect-[16/10] w-[112px] overflow-hidden border border-rule bg-paper-2 lg:w-[168px]">
                       <Image src={d.desktop} alt="" fill sizes="168px" className="object-cover object-top" />
                     </div>
                   </td>
-                  <th scope="row" className="text-left align-top md:py-4 md:pl-5">
+                  <th scope="row" className="text-left align-top lg:py-4 lg:pl-5">
                     <span className="flex items-center gap-2">
                       <span aria-hidden className="size-2.5 shrink-0" style={{ background: d.accent }} />
                       <span className="font-bold">{d.name}</span>
                     </span>
                     <span className="block text-[14px] font-normal text-ink-2">{d.location}</span>
                   </th>
-                  <td className="col-start-2 max-w-[46ch] align-top text-[15px] text-ink-2 md:py-4 md:pl-5">{d.solves}</td>
-                  <td className="col-start-2 align-top md:py-4 md:pl-5">
-                    <ul className="flex flex-wrap gap-1.5 md:flex-col md:items-start">
+                  <td className="col-start-2 max-w-[46ch] align-top text-[15px] text-ink-2 lg:py-4 lg:pl-5">{d.solves}</td>
+                  <td className="col-start-2 align-top lg:py-4 lg:pl-5">
+                    <ul className="flex flex-wrap gap-1.5 lg:flex-col lg:items-start">
                       {d.status.map((s) => (
                         <li key={s.label}><Stamp tally={s.tally}>{s.label}</Stamp></li>
                       ))}
                     </ul>
                   </td>
-                  <td className="col-span-2 align-top md:py-4 md:pl-5 md:text-right">
-                    <span className="flex flex-wrap gap-x-4 gap-y-1 md:flex-col md:items-end">
+                  <td className="col-span-2 align-top lg:py-4 lg:pl-5 lg:text-right">
+                    <span className="flex flex-wrap gap-x-4 gap-y-1 lg:flex-col lg:items-end">
                       <TrackLink href={d.system ?? d.site} event="demo_open" data={{ slug: d.slug, from: "home_lab" }} className="doc-link group inline-flex min-h-8 items-center gap-1 whitespace-nowrap font-semibold">
                         {d.system ? "Revenue system" : "Open site"} <Arrow dir="out" className="size-3.5" />
                       </TrackLink>
