@@ -198,7 +198,7 @@ export const caseStudies: CaseStudy[] = [
         D("cactus-rs-journey", "Cactus revenue system: One connected patient journey, a grid of 13 journey steps.", "Every step is visible, so the demo sells the whole path."),
       ],
     },
-    technologies: ["AI voice agent", "GoHighLevel / LeadConnector booking", "CRM pipeline", "Two-way SMS", "Email automation", "Web forms", "Reporting"],
+    technologies: ["AI voice agent", "GoHighLevel CRM", "CRM pipeline", "Two-way SMS", "Email automation", "Web forms", "Reporting"],
     integrations: [
       { from: "Demo phone line", to: "AI voice agent", note: "Separate from the public practice line" },
       { from: "Website form", to: "CRM contact + opportunity", note: "Source recorded on creation" },

@@ -31,7 +31,7 @@ export default async function ClientDemo({ params }: { params: Promise<{ slug: s
   const d = getDemo(slug);
   if (!d) notFound();
   const primary = d.system ?? d.site;
-  const walkthrough = d.booking ?? `mailto:${person.email}?subject=${encodeURIComponent(`${d.name} — demo walkthrough`)}`;
+  const walkthrough = `mailto:${person.email}?subject=${encodeURIComponent(`${d.name} — demo walkthrough`)}`;
 
   return (
     <>
@@ -142,7 +142,7 @@ export default async function ClientDemo({ params }: { params: Promise<{ slug: s
           </div>
           <div className="flex flex-col gap-3 self-end lg:col-span-5 lg:items-end">
             <TrackLink href={walkthrough} event="client_book" data={{ slug: d.slug }} className="group inline-flex min-h-12 items-center gap-2 rounded-[2px] bg-paper px-5 text-[16px] font-semibold text-ink hover:bg-yellow">
-              {d.booking ? "Book a walkthrough" : "Request a walkthrough"} <Arrow dir={d.booking ? "out" : "right"} />
+              Request a walkthrough <Arrow />
             </TrackLink>
             <p className="text-[15px] text-white/70">
               or <TrackLink href={`mailto:${person.email}?subject=${encodeURIComponent(`${d.name} — demo`)}`} event="client_email" data={{ slug: d.slug }} className="underline underline-offset-4 hover:text-yellow">{person.email}</TrackLink> ·{" "}

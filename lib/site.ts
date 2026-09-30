@@ -96,7 +96,7 @@ export const capabilities = [
 /** Patch bay: what each build actually connects. Only integrations verified in the live builds. */
 export const patchBay = [
   { source: "VYBE Voice", targets: ["ElevenLabs Scribe", "ElevenLabs TTS", "Supabase", "Vercel Functions"] },
-  { source: "Cactus revenue system", targets: ["AI voice line", "LeadConnector booking", "CRM pipeline", "SMS + email"] },
+  { source: "Cactus revenue system", targets: ["AI voice line", "Test patient form", "CRM pipeline", "SMS + email"] },
   { source: "Palmer & Herman system", targets: ["Web form → CRM", "Missed-call text-back", "12-stage pipeline", "Review requests"] },
   { source: "Canham growth system", targets: ["Local search", "Lead capture", "Follow-up", "Reputation workflow"] },
 ] as const;

@@ -16,10 +16,7 @@ export type Demo = {
   desktop: string;
   mobile: string;
   systemShot?: string;
-  booking?: string;
 };
-
-const CHIRO_BOOKING = "https://api.leadconnectorhq.com/widget/bookings/blair-chiro-revenue-demo";
 
 export const demos: Demo[] = [
   {
@@ -46,7 +43,6 @@ export const demos: Demo[] = [
     desktop: "/shots/cactus-d.jpg",
     mobile: "/shots/cactus-m.jpg",
     systemShot: "/shots/cactus-rs-d.jpg",
-    booking: CHIRO_BOOKING,
   },
   {
     slug: "palmer-herman",
@@ -72,7 +68,6 @@ export const demos: Demo[] = [
     desktop: "/shots/palmer-d.jpg",
     mobile: "/shots/palmer-m.jpg",
     systemShot: "/shots/palmer-rs-d.jpg",
-    booking: CHIRO_BOOKING,
   },
   {
     slug: "canham",
@@ -98,7 +93,6 @@ export const demos: Demo[] = [
     desktop: "/shots/canham-d.jpg",
     mobile: "/shots/canham-m.jpg",
     systemShot: "/shots/canham-rs-d.jpg",
-    booking: CHIRO_BOOKING,
   },
   {
     slug: "nelson",
@@ -118,7 +112,6 @@ export const demos: Demo[] = [
     capabilities: ["Conversion-focused website", "Appointment requests", "Click-to-call", "Local directions", "Mobile-first layout"],
     desktop: "/shots/nelson-d.jpg",
     mobile: "/shots/nelson-m.jpg",
-    booking: CHIRO_BOOKING,
   },
   {
     slug: "coyote",
@@ -138,7 +131,6 @@ export const demos: Demo[] = [
     capabilities: ["Multi-service website", "Appointment requests", "Click-to-call", "First-visit guidance", "Local directions"],
     desktop: "/shots/coyote-d.jpg",
     mobile: "/shots/coyote-m.jpg",
-    booking: CHIRO_BOOKING,
   },
   {
     slug: "blair-medspa",
