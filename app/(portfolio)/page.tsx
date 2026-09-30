@@ -32,36 +32,35 @@ export default function Home() {
 
       {/* ─── Cover sheet ─────────────────────────────────────────── */}
       <section id="cover" aria-labelledby="cover-title" className="relative overflow-hidden">
-        <CoverMotion className="mx-auto grid grid-cols-1 max-w-[1360px] gap-x-12 gap-y-12 px-[var(--gutter)] pb-16 pt-8 lg:grid-cols-12 lg:pb-24 lg:pt-12">
+        <CoverMotion className="mx-auto grid grid-cols-1 max-w-[1360px] gap-x-12 gap-y-12 px-[var(--gutter)] pb-16 pt-8 lg:grid-cols-12 lg:pb-24 lg:pt-10 lg:[@media(max-height:860px)]:pt-6">
           <div className="lg:col-span-6 xl:col-span-6">
             <table data-cover-meta className="w-full max-w-[560px] border-collapse text-[14.5px]">
               <caption className="sr-only">Document details</caption>
               <tbody>
                 {[
                   ["Prepared for", "Hiring teams in AI, SaaS and automation"],
-                  ["Prepared by", "Emmanuel Nanadoum"],
+                  ["Prepared by", "Emmanuel Nanadoum · rev. September 2026"],
                   ["Based in", `${person.location} · ${person.availability}`],
                   ["Roles", "Solutions Engineer · Sales Engineer · AI Consultant"],
-                  ["Revision", "September 2026 · every exhibit verified live"],
                 ].map(([k, v]) => (
                   <tr key={k} className="border-b border-rule first:border-t">
-                    <th scope="row" className="w-[124px] py-1.5 pr-3 text-left align-top font-normal text-ink-2">{k}</th>
-                    <td className="py-1.5 font-medium">{v}</td>
+                    <th scope="row" className="w-[124px] py-1.5 pr-3 text-left align-top font-normal text-ink-2 lg:[@media(max-height:860px)]:py-1">{k}</th>
+                    <td className="py-1.5 font-medium lg:[@media(max-height:860px)]:py-1">{v}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
 
-            <h1 id="cover-title" className="mt-10 text-[clamp(52px,8.4vw,94px)] font-extrabold leading-[0.92] tracking-[-0.045em] lg:mt-12">
+            <h1 id="cover-title" className="mt-10 text-[clamp(52px,min(8.4vw,10.5vh),94px)] font-extrabold leading-[0.92] tracking-[-0.045em] lg:mt-9 lg:[@media(max-height:860px)]:mt-6">
               <span className="block overflow-hidden pb-[0.06em]"><span data-name-line className="block">Emmanuel</span></span>
               <span className="block overflow-hidden pb-[0.06em]"><span data-name-line className="block">Nanadoum</span></span>
             </h1>
-            <p data-cover-role className="mt-5 text-[clamp(21px,2.3vw,28px)] font-semibold leading-tight tracking-[-0.015em]">
+            <p data-cover-role className="mt-5 lg:[@media(max-height:860px)]:mt-3 text-[clamp(21px,2.3vw,28px)] font-semibold leading-tight tracking-[-0.015em]">
               AI Consultant / Solutions Engineer
               <span className="mt-1 block text-[17px] font-normal tracking-normal text-ink-2">Sales Engineer · AI, CRM &amp; Automation</span>
             </p>
 
-            <p className="mt-8 max-w-[34ch] text-[clamp(20px,2vw,24px)] font-medium leading-[1.35] tracking-[-0.01em]">
+            <p className="mt-7 lg:[@media(max-height:860px)]:mt-5 max-w-[34ch] text-[clamp(20px,2vw,24px)] font-medium leading-[1.35] tracking-[-0.01em]">
               <del className="redline-del no-underline">
                 <span className="sr-only">Not: </span>I make websites.
               </del>{" "}
@@ -74,11 +73,11 @@ export default function Home() {
                 ))}
               </ins>
             </p>
-            <p className="mt-5 max-w-[48ch] text-[16px] text-ink-2">
-              Customer discovery → solution architecture → working demo → implementation. 8+ years of consultative selling and 4+ years designing CRM, automation, web and AI-enabled systems.
+            <p className="mt-4 max-w-[52ch] text-[16px] text-ink-2">
+              Customer discovery → solution architecture → working demo → implementation.
             </p>
 
-            <div data-cover-keys className="mt-8 flex flex-wrap items-center gap-3">
+            <div data-cover-keys className="mt-7 lg:[@media(max-height:860px)]:mt-5 flex flex-wrap items-center gap-3">
               <Key href={person.resume} event="resume_open" data={{ from: "cover" }}>
                 Download résumé
                 <Arrow dir="down" />
