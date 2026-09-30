@@ -487,7 +487,7 @@ export default function Home() {
             <h2 className="text-[clamp(30px,3.6vw,46px)]">
               <span className="num mr-3 text-ink-3">6</span>Experience
             </h2>
-            <Link href="/about" className="doc-link mt-4 inline-block">Full experience and education →</Link>
+            <Link href="/about" className="doc-link group mt-4 inline-flex items-center gap-1.5">Full experience and education <Arrow /></Link>
           </div>
           <ol className="lg:col-span-8" data-r="rows">
             {experience.map((e) => (

@@ -37,7 +37,7 @@ export function ExhibitPlate({
         </div>
         {source && (
           <div className="flex items-center gap-2 px-1 pt-1.5 text-[12px] text-white/60">
-            <span aria-hidden className="size-1.5 rounded-full bg-[#5b8cff]" />
+            <span aria-hidden className="size-1.5 rounded-full bg-paper/70" />
             <span className="truncate">{source}</span>
           </div>
         )}

@@ -83,7 +83,7 @@ export function SiteHeader() {
               <li key={n.href} className="border-b border-rule">
                 <Link href={n.href} aria-current={path === n.href ? "page" : undefined} className="flex min-h-14 items-center justify-between text-[22px] font-bold tracking-[-0.01em]">
                   {n.label}
-                  <span aria-hidden className="text-ink-3">→</span>
+                  <svg aria-hidden viewBox="0 0 16 16" className="size-5 text-ink-3" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="square"><path d="M2 8h11M8.5 3.5 13 8l-4.5 4.5" /></svg>
                 </Link>
               </li>
             ))}

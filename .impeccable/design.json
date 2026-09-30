@@ -1,0 +1,520 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-30T16:06:14.291Z",
+  "title": "Design System: Emmanuel Nanadoum — Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Laser-Print White",
+        "canonical": "oklch(98.8% 0.003 106.4)",
+        "tonalRamp": [
+          "#0b0b0a",
+          "#252524",
+          "#424240",
+          "#616160",
+          "#828281",
+          "#a5a5a3",
+          "#c9c9c7",
+          "#eeeeec"
+        ]
+      },
+      "paper-2": {
+        "role": "neutral",
+        "displayName": "Copier Grey",
+        "canonical": "oklch(96.0% 0.005 106.5)",
+        "tonalRamp": [
+          "#0b0b09",
+          "#252522",
+          "#42423f",
+          "#61615e",
+          "#82827f",
+          "#a5a5a1",
+          "#c9c9c5",
+          "#efefeb"
+        ]
+      },
+      "paper-3": {
+        "role": "neutral",
+        "displayName": "Toner Grey",
+        "canonical": "oklch(93.2% 0.008 106.6)",
+        "tonalRamp": [
+          "#0b0b08",
+          "#252521",
+          "#42423d",
+          "#62625c",
+          "#83837d",
+          "#a5a5a0",
+          "#c9c9c4",
+          "#efefe9"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Graphite Ink",
+        "canonical": "oklch(18.2% 0.004 264.5)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#242527",
+          "#414244",
+          "#606164",
+          "#818285",
+          "#a4a5a8",
+          "#c8c9cc",
+          "#edeef1"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Soft Graphite",
+        "canonical": "oklch(39.8% 0.010 271.1)",
+        "tonalRamp": [
+          "#090b10",
+          "#23252a",
+          "#404248",
+          "#5f6167",
+          "#808289",
+          "#a2a5ac",
+          "#c6c9d0",
+          "#eceef6"
+        ]
+      },
+      "ink-3": {
+        "role": "neutral",
+        "displayName": "Pencil Grey",
+        "canonical": "oklch(53.5% 0.010 271.2)",
+        "tonalRamp": [
+          "#0a0b0f",
+          "#23252a",
+          "#404247",
+          "#5f6167",
+          "#808288",
+          "#a3a5ab",
+          "#c7c9d0",
+          "#eceef5"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(88.1% 0.008 98.9)",
+        "tonalRamp": [
+          "#0c0b08",
+          "#262521",
+          "#43423d",
+          "#62615c",
+          "#83827d",
+          "#a6a59f",
+          "#cac9c3",
+          "#f0efe8"
+        ]
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Strong Hairline",
+        "canonical": "oklch(78.1% 0.010 100.0)",
+        "tonalRamp": [
+          "#0c0b07",
+          "#262520",
+          "#43423c",
+          "#62615b",
+          "#83837c",
+          "#a6a59e",
+          "#cac9c2",
+          "#f0efe7"
+        ]
+      },
+      "blue": {
+        "role": "primary",
+        "displayName": "Ballpoint Blue",
+        "canonical": "oklch(45.4% 0.223 266.0)",
+        "tonalRamp": [
+          "#02003c",
+          "#061569",
+          "#183498",
+          "#2e54ca",
+          "#4d78f2",
+          "#749fff",
+          "#9dc6ff",
+          "#c9edff"
+        ]
+      },
+      "blue-deep": {
+        "role": "primary",
+        "displayName": "Blue Ink, Pressed",
+        "canonical": "oklch(35.8% 0.173 266.4)",
+        "tonalRamp": [
+          "#02003c",
+          "#071569",
+          "#1a3498",
+          "#3456c2",
+          "#527ae8",
+          "#759fff",
+          "#9ec6ff",
+          "#c9edff"
+        ]
+      },
+      "red": {
+        "role": "secondary",
+        "displayName": "Redline Red",
+        "canonical": "oklch(55.3% 0.186 28.9)",
+        "tonalRamp": [
+          "#2d0000",
+          "#570000",
+          "#840000",
+          "#b31c15",
+          "#db483b",
+          "#fc7766",
+          "#ffa393",
+          "#ffd0c0"
+        ]
+      },
+      "yellow": {
+        "role": "secondary",
+        "displayName": "Highlighter Yellow",
+        "canonical": "oklch(89.8% 0.162 101.4)",
+        "tonalRamp": [
+          "#170700",
+          "#352200",
+          "#564000",
+          "#766100",
+          "#988300",
+          "#bba700",
+          "#ddcc50",
+          "#fff290"
+        ]
+      },
+      "green": {
+        "role": "tertiary",
+        "displayName": "Ledger Green",
+        "canonical": "oklch(52.9% 0.106 154.6)",
+        "tonalRamp": [
+          "#001500",
+          "#003209",
+          "#005127",
+          "#217245",
+          "#489565",
+          "#6cb987",
+          "#90deaa",
+          "#b5ffcf"
+        ]
+      },
+      "plate": {
+        "role": "neutral",
+        "displayName": "Exhibit Plate",
+        "canonical": "oklch(17.7% 0.009 264.3)",
+        "tonalRamp": [
+          "#090b0f",
+          "#232529",
+          "#404247",
+          "#5f6166",
+          "#808288",
+          "#a2a5ab",
+          "#c6c9cf",
+          "#ebeef5"
+        ]
+      },
+      "plate-2": {
+        "role": "neutral",
+        "displayName": "Plate Well",
+        "canonical": "oklch(23.0% 0.012 264.3)",
+        "tonalRamp": [
+          "#090b11",
+          "#22252b",
+          "#3f4249",
+          "#5e6169",
+          "#7f828a",
+          "#a1a5ad",
+          "#c5c9d2",
+          "#eaeff7"
+        ]
+      }
+    },
+    "scopedExceptions": [
+      {
+        "scope": "VYBE exhibit band, VYBE Flow tone, /work/vybe header",
+        "source": "VYBE Variation 5 locked tokens (brief-pinned)",
+        "colors": {
+          "ground": "#010409",
+          "surface": "#07101a",
+          "text": "#f7fbff",
+          "muted": "#a8b7c8",
+          "cyan": "#16c8ff",
+          "ctaGradient": "linear-gradient(100deg, #0b76c8, #5345c0)",
+          "inactive": "#ff8a7a"
+        },
+        "rounded": "10px keys, 18px phone frame",
+        "shadow": "0 8px 30px -8px rgba(83,69,192,0.7) on the gradient CTA"
+      },
+      {
+        "scope": "/solutions/[slug] client proposal pages",
+        "source": "each client's own brand colour sampled from their live site (lib/demos.ts accent / accentInk)",
+        "appliesTo": [
+          "8px cover rule",
+          "primary key background",
+          "step ordinals",
+          "client-lab legend swatch"
+        ],
+        "contrastNote": "checked per client; Cactus #E47F19 key carries #1F140B ink and its ordinals darken to #A85A0C"
+      }
+    ],
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Cover name only; masked line reveal on load."
+      },
+      "display-divider": {
+        "displayName": "Display Divider",
+        "purpose": "Full-bleed divider sheets and page titles (Exhibits runs up to 112px)."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Numbered section clauses with an inline Pencil Grey numeral."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Lettered exhibit titles A–D."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Exhibit headlines, summaries, the cover tracked-change line."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running copy, 34–70ch measure (68ch default)."
+      },
+      "table": {
+        "displayName": "Table",
+        "purpose": "Decision tables, indexes, keys."
+      },
+      "meta": {
+        "displayName": "Meta",
+        "purpose": "Document header tables, dt labels, figure and table captions."
+      },
+      "label-stamp": {
+        "displayName": "Stamp Label",
+        "purpose": "Status stamps only; the system's only uppercase."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "Tabular figures for clause, step, exhibit and date numbers (.num)."
+      }
+    },
+    "shadows": [
+      {
+        "name": "clipped-print",
+        "value": "0 18px 40px -18px rgba(17,18,20,0.45)",
+        "purpose": "Exhibit plates and document previews."
+      },
+      {
+        "name": "phone-print",
+        "value": "0 20px 40px -16px rgba(17,18,20,0.55)",
+        "purpose": "Phone captures overlapping a desktop capture."
+      },
+      {
+        "name": "pulled-tab",
+        "value": "-2px 2px 10px rgba(17,18,20,0.18)",
+        "purpose": "Current binder tab only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Default reveal easing (GSAP expo.out)."
+      },
+      {
+        "name": "plate-wipe",
+        "value": "clip-path inset(0 0 100% 0) → none, 1.1–1.25s expo.inOut",
+        "purpose": "Exhibit plates open from the top edge, once."
+      },
+      {
+        "name": "redline-strike",
+        "value": "--strike 0 → 1, 0.55s power3.inOut",
+        "purpose": "Signature tracked change on the cover."
+      },
+      {
+        "name": "insertion-write",
+        "value": "per-word opacity 0→1, y 3px, stagger 0.028s",
+        "purpose": "Blue insertion writes in after the strike."
+      },
+      {
+        "name": "rise",
+        "value": "opacity 0, y 22px → rest, 1s expo.out",
+        "purpose": "Text blocks entering on scroll."
+      },
+      {
+        "name": "rows",
+        "value": "children opacity 0, y 10px, stagger 0.06s, 0.6s power3.out",
+        "purpose": "Table rows filling in."
+      },
+      {
+        "name": "state",
+        "value": "200ms",
+        "purpose": "Key colour transitions and arrow nudges."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "all motion gated on prefers-reduced-motion: no-preference; CSS durations collapse to 0.01ms",
+        "purpose": "Final state shown immediately."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Key",
+      "kind": "button",
+      "refersTo": "key-primary",
+      "description": "Primary action: résumé, open a live build.",
+      "html": "<a class=\"ds-key ds-key-primary\" href=\"#\">Download résumé <svg viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"square\"><path d=\"M8 2v11M3.5 8.5 8 13l4.5-4.5\"/></svg></a>",
+      "css": ".ds-key{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:2px;font-family:var(--font-sans,'Schibsted Grotesk',sans-serif);font-size:15px;font-weight:600;line-height:1;text-decoration:none;transition:background-color .2s,color .2s,border-color .2s,transform .2s}.ds-key svg{transition:transform .2s}.ds-key:active{transform:translateY(1px)}.ds-key:focus-visible{outline:2px solid #1d3fcf;outline-offset:3px}.ds-key-primary{background:#1d3fcf;color:#fff}.ds-key-primary:hover{background:#142c95}.ds-key-primary:hover svg{transform:translateY(2px)}"
+    },
+    {
+      "name": "Secondary Key",
+      "kind": "button",
+      "refersTo": "key-secondary",
+      "description": "Outlined ink key for the second action.",
+      "html": "<a class=\"ds-key2\" href=\"#\">View the exhibits</a>",
+      "css": ".ds-key2{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border:1px solid #111214;border-radius:2px;color:#111214;background:transparent;font-size:15px;font-weight:600;line-height:1;text-decoration:none;transition:background-color .2s,color .2s}.ds-key2:hover{background:#111214;color:#fbfbf9}.ds-key2:active{transform:translateY(1px)}.ds-key2:focus-visible{outline:2px solid #1d3fcf;outline-offset:3px}"
+    },
+    {
+      "name": "Quiet Key",
+      "kind": "button",
+      "refersTo": "key-primary",
+      "description": "Tertiary action as an underlined blue link with arrow.",
+      "html": "<a class=\"ds-quiet\" href=\"#\">Read the case study <svg viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"square\"><path d=\"M2 8h11M8.5 3.5 13 8l-4.5 4.5\"/></svg></a>",
+      "css": ".ds-quiet{display:inline-flex;align-items:center;gap:8px;min-height:44px;color:#1d3fcf;font-size:15px;font-weight:600;text-decoration:underline;text-decoration-color:rgba(29,63,207,.4);text-underline-offset:4px}.ds-quiet svg{transition:transform .2s}.ds-quiet:hover{text-decoration-color:#1d3fcf}.ds-quiet:hover svg{transform:translateX(2px)}.ds-quiet:focus-visible{outline:2px solid #1d3fcf;outline-offset:3px}"
+    },
+    {
+      "name": "Inverse Key",
+      "kind": "button",
+      "refersTo": "key-inverse",
+      "description": "Paper key on the ink Sign-off sheet.",
+      "html": "<div class=\"ds-inv-wrap\"><a class=\"ds-inv\" href=\"#\">Discuss a role</a></div>",
+      "css": ".ds-inv-wrap{background:#111214;padding:24px}.ds-inv{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:2px;background:#fbfbf9;color:#111214;font-size:15px;font-weight:600;text-decoration:none;transition:background-color .2s}.ds-inv:hover{background:#f4e04d}.ds-inv:focus-visible{outline:2px solid #1d3fcf;outline-offset:3px}"
+    },
+    {
+      "name": "Status Stamps",
+      "kind": "chip",
+      "refersTo": "stamp-live",
+      "description": "Honest status: Live, Preview, Demo data, Not activated.",
+      "html": "<span class=\"ds-stamp ds-live\"><i></i>Live</span> <span class=\"ds-stamp ds-prev\">Preview</span> <span class=\"ds-stamp ds-demo\">Demo data</span> <span class=\"ds-stamp ds-off\">Not activated</span>",
+      "css": ".ds-stamp{display:inline-flex;align-items:center;gap:6px;border:1.5px solid currentColor;padding:1px 6px;font-size:11.5px;font-weight:700;line-height:1.5;letter-spacing:.07em;text-transform:uppercase}.ds-stamp i{width:6px;height:6px;border-radius:50%;background:currentColor}.ds-live{color:#1d3fcf}.ds-prev{color:#2e7d4f}.ds-demo{color:#111214;background:#f4e04d}.ds-off{color:#c8352a}"
+    },
+    {
+      "name": "Exhibit Plate",
+      "kind": "card",
+      "refersTo": "exhibit-plate",
+      "description": "A real screenshot attached as evidence on a dark plate with an exhibit tab and source line.",
+      "html": "<figure class=\"ds-plate\"><div class=\"ds-plate-tab\"><b>Exhibit A</b> <span>VYBE</span></div><div class=\"ds-plate-body\"><div class=\"ds-plate-shot\"></div><div class=\"ds-plate-src\"><i></i>vybe-app-blue.vercel.app</div></div></figure>",
+      "css": ".ds-plate{position:relative;margin:36px 0 0;max-width:420px}.ds-plate-tab{position:absolute;top:-28px;left:12px;height:28px;display:flex;align-items:center;gap:8px;padding:0 10px;border-radius:3px 3px 0 0;background:#1d3fcf;color:#fff;font-size:12.5px;font-weight:600}.ds-plate-tab span{font-weight:400;opacity:.8}.ds-plate-body{background:#0f1115;padding:8px;box-shadow:0 18px 40px -18px rgba(17,18,20,.45)}.ds-plate-shot{aspect-ratio:16/10;background:#1a1d23}.ds-plate-src{display:flex;align-items:center;gap:8px;padding:6px 4px 0;font-size:12px;color:rgba(255,255,255,.6)}.ds-plate-src i{width:6px;height:6px;border-radius:50%;background:#1d3fcf}"
+    },
+    {
+      "name": "Exhibit Index",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Ruled index with tabular letters, leader dots and arrow; rows turn blue on hover.",
+      "html": "<ol class=\"ds-index\"><li><a href=\"#\"><span class=\"n\">A</span><b>VYBE</b><span class=\"lead\"></span><svg viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"square\"><path d=\"M2 8h11M8.5 3.5 13 8l-4.5 4.5\"/></svg></a></li><li><a href=\"#\"><span class=\"n\">B</span><b>Cactus revenue system</b><span class=\"lead\"></span><svg viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"square\"><path d=\"M2 8h11M8.5 3.5 13 8l-4.5 4.5\"/></svg></a></li></ol>",
+      "css": ".ds-index{list-style:none;margin:0;padding:0;border-top:1px solid #111214;max-width:520px}.ds-index li{border-bottom:1px solid #d9d8d2}.ds-index a{display:flex;align-items:center;min-height:48px;font-size:15.5px;color:#111214;text-decoration:none;transition:color .2s}.ds-index a:hover,.ds-index a:hover .n{color:#1d3fcf}.ds-index .n{width:28px;font-weight:600;color:#6b6d73;font-variant-numeric:tabular-nums}.ds-index .lead{flex:1;height:1em;margin:0 8px;background-image:radial-gradient(circle,#b9b8b1 1px,transparent 1.4px);background-size:7px 7px;background-position:0 70%;background-repeat:repeat-x}"
+    },
+    {
+      "name": "Site Header",
+      "kind": "nav",
+      "refersTo": "header",
+      "description": "Sticky paper header with name, role, nav and résumé key.",
+      "html": "<header class=\"ds-hdr\"><a class=\"ds-hdr-name\" href=\"#\"><b>Emmanuel Nanadoum</b><span>AI Consultant / Solutions Engineer</span></a><nav><a href=\"#\" aria-current=\"page\">Work</a><a href=\"#\">Solution lab</a><a href=\"#\">About</a><a href=\"#\">Contact</a></nav><a class=\"ds-hdr-cta\" href=\"#\">Résumé</a></header>",
+      "css": ".ds-hdr{display:flex;align-items:center;gap:24px;height:64px;padding:0 24px;background:rgba(251,251,249,.85);backdrop-filter:blur(6px);border-bottom:1px solid #d9d8d2}.ds-hdr-name{margin-right:auto;display:flex;align-items:baseline;gap:10px;color:#111214;text-decoration:none}.ds-hdr-name b{font-size:16px;font-weight:800;letter-spacing:-.01em}.ds-hdr-name span{font-size:14px;color:#45474d}.ds-hdr nav{display:flex;gap:4px}.ds-hdr nav a{position:relative;padding:8px 12px;font-size:15px;color:#45474d;text-decoration:none;transition:color .2s}.ds-hdr nav a:hover{color:#1d3fcf}.ds-hdr nav a[aria-current]{color:#111214;font-weight:600}.ds-hdr nav a[aria-current]::after{content:'';position:absolute;left:12px;right:12px;bottom:-13px;height:2px;background:#1d3fcf}.ds-hdr-cta{display:inline-flex;align-items:center;height:40px;padding:0 14px;border-radius:2px;background:#1d3fcf;color:#fff;font-size:14.5px;font-weight:600;text-decoration:none}.ds-hdr-cta:hover{background:#142c95}.ds-hdr a:focus-visible{outline:2px solid #1d3fcf;outline-offset:3px}"
+    },
+    {
+      "name": "Binder Tabs",
+      "kind": "nav",
+      "refersTo": "binder-tab",
+      "description": "Section divider tabs on the right page edge; the current one pulls out.",
+      "html": "<nav class=\"ds-tabs\"><a style=\"background:#111214;color:#fff\" href=\"#\">Cover</a><a style=\"background:#2e7d4f;color:#fff\" href=\"#\">Method</a><a class=\"on\" style=\"background:#1d3fcf;color:#fff\" href=\"#\">Exhibits</a><a style=\"background:#f4e04d;color:#111214\" href=\"#\">Solution lab</a></nav>",
+      "css": ".ds-tabs{display:flex;flex-direction:column;align-items:flex-end;gap:4px}.ds-tabs a{display:flex;align-items:center;justify-content:center;width:36px;height:92px;border-radius:4px 0 0 4px;writing-mode:vertical-rl;font-size:12.5px;font-weight:600;text-decoration:none;transition:width .3s,box-shadow .3s}.ds-tabs a:hover{width:44px}.ds-tabs a.on{width:48px;box-shadow:-2px 2px 10px rgba(17,18,20,.18)}.ds-tabs a:focus-visible{outline:2px solid #1d3fcf;outline-offset:3px}"
+    },
+    {
+      "name": "Tracked Change",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Redline deletion followed by a blue insertion; the cover's signature.",
+      "html": "<p class=\"ds-tc\"><del>I make websites.</del> <ins>I find where revenue and process break, and design the connected systems that fix them.</ins></p>",
+      "css": ".ds-tc{max-width:34ch;font-size:22px;font-weight:500;line-height:1.35;letter-spacing:-.01em;color:#111214}.ds-tc del{position:relative;color:#6b6d73;text-decoration:none}.ds-tc del::after{content:'';position:absolute;left:-.05em;right:-.05em;top:55%;height:.09em;min-height:2px;background:#c8352a}.ds-tc ins{color:#1d3fcf;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:.18em}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Statement of Work",
+    "overview": "The site is the presales document Emmanuel would hand a buyer: a cover sheet with a document header table, numbered clauses, live builds attached as lettered exhibits on dark plates, decision tables, status stamps, and a sign-off block with a signature line. Everything is set on bright laser-print white in graphite ink, with the pen and office-supply colors of a marked-up contract doing the work of accent: ballpoint blue for links, insertions and the primary action; redline red for deletions and anything not activated; highlighter yellow for demo data.\n\nDensity is that of a well-set business document: hairline table rules, leader dots, tabular numerals, generous section padding, and a single sans family carrying every role from the 94px cover name to 11.5px stamp labels. Depth comes from paper physics only: exhibits sit on dark plates with a soft drop shadow like prints clipped to a page, and colored binder divider tabs mark the sections. Full-bleed divider sheets (blue for Exhibits, yellow for the Solution lab, ink for Sign-off) break the paper run the way coloured dividers break a binder.\n\nThe world rejects the headshot-plus-card-grid portfolio and the cream-paper-serif \"editorial\" default. Two scoped exceptions are pinned by the brief and are not part of this palette: the VYBE exhibit wears VYBE Variation 5's locked tokens, and each `/solutions/[slug]` proposal takes the client's own brand colour for its cover rule, primary key and ordinals.",
+    "keyCharacteristics": [
+      "Laser-print white ground, graphite ink, hairline rules; colour enters as pen, redline and highlighter.",
+      "One family (Schibsted Grotesk), heavy and tightly tracked for display, tabular figures for clause and exhibit numbers.",
+      "Numbered clauses and lettered exhibits (1–7, A–D) are the section grammar.",
+      "Real screenshots on dark plates with an exhibit tab; never mock UI.",
+      "Status is stamped: Live, Preview, Demo data, Not activated.",
+      "Rectangular keys at 2px; no pills.",
+      "One signature motion: the redline strikes through \"I make websites.\" and the blue insertion writes in, once, on load."
+    ],
+    "rules": [
+      {
+        "name": "The Marking Instrument Rule",
+        "body": "Each chromatic colour means one thing: blue is what you can act on or what was inserted, red is what was struck or is not activated, yellow is demo data or a highlight, green is preview or progress. Never swap roles for variety.",
+        "section": "colors"
+      },
+      {
+        "name": "The Scoped Brand Rule",
+        "body": "VYBE's #010409 ground, #16c8ff cyan and #0b76c8→#5345c0 gradient appear only on the VYBE exhibit band, the VYBE Flow tone and the /work/vybe header. A client's accent appears only on that client's /solutions page (cover rule, primary key, ordinals, legend swatch), with contrast checked per client; where the accent fails as text (Cactus #E47F19) its ordinals darken and its key carries dark ink. Neither ever becomes a portfolio colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The Clause Number Rule",
+        "body": "Section and step numbers are tabular figures in Pencil Grey set inline before the heading (1, 2.3, A, Figure A.1). Never draw them in circles or badges.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Uppercase Rule",
+        "body": "Uppercase belongs to the stamp. Everything else stays in sentence case.",
+        "section": "typography"
+      },
+      {
+        "name": "The Only Prints Lift Rule",
+        "body": "Shadows belong to attached evidence and the current binder tab. Keys, tables, stamps and text blocks stay flat.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do attach proof as a real screenshot on an Exhibit Plate with its source URL.",
+      "Do mark every status with a Stamp in its assigned colour (Live blue, Preview green, Demo data yellow, Not activated red).",
+      "Do number sections and figures with tabular Pencil Grey numerals set inline (\"2.3\", \"Figure A.1 —\", \"Table C.1 —\").",
+      "Do present lists and comparisons as ruled tables with hairline rows and an ink header rule.",
+      "Do keep keys rectangular at 2px with a 44px minimum height.",
+      "Do run motion through expo easing (`cubic-bezier(0.16, 1, 0.3, 1)`), reveal once, and fall back to the final state under reduced motion.",
+      "Do confine VYBE tokens and client accents to their own exhibit, case header and /solutions pages."
+    ],
+    "donts": [
+      "Don't use blue, red, yellow or green outside their marking-instrument roles.",
+      "Don't build card grids, pill chips, numbered circles, gradient blobs, neon purple or fake dashboards; these are PRODUCT.md commitments.",
+      "Don't shadow keys, tables or text blocks; only prints and the current binder tab lift.",
+      "Don't introduce a second typeface or a serif; the world rejected the cream-paper-serif default.",
+      "Don't restyle VYBE or any client build to match the portfolio, or bring their colours into portfolio sections.",
+      "Don't use uppercase outside stamps."
+    ]
+  }
+}
