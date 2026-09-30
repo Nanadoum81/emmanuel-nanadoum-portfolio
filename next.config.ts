@@ -22,6 +22,7 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/work/palmer", destination: "/work/palmer-herman", permanent: true },
+      { source: "/Emmanuel_Nanadoum_Sales_Engineer_Resume.pdf", destination: "/Emmanuel_Nanadoum_Solutions_Engineer_Resume.pdf", permanent: true },
       { source: "/demos", destination: "/solutions", permanent: true },
       { source: "/demos/:slug", destination: "/solutions/:slug", permanent: true },
     ];

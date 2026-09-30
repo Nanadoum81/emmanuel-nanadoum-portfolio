@@ -13,7 +13,7 @@ const rows = [
   { k: "Email", v: person.email, href: mailto("Discuss a role"), ev: "contact_email", note: "Best for scheduling a conversation." },
   { k: "Phone", v: person.phone, href: person.phoneHref, ev: "contact_phone", note: "Arizona time (MST, UTC−7, no daylight saving)." },
   { k: "LinkedIn", v: "linkedin.com/in/emmanuel-nanadoum-7971b7a8", href: person.linkedin, ev: "contact_linkedin", note: "Professional profile." },
-  { k: "Résumé", v: "Emmanuel_Nanadoum_Sales_Engineer_Resume.pdf", href: person.resume, ev: "resume_open", note: "One page, PDF." },
+  { k: "Résumé", v: "Emmanuel_Nanadoum_Solutions_Engineer_Resume.pdf", href: person.resume, ev: "resume_open", note: "One page, PDF." },
 ];
 
 export default function Contact() {

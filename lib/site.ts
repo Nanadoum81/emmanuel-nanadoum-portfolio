@@ -11,7 +11,7 @@ export const person = {
   phone: "602-810-1271",
   phoneHref: "tel:+16028101271",
   linkedin: "https://www.linkedin.com/in/emmanuel-nanadoum-7971b7a8",
-  resume: "/Emmanuel_Nanadoum_Sales_Engineer_Resume.pdf",
+  resume: "/Emmanuel_Nanadoum_Solutions_Engineer_Resume.pdf",
   summary:
     "Customer-facing technical and sales professional with 8+ years of consultative selling and 4+ years designing CRM, automation, web, and AI-enabled solutions.",
 };

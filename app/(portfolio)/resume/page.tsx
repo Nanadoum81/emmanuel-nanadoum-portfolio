@@ -5,7 +5,7 @@ import { TrackLink } from "@/components/TrackLink";
 
 export const metadata: Metadata = {
   title: "Résumé",
-  description: "Résumé of Emmanuel Nanadoum — Sales Engineer, Solutions Consultant, AI, CRM & Automation.",
+  description: "Résumé of Emmanuel Nanadoum — Solutions Engineer, Sales Engineer, AI, CRM & Automation. PDF and Word versions.",
   alternates: { canonical: "/resume" },
 };
 
@@ -22,12 +22,21 @@ export default function Resume() {
             href={person.resume}
             event="resume_download"
             data={{ from: "resume_page" }}
-            download="Emmanuel_Nanadoum_Sales_Engineer_Resume.pdf"
+            download="Emmanuel_Nanadoum_Solutions_Engineer_Resume.pdf"
             className="group inline-flex min-h-11 items-center gap-2 rounded-[2px] bg-blue px-4.5 text-[15px] font-semibold text-white hover:bg-blue-deep"
           >
             Download PDF <Arrow dir="down" />
           </TrackLink>
-          <Key href={person.resume} event="resume_open" data={{ from: "resume_page" }} variant="secondary">Open in new tab <Arrow dir="out" /></Key>
+          <TrackLink
+            href={person.resume.replace(".pdf", ".docx")}
+            event="resume_download_docx"
+            data={{ from: "resume_page" }}
+            download="Emmanuel_Nanadoum_Solutions_Engineer_Resume.docx"
+            className="group inline-flex min-h-11 items-center gap-2 rounded-[2px] border border-ink px-4.5 text-[15px] font-semibold hover:bg-ink hover:text-paper"
+          >
+            Word (.docx) <Arrow dir="down" />
+          </TrackLink>
+          <Key href={person.resume} event="resume_open" data={{ from: "resume_page" }} variant="quiet">Open in new tab <Arrow dir="out" /></Key>
         </div>
       </div>
       <div className="mt-10 border border-rule bg-paper-2 shadow-[0_18px_40px_-24px_rgba(17,18,20,0.35)]">

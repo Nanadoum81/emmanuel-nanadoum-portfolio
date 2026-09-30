@@ -1,0 +1,78 @@
+// Single source for the résumé. Every claim here is either from Emmanuel's own résumés
+// or verified against the live builds (2026-09-30). Do not add metrics that aren't real.
+
+export const resume = {
+  name: "Emmanuel Nanadoum",
+  headline: "Solutions Engineer | Sales Engineer | AI, CRM & Automation",
+  contact: [
+    "Phoenix, AZ (Remote / Hybrid)",
+    "602-810-1271",
+    "nanadoum81@gmail.com",
+    "linkedin.com/in/emmanuel-nanadoum-7971b7a8",
+  ],
+  portfolio: { label: "Portfolio & live client demos", url: "https://emmanuel-nanadoum.vercel.app" },
+
+  summary:
+    "Customer-facing technical and sales professional with 8+ years of consultative, high-ticket selling and 4+ years designing CRM, automation, web, and AI voice solutions. Leads discovery, turns business pain into technical requirements, builds proof-of-concept demos on the prospect's own business, and guides customers from evaluation through implementation. Portfolio: six live client demo builds and a deployed AI voice product.",
+
+  skills: [
+    ["Presales", "Technical discovery, needs analysis, solution mapping, technical demos, proof of concept (POC), technical validation, objection handling, value articulation, scoping and proposals"],
+    ["Solution design", "Solution architecture, workflow and integration diagrams, implementation planning, technical documentation, stakeholder communication, customer training and enablement"],
+    ["Technical", "REST APIs, webhooks, SQL, Python, JavaScript, HTML/CSS, serverless functions (Vercel), Supabase (Postgres, auth), AWS fundamentals, Git/GitHub, troubleshooting"],
+    ["Platforms & AI", "GoHighLevel, HubSpot, Salesforce, Twilio (voice/SMS), ElevenLabs (speech-to-text, text-to-speech), AI voice agents, CRM automation, Jira"],
+  ],
+
+  experience: [
+    {
+      role: "Principal Consultant, CRM, AI Automation & Technical Solutions",
+      org: "Blair Digital Studios",
+      where: "Remote",
+      when: "2020 – Present",
+      bullets: [
+        "Lead discovery with small-practice owners (chiropractic, med spa), find where leads and revenue leak, and map business goals to CRM, automation, web, and AI voice solutions.",
+        "Build proof-of-concept demos on each prospect's own brand: six live client and reference builds, including a revenue system with a live two-way AI receptionist line, test patient form, and 13-step patient journey.",
+        "Design reusable solution architecture customized per client: a 12-stage CRM pipeline with tagged lead routing, missed-call text-back, 24-hour and 2-hour reminders, no-show recovery, review requests, and explicit follow-up stop conditions.",
+        "Deliver public-information revenue-leak audits that separate verified findings from open questions, then present solution diagrams, scopes, proposals, and implementation plans with clear tradeoffs.",
+        "Own handoff from solution design into configuration, testing, launch, training, troubleshooting, and post-launch optimization using GoHighLevel, Twilio voice/SMS, REST APIs, and webhooks.",
+      ],
+    },
+    {
+      role: "Online Experience Advisor",
+      org: "DriveTime",
+      where: "Tempe, AZ",
+      when: "Jul 2026 – Sep 2026",
+      bullets: [
+        "Guided customers through complex digital vehicle, financing, and documentation workflows using consultative discovery.",
+        "Resolved objections and account issues, and coordinated escalations when technical or operational support was needed.",
+        "Maintained accurate CRM and case documentation across high transaction volume and compliance-sensitive information.",
+      ],
+    },
+    {
+      role: "Sales Representative",
+      org: "A Better Way Wholesale Autos",
+      where: "Naugatuck, CT",
+      when: "Sep 2017 – 2025",
+      bullets: [
+        "Managed a high-volume, high-ticket pipeline from discovery through close, matching needs to vehicle and financing options.",
+        "Delivered product presentations, handled objections, and coordinated finance, service, and operations to close deals.",
+        "Built repeat and referral business through CRM follow-up and structured outreach; consistently a top performer.",
+      ],
+    },
+  ],
+
+  projects: [
+    {
+      name: "VYBE, AI passenger experience platform",
+      link: "vybe-app-blue.vercel.app",
+      bullets: [
+        "Designed and deployed a voice concierge that keeps ride context (destination, trip length, passengers, mood): browser audio → ElevenLabs Scribe → context-aware response → ElevenLabs speech, on Vercel serverless functions.",
+        "Supabase for auth, shared rides, and saved setups; provider keys kept server-side; Google Places/Routes recommendations integrated behind production credentials.",
+      ],
+    },
+  ],
+
+  education: [
+    "B.S. Cybersecurity & Information Assurance, WGU (in progress) · Software Engineering Training, TripleTen",
+    "HubSpot Customer Success & Service Hub · Salesforce Trailhead · SQL Fundamentals · AWS / Cloud Fundamentals",
+  ],
+};

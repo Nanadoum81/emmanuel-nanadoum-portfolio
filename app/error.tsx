@@ -15,7 +15,7 @@ export default function Error({ error, reset }: { error: Error & { digest?: stri
         <button type="button" onClick={reset} className="inline-flex min-h-11 items-center rounded-[2px] bg-blue px-4.5 text-white hover:bg-blue-deep">
           Try again
         </button>
-        <a className="doc-link inline-flex min-h-11 items-center" href="/Emmanuel_Nanadoum_Sales_Engineer_Resume.pdf">Résumé (PDF)</a>
+        <a className="doc-link inline-flex min-h-11 items-center" href="/Emmanuel_Nanadoum_Solutions_Engineer_Resume.pdf">Résumé (PDF)</a>
         <Link className="doc-link inline-flex min-h-11 items-center" href="/contact">Contact</Link>
       </div>
     </main>
