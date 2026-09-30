@@ -36,7 +36,7 @@ export const demos: Demo[] = [
       { label: "AI receptionist line live", tally: "live" },
       { label: "Dashboards use sample data", tally: "demo" },
     ],
-    solves: "Every new-patient call and form is answered, tracked and followed up — from first ring to a booked visit.",
+    solves: "Every new-patient call and form is answered, tracked and followed up, from first ring to a booked visit.",
     detail: [
       "Call a real AI receptionist on a dedicated demo line and ask what a new patient would ask.",
       "Submit a test patient form and see where it lands in the pipeline.",
@@ -88,7 +88,7 @@ export const demos: Demo[] = [
       { label: "Owner presentation live", tally: "live" },
       { label: "Missed-call demo is simulated", tally: "demo" },
     ],
-    solves: "An honest look at how patients find, contact and return to the practice — and one connected system from search to reactivation.",
+    solves: "An honest look at how patients find, contact and return to the practice, and one connected system from search to reactivation.",
     detail: [
       "Open the guided owner presentation and the Digital Revenue Leak Audit, built from public information only.",
       "Press simulate to watch a missed call become a recovered appointment opportunity.",
@@ -112,7 +112,7 @@ export const demos: Demo[] = [
     solves: "A clear, calm website that turns local searches into appointment requests and phone calls.",
     detail: [
       "Built around how patients actually describe the problem: neck and back discomfort, day to day.",
-      "Every page leads to one of two actions — request an appointment or call.",
+      "Every page leads to one of two actions: request an appointment or call.",
       "The same revenue-system layer shown for Cactus, Palmer & Herman and Canham is scoped per practice in discovery.",
     ],
     capabilities: ["Conversion-focused website", "Appointment requests", "Click-to-call", "Local directions", "Mobile-first layout"],
@@ -129,7 +129,7 @@ export const demos: Demo[] = [
     accentInk: "#FFFFFF",
     site: "https://coyote-wellness.vibepreview.app",
     status: [{ label: "Website live", tally: "live" }],
-    solves: "A considered, unhurried website for chiropractic, injury care, massage and wellness — with a clear path to book.",
+    solves: "A considered, unhurried website for chiropractic, injury care, massage and wellness, with a clear path to book.",
     detail: [
       "Service pages for chiropractic, auto-accident care, massage and wellness, each ending in a request or a call.",
       "A 'what to expect' path that answers first-visit questions before the phone rings.",

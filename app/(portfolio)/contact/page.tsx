@@ -18,7 +18,7 @@ const rows = [
 
 export default function Contact() {
   return (
-    <section className="mx-auto grid max-w-[1360px] gap-12 px-[var(--gutter)] pb-24 pt-12 lg:grid-cols-12 lg:pt-16">
+    <section className="mx-auto grid grid-cols-1 max-w-[1360px] gap-12 px-[var(--gutter)] pb-24 pt-12 lg:grid-cols-12 lg:pt-16">
       <div className="lg:col-span-5">
         <h1 className="text-[clamp(48px,7vw,92px)] font-extrabold leading-[0.92] tracking-[-0.045em]">Contact</h1>
         <p className="mt-6 max-w-[36ch] text-[clamp(20px,1.9vw,24px)] font-medium leading-[1.35]">
@@ -32,7 +32,7 @@ export default function Contact() {
       </div>
       <dl className="border-t-2 border-ink lg:col-span-7">
         {rows.map((r) => (
-          <div key={r.k} className="grid gap-1 border-b border-rule py-5 sm:grid-cols-[120px_1fr]">
+          <div key={r.k} className="grid grid-cols-1 gap-1 border-b border-rule py-5 sm:grid-cols-[120px_1fr]">
             <dt className="text-[15px] text-ink-2">{r.k}</dt>
             <dd className="min-w-0">
               <TrackLink href={r.href} event={r.ev} data={{ from: "contact_table" }} className="break-words text-[clamp(19px,2vw,24px)] font-bold tracking-[-0.01em] text-blue underline decoration-blue/35 underline-offset-4 hover:decoration-blue">

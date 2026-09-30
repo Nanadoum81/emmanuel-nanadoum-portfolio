@@ -31,7 +31,7 @@ export default function SolutionsLayout({ children }: { children: React.ReactNod
         {children}
       </main>
       <footer className="border-t border-rule">
-        <div className="mx-auto grid max-w-[1360px] gap-6 px-[var(--gutter)] py-10 text-[14.5px] text-ink-2 md:grid-cols-2">
+        <div className="mx-auto grid grid-cols-1 max-w-[1360px] gap-6 px-[var(--gutter)] py-10 text-[14.5px] text-ink-2 md:grid-cols-2">
           <div>
             <p className="font-bold text-ink">Blair Digital Studios</p>
             <p>Websites, AI voice, CRM and follow-up built as one connected system.</p>

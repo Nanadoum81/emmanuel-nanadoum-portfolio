@@ -27,7 +27,7 @@ export default function WorkIndex() {
         <ol className="border-t-2 border-ink">
           {caseStudies.map((c, i) => (
             <li key={c.slug} className="border-b border-rule">
-              <Link href={`/work/${c.slug}`} className="group grid gap-6 py-8 md:grid-cols-12 md:items-center">
+              <Link href={`/work/${c.slug}`} className="group grid grid-cols-1 gap-6 py-8 md:grid-cols-12 md:items-center">
                 <div className="md:col-span-5" data-r="mask">
                   <ExhibitPlate src={c.cover.src} alt={c.cover.alt} sizes="(min-width:768px) 40vw, 100vw" />
                 </div>

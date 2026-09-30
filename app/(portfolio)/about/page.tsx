@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <>
-      <header className="mx-auto grid max-w-[1360px] gap-10 px-[var(--gutter)] pb-14 pt-12 lg:grid-cols-12 lg:pt-16">
+      <header className="mx-auto grid grid-cols-1 max-w-[1360px] gap-10 px-[var(--gutter)] pb-14 pt-12 lg:grid-cols-12 lg:pt-16">
         <div className="lg:col-span-7">
           <h1 className="text-[clamp(48px,7vw,92px)] font-extrabold leading-[0.92] tracking-[-0.045em]">About</h1>
           <p className="mt-6 max-w-[40ch] text-[clamp(21px,2vw,26px)] font-medium leading-[1.35] tracking-[-0.01em]">
@@ -32,7 +32,7 @@ export default function About() {
       <Reveal as="section" className="border-t border-rule bg-paper-2">
         <div className="mx-auto max-w-[1360px] px-[var(--gutter)] py-16 lg:py-20">
           <h2 className="text-[clamp(30px,3.4vw,44px)]">How I work</h2>
-          <ol className="mt-10 grid gap-x-10 gap-y-8 md:grid-cols-2 xl:grid-cols-3" data-r="rows">
+          <ol className="mt-10 grid grid-cols-1 gap-x-10 gap-y-8 md:grid-cols-2 xl:grid-cols-3" data-r="rows">
             {runSheet.map((r, i) => (
               <li key={r.step} className="border-t-2 border-ink pt-3">
                 <h3 className="text-[20px] font-bold tracking-[-0.01em]">
@@ -48,7 +48,7 @@ export default function About() {
       </Reveal>
 
       <Reveal as="section" className="border-t border-rule">
-        <div className="mx-auto grid max-w-[1360px] gap-10 px-[var(--gutter)] py-16 lg:grid-cols-12 lg:py-20">
+        <div className="mx-auto grid grid-cols-1 max-w-[1360px] gap-10 px-[var(--gutter)] py-16 lg:grid-cols-12 lg:py-20">
           <h2 className="text-[clamp(30px,3.4vw,44px)] lg:col-span-4">Experience</h2>
           <ol className="lg:col-span-8" data-r="rows">
             {experience.map((e) => (
@@ -73,9 +73,9 @@ export default function About() {
       </Reveal>
 
       <Reveal as="section" className="border-t border-rule bg-paper-2">
-        <div className="mx-auto grid max-w-[1360px] gap-10 px-[var(--gutter)] py-16 lg:grid-cols-12 lg:py-20">
+        <div className="mx-auto grid grid-cols-1 max-w-[1360px] gap-10 px-[var(--gutter)] py-16 lg:grid-cols-12 lg:py-20">
           <h2 className="text-[clamp(30px,3.4vw,44px)] lg:col-span-4">Technical capabilities</h2>
-          <div className="grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:col-span-8" data-r="rows">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-8 sm:grid-cols-2 lg:col-span-8" data-r="rows">
             {capabilities.map((g) => (
               <div key={g.group} className="border-t-2 border-ink pt-3">
                 <h3 className="text-[17px] font-bold tracking-normal">{g.group}</h3>
@@ -87,7 +87,7 @@ export default function About() {
       </Reveal>
 
       <section className="border-t border-rule">
-        <div className="mx-auto grid max-w-[1360px] gap-10 px-[var(--gutter)] py-16 lg:grid-cols-12 lg:py-20">
+        <div className="mx-auto grid grid-cols-1 max-w-[1360px] gap-10 px-[var(--gutter)] py-16 lg:grid-cols-12 lg:py-20">
           <h2 className="text-[clamp(30px,3.4vw,44px)] lg:col-span-4">Education</h2>
           <ul className="grid gap-3 text-[17px] lg:col-span-8">
             {education.map((e) => (

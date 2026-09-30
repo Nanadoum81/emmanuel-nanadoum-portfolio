@@ -40,13 +40,13 @@ export const runSheet = [
     step: "Requirements",
     line: "Turn pain into something buildable.",
     detail:
-      "Business goals mapped to functional requirements, integration needs, data ownership, and constraints — written down so everyone agrees on scope.",
+      "Business goals mapped to functional requirements, integration needs, data ownership, and constraints, written down so everyone agrees on scope.",
   },
   {
     step: "Solution architecture",
     line: "Design the connected system, not a feature.",
     detail:
-      "Workflow diagrams and integration maps across CRM, voice, SMS, web, APIs and webhooks — with the tradeoffs named before anything is built.",
+      "Workflow diagrams and integration maps across CRM, voice, SMS, web, APIs and webhooks, with the tradeoffs named before anything is built.",
   },
   {
     step: "Demo / POC",

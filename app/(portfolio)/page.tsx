@@ -32,7 +32,7 @@ export default function Home() {
 
       {/* ─── Cover sheet ─────────────────────────────────────────── */}
       <section id="cover" aria-labelledby="cover-title" className="relative overflow-hidden">
-        <CoverMotion className="mx-auto grid max-w-[1360px] gap-x-12 gap-y-12 px-[var(--gutter)] pb-16 pt-8 lg:grid-cols-12 lg:pb-24 lg:pt-12">
+        <CoverMotion className="mx-auto grid grid-cols-1 max-w-[1360px] gap-x-12 gap-y-12 px-[var(--gutter)] pb-16 pt-8 lg:grid-cols-12 lg:pb-24 lg:pt-12">
           <div className="lg:col-span-6 xl:col-span-6">
             <table data-cover-meta className="w-full max-w-[560px] border-collapse text-[14.5px]">
               <caption className="sr-only">Document details</caption>
@@ -95,7 +95,7 @@ export default function Home() {
 
           {/* Attached exhibits */}
           <div className="lg:col-span-6 xl:col-span-6">
-            <div className="relative -mx-[var(--gutter)] flex snap-x snap-mandatory gap-4 overflow-x-auto px-[var(--gutter)] pb-2 pt-8 [scrollbar-width:none] sm:mx-0 sm:block sm:h-[min(560px,48vw)] sm:overflow-visible sm:px-0 sm:pb-0 sm:pt-0 lg:h-[520px] xl:h-[560px]">
+            <div className="relative -mx-[var(--gutter)] flex snap-x snap-mandatory gap-4 overflow-x-auto px-[var(--gutter)] pb-2 pt-8 [scrollbar-width:none] sm:mx-0 sm:block sm:h-[70vw] md:h-[68vw] sm:overflow-visible sm:px-0 sm:pb-0 sm:pt-0 lg:h-[520px] xl:h-[560px]">
               <Link href="/work/vybe" data-depth="4" className="w-[84%] shrink-0 snap-start sm:absolute sm:right-0 sm:top-8 sm:z-10 sm:w-[84%]">
                 <div data-plate>
                   <ExhibitPlate letter="A" label="VYBE" src="/shots/vybe-d.jpg" alt={vybe.cover.alt} source="vybe-app-blue.vercel.app" priority sizes="(min-width:1024px) 42vw, 84vw" tabColor="bg-blue text-white" />
@@ -135,7 +135,7 @@ export default function Home() {
 
       {/* ─── 1 Summary ─────────────────────────────────────────── */}
       <Reveal as="section" id="summary" className="border-t border-rule">
-        <div className="mx-auto grid max-w-[1360px] gap-8 px-[var(--gutter)] py-16 lg:grid-cols-12 lg:py-24">
+        <div className="mx-auto grid grid-cols-1 max-w-[1360px] gap-8 px-[var(--gutter)] py-16 lg:grid-cols-12 lg:py-24">
           <h2 className="text-[clamp(30px,3.6vw,46px)] lg:col-span-4">
             <span className="num mr-3 text-ink-3">1</span>Summary of qualifications
           </h2>
@@ -143,7 +143,7 @@ export default function Home() {
             <p className="text-[clamp(19px,1.7vw,22px)] leading-[1.5]">
               {person.summary} I lead discovery, translate business pain into technical requirements, build the demonstration, explain integrations and tradeoffs, and guide customers from evaluation through implementation.
             </p>
-            <dl className="mt-10 grid gap-x-10 gap-y-6 sm:grid-cols-2">
+            <dl className="mt-10 grid grid-cols-1 gap-x-10 gap-y-6 sm:grid-cols-2">
               <div className="border-t border-ink pt-3">
                 <dt className="text-[14px] text-ink-2">Roles I am pursuing</dt>
                 <dd className="mt-1 font-semibold">Solutions Engineer · Sales Engineer · AI Consultant · Solutions Consultant · Technical Presales · Implementation Consultant</dd>
@@ -160,7 +160,7 @@ export default function Home() {
       {/* ─── 2 Method ─────────────────────────────────────────── */}
       <Reveal as="section" id="method" className="border-t border-rule bg-paper-2">
         <div className="mx-auto max-w-[1360px] px-[var(--gutter)] py-16 lg:py-24">
-          <div className="grid gap-6 lg:grid-cols-12">
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-12">
             <h2 className="text-[clamp(30px,3.6vw,46px)] lg:col-span-5">
               <span className="num mr-3 text-ink-3">2</span>Method of engagement
             </h2>
@@ -173,7 +173,7 @@ export default function Home() {
             <div aria-hidden data-r="rule" className="absolute bottom-0 left-[11px] top-0 w-[2px] bg-green md:left-[15px]" />
             <ol data-r="rows">
               {runSheet.map((r, i) => (
-                <li key={r.step} className="relative grid gap-x-8 gap-y-1 border-b border-rule py-5 pl-10 md:grid-cols-12 md:pl-14">
+                <li key={r.step} className="relative grid grid-cols-1 gap-x-8 gap-y-1 border-b border-rule py-5 pl-10 md:grid-cols-12 md:pl-14">
                   <span aria-hidden className="absolute left-[5px] top-[27px] size-[14px] border-2 border-green bg-paper-2 md:left-[9px]" />
                   <h3 className="text-[20px] font-bold tracking-[-0.01em] md:col-span-3">
                     <span className="num mr-2 text-[15px] font-semibold text-ink-3">2.{i + 1}</span>
@@ -191,7 +191,7 @@ export default function Home() {
       {/* ─── 3 Exhibits (divider) ─────────────────────────────── */}
       <section id="exhibits" aria-labelledby="exhibits-title">
         <div className="bg-blue text-white">
-          <div className="mx-auto grid max-w-[1360px] gap-6 px-[var(--gutter)] py-16 lg:grid-cols-12 lg:py-20">
+          <div className="mx-auto grid grid-cols-1 max-w-[1360px] gap-6 px-[var(--gutter)] py-16 lg:grid-cols-12 lg:py-20">
             <h2 id="exhibits-title" className="text-[clamp(56px,9vw,112px)] font-extrabold leading-[0.9] tracking-[-0.045em] lg:col-span-7">
               <span className="num mr-4 font-bold text-white/55">3</span>Exhibits
             </h2>
@@ -204,7 +204,7 @@ export default function Home() {
         {/* Exhibit A — VYBE, in VYBE's own locked palette */}
         <Reveal className="bg-[#010409] text-[#f7fbff]">
           <div className="mx-auto max-w-[1360px] px-[var(--gutter)] py-16 lg:py-24">
-            <div className="grid gap-10 lg:grid-cols-12">
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
               <div className="lg:col-span-5">
                 <div className="flex items-center gap-3">
                   <Image src="/brand/vybe-mark.svg" alt="" width={44} height={44} className="rounded-[10px]" />
@@ -247,7 +247,7 @@ export default function Home() {
 
         {/* Exhibit B — Cactus */}
         <Reveal className="border-b border-rule">
-          <div className="mx-auto grid max-w-[1360px] gap-12 px-[var(--gutter)] py-16 lg:grid-cols-12 lg:py-24">
+          <div className="mx-auto grid grid-cols-1 max-w-[1360px] gap-12 px-[var(--gutter)] py-16 lg:grid-cols-12 lg:py-24">
             <div className="lg:col-span-5 lg:pt-10">
               <p className="num text-[15px] font-semibold text-ink-3">Exhibit B · {cactus.kind}</p>
               <h3 className="mt-4 text-[clamp(32px,3.6vw,48px)] font-extrabold tracking-[-0.03em]">{cactus.title}</h3>
@@ -277,7 +277,7 @@ export default function Home() {
         {/* Exhibit C — Palmer & Herman: reuse vs. customize */}
         <Reveal className="border-b border-rule bg-paper-2">
           <div className="mx-auto max-w-[1360px] px-[var(--gutter)] py-16 lg:py-24">
-            <div className="grid gap-8 lg:grid-cols-12">
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
               <div className="lg:col-span-6">
                 <p className="num text-[15px] font-semibold text-ink-3">Exhibit C · {palmer.kind}</p>
                 <h3 className="mt-4 text-[clamp(32px,3.6vw,48px)] font-extrabold tracking-[-0.03em]">{palmer.title}</h3>
@@ -286,7 +286,7 @@ export default function Home() {
               <p className="text-ink-2 lg:col-span-5 lg:col-start-8 lg:pt-12">{palmer.summary}</p>
             </div>
 
-            <div className="mt-12 grid gap-8 lg:grid-cols-12">
+            <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-12">
               <div className="grid grid-cols-2 gap-3 lg:col-span-7">
                 <figure data-r="mask">
                   <ExhibitPlate src="/shots/cactus-d.jpg" alt="Cactus Chiropractic site, Peoria AZ." aspect="4/3" sizes="(min-width:1024px) 28vw, 50vw" />
@@ -339,7 +339,7 @@ export default function Home() {
         {/* Exhibit D — Blair Digital Studios */}
         <Reveal className="border-b border-rule">
           <div className="mx-auto max-w-[1360px] px-[var(--gutter)] py-16 lg:py-24">
-            <div className="grid gap-8 lg:grid-cols-12">
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
               <div className="lg:col-span-7">
                 <p className="num text-[15px] font-semibold text-ink-3">Exhibit D · {blair.kind}</p>
                 <h3 className="mt-4 text-[clamp(32px,3.6vw,48px)] font-extrabold tracking-[-0.03em]">{blair.title}</h3>
@@ -353,7 +353,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="mt-12 grid gap-4 md:grid-cols-3">
+            <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3">
               {blair.demo.shots.map((s) => (
                 <figure key={s.src} data-r="mask">
                   <ExhibitPlate src={s.src} alt={s.alt} aspect="16/11" sizes="(min-width:768px) 32vw, 100vw" />
@@ -361,7 +361,7 @@ export default function Home() {
                 </figure>
               ))}
             </div>
-            <div className="mt-12 grid gap-x-10 border-t border-ink pt-5 md:grid-cols-12" data-r="rise">
+            <div className="mt-12 grid grid-cols-1 gap-x-10 border-t border-ink pt-5 md:grid-cols-12" data-r="rise">
               <h4 className="text-[17px] font-bold md:col-span-3">What a Blair system connects</h4>
               <p className="text-ink-2 md:col-span-9">
                 AI receptionist and voice · lead capture and qualification · CRM automation and pipeline design · appointment booking · missed-call recovery · SMS / email nurture · review automation · reporting · websites wired to revenue workflows through APIs and webhooks.
@@ -374,7 +374,7 @@ export default function Home() {
       {/* ─── 4 Solution lab (divider) ─────────────────────────── */}
       <section id="lab" aria-labelledby="lab-title">
         <div className="bg-yellow">
-          <div className="mx-auto grid max-w-[1360px] gap-6 px-[var(--gutter)] py-14 lg:grid-cols-12 lg:py-16">
+          <div className="mx-auto grid grid-cols-1 max-w-[1360px] gap-6 px-[var(--gutter)] py-14 lg:grid-cols-12 lg:py-16">
             <h2 id="lab-title" className="text-[clamp(44px,6.6vw,84px)] font-extrabold leading-[0.92] tracking-[-0.04em] lg:col-span-7">
               <span className="num mr-4 font-bold text-ink/45">4</span>Client solution lab
             </h2>
@@ -421,11 +421,11 @@ export default function Home() {
                   </td>
                   <td className="col-span-2 align-top md:py-4 md:pl-5 md:text-right">
                     <span className="flex flex-wrap gap-x-4 gap-y-1 md:flex-col md:items-end">
-                      <TrackLink href={d.system ?? d.site} event="demo_open" data={{ slug: d.slug, from: "home_lab" }} className="doc-link inline-flex min-h-8 items-center gap-1 font-semibold">
+                      <TrackLink href={d.system ?? d.site} event="demo_open" data={{ slug: d.slug, from: "home_lab" }} className="doc-link inline-flex min-h-8 items-center gap-1 whitespace-nowrap font-semibold">
                         {d.system ? "Revenue system" : "Open site"} ↗
                       </TrackLink>
                       {d.system && (
-                        <TrackLink href={d.site} event="demo_open" data={{ slug: d.slug, from: "home_lab_site" }} className="doc-link inline-flex min-h-8 items-center gap-1">
+                        <TrackLink href={d.site} event="demo_open" data={{ slug: d.slug, from: "home_lab_site" }} className="doc-link inline-flex min-h-8 items-center gap-1 whitespace-nowrap">
                           Website ↗
                         </TrackLink>
                       )}
@@ -445,7 +445,7 @@ export default function Home() {
           <h2 className="text-[clamp(30px,3.6vw,46px)]">
             <span className="num mr-3 text-ink-3">5</span>Schedule of capabilities
           </h2>
-          <div className="mt-10 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4" data-r="rows">
+          <div className="mt-10 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4" data-r="rows">
             {capabilities.map((g) => (
               <div key={g.group} className="border-t-2 border-ink pt-3">
                 <h3 className="text-[17px] font-bold tracking-normal">{g.group}</h3>
@@ -458,7 +458,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-16 grid gap-8 lg:grid-cols-12">
+          <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-12">
             <div className="lg:col-span-4">
               <h3 className="text-[22px] font-bold">Integration register</h3>
               <p className="mt-2 text-ink-2">Only connections that exist in the live builds.</p>
@@ -486,7 +486,7 @@ export default function Home() {
 
       {/* ─── 6 Experience ─────────────────────────────────────── */}
       <Reveal as="section" id="experience" className="border-t border-rule">
-        <div className="mx-auto grid max-w-[1360px] gap-8 px-[var(--gutter)] py-16 lg:grid-cols-12 lg:py-24">
+        <div className="mx-auto grid grid-cols-1 max-w-[1360px] gap-8 px-[var(--gutter)] py-16 lg:grid-cols-12 lg:py-24">
           <div className="lg:col-span-4">
             <h2 className="text-[clamp(30px,3.6vw,46px)]">
               <span className="num mr-3 text-ink-3">6</span>Experience
@@ -495,7 +495,7 @@ export default function Home() {
           </div>
           <ol className="lg:col-span-8" data-r="rows">
             {experience.map((e) => (
-              <li key={e.org} className="grid gap-x-6 gap-y-1 border-b border-rule py-5 first:border-t first:border-t-ink sm:grid-cols-[1fr_auto]">
+              <li key={e.org} className="grid grid-cols-1 gap-x-6 gap-y-1 border-b border-rule py-5 first:border-t first:border-t-ink sm:grid-cols-[1fr_auto]">
                 <div>
                   <h3 className="text-[19px] font-bold tracking-[-0.01em]">{e.role}</h3>
                   <p className="text-ink-2">{e.org} · {e.where}</p>
@@ -510,7 +510,7 @@ export default function Home() {
 
       {/* ─── 7 Sign-off ─────────────────────────────────────── */}
       <section id="contact" aria-labelledby="contact-title" className="bg-ink text-paper">
-        <div className="mx-auto grid max-w-[1360px] gap-12 px-[var(--gutter)] py-20 lg:grid-cols-12 lg:py-28">
+        <div className="mx-auto grid grid-cols-1 max-w-[1360px] gap-12 px-[var(--gutter)] py-20 lg:grid-cols-12 lg:py-28">
           <div className="lg:col-span-6">
             <h2 id="contact-title" className="text-[clamp(44px,6.2vw,80px)] font-extrabold leading-[0.95] tracking-[-0.04em]">
               <span className="num mr-4 font-bold text-white/40">7</span>Sign-off

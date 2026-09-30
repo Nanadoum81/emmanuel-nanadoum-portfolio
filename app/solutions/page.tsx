@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function SolutionsHub() {
   return (
     <>
-      <section className="mx-auto grid max-w-[1360px] gap-8 px-[var(--gutter)] pb-12 pt-12 lg:grid-cols-12 lg:pt-16">
+      <section className="mx-auto grid grid-cols-1 max-w-[1360px] gap-8 px-[var(--gutter)] pb-12 pt-12 lg:grid-cols-12 lg:pt-16">
         <h1 className="text-[clamp(44px,6.6vw,88px)] font-extrabold leading-[0.93] tracking-[-0.045em] lg:col-span-7">Live solution demos</h1>
         <div className="grid content-end gap-4 text-[17px] text-ink-2 lg:col-span-5">
           <p>
@@ -31,7 +31,7 @@ export default function SolutionsHub() {
       <Reveal className="mx-auto max-w-[1360px] px-[var(--gutter)] pb-24">
         <ol className="border-t-2 border-ink">
           {demos.map((d) => (
-            <li key={d.slug} className="grid gap-6 border-b border-rule py-8 md:grid-cols-12 md:gap-8">
+            <li key={d.slug} className="grid grid-cols-1 gap-6 border-b border-rule py-8 md:grid-cols-12 md:gap-8">
               <div className="relative md:col-span-5" data-r="mask">
                 <div className="relative aspect-[16/10] overflow-hidden border border-rule bg-paper-2">
                   <Image src={d.desktop} alt={`${d.name} website`} fill sizes="(min-width:768px) 40vw, 100vw" className="object-cover object-top" />

@@ -1,9 +1,9 @@
 type Step = { label: string; note?: string };
 
 const tones = {
-  paper: { box: "border-ink bg-paper", note: "text-ink-2", arrow: "text-ink-3", num: "text-ink-3" },
-  vybe: { box: "border-[#16c8ff]/50 bg-[#07101a]", note: "text-[#a8b7c8]", arrow: "text-[#16c8ff]", num: "text-[#16c8ff]" },
-  blue: { box: "border-white/40 bg-white/[0.06]", note: "text-white/75", arrow: "text-white/60", num: "text-white/60" },
+  paper: { box: "border-ink bg-paper text-ink", note: "text-ink-2", arrow: "text-ink-3", num: "text-ink-3" },
+  vybe: { box: "border-[#16c8ff]/50 bg-[#07101a] text-[#f7fbff]", note: "text-[#a8b7c8]", arrow: "text-[#16c8ff]", num: "text-[#16c8ff]" },
+  blue: { box: "border-white/40 bg-white/[0.06] text-white", note: "text-white/75", arrow: "text-white/60", num: "text-white/60" },
 };
 
 /**
@@ -15,17 +15,19 @@ export function Flow({
   tone = "paper",
   caption,
   dense = false,
+  captionClassName,
 }: {
   steps: readonly Step[];
   tone?: keyof typeof tones;
   caption?: string;
   dense?: boolean;
+  captionClassName?: string;
 }) {
   const t = tones[tone];
   const cols = dense ? "sm:grid-cols-3 lg:grid-cols-5" : steps.length <= 5 ? "lg:grid-cols-5" : steps.length <= 7 ? "sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7" : "sm:grid-cols-3 lg:grid-cols-5";
   return (
     <figure>
-      <ol className={`grid gap-x-7 gap-y-3 ${cols}`}>
+      <ol className={`grid grid-cols-1 gap-x-7 gap-y-3 ${cols}`}>
         {steps.map((s, i) => (
           <li key={s.label} className="relative flex">
             <div className={`flex w-full flex-col border px-3 py-2.5 ${t.box}`}>
@@ -41,7 +43,7 @@ export function Flow({
           </li>
         ))}
       </ol>
-      {caption && <figcaption className={`mt-3 text-[13.5px] ${t.note}`}>{caption}</figcaption>}
+      {caption && <figcaption className={`mt-3 text-[13.5px] ${captionClassName ?? t.note}`}>{caption}</figcaption>}
     </figure>
   );
 }

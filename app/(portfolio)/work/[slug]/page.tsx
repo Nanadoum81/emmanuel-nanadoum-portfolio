@@ -77,7 +77,7 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
             <span aria-hidden className="mx-2">/</span>
             <span aria-current="page">Exhibit {letter}</span>
           </nav>
-          <div className="mt-10 grid gap-10 lg:grid-cols-12">
+          <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-12">
             <div className="lg:col-span-7">
               <p className={`num flex items-center gap-3 text-[15px] font-semibold ${sub}`}>
                 {isVybe && <Image src="/brand/vybe-mark.svg" alt="" width={36} height={36} className="rounded-[8px]" />}
@@ -138,7 +138,7 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
         </div>
       </div>
 
-      <div className="mx-auto grid max-w-[1360px] gap-12 px-[var(--gutter)] py-16 lg:grid-cols-12 lg:py-20">
+      <div className="mx-auto grid grid-cols-1 max-w-[1360px] gap-12 px-[var(--gutter)] py-16 lg:grid-cols-12 lg:py-20">
         <aside className="hidden lg:col-span-3 lg:block">
           <CaseRail items={sections} />
         </aside>
@@ -182,7 +182,7 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
               {c.architecture.flows.map((f, k) => (
                 <div key={f.title}>
                   <h3 className="mb-4 text-[18px] font-bold tracking-normal">{f.title}</h3>
-                  <Flow steps={f.steps} tone={isVybe ? "vybe" : "paper"} dense={f.steps.length > 7} caption={`Figure 4.${k + 1} — ${f.title}`} />
+                  <Flow steps={f.steps} tone={isVybe ? "vybe" : "paper"} dense={f.steps.length > 7} caption={`Figure 4.${k + 1} — ${f.title}`} captionClassName="text-ink-2" />
                 </div>
               ))}
             </div>

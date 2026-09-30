@@ -36,7 +36,7 @@ export default async function ClientDemo({ params }: { params: Promise<{ slug: s
   return (
     <>
       <div className="h-2" style={{ background: d.accent }} aria-hidden />
-      <section className="mx-auto grid max-w-[1360px] gap-10 px-[var(--gutter)] pb-14 pt-10 lg:grid-cols-12 lg:pt-14">
+      <section className="mx-auto grid grid-cols-1 max-w-[1360px] gap-10 px-[var(--gutter)] pb-14 pt-10 lg:grid-cols-12 lg:pt-14">
         <div className="lg:col-span-6">
           <table className="w-full max-w-[520px] border-collapse text-[14.5px]">
             <caption className="sr-only">Demo details</caption>
@@ -92,7 +92,7 @@ export default async function ClientDemo({ params }: { params: Promise<{ slug: s
       </section>
 
       <section className="border-t border-rule bg-paper-2">
-        <div className="mx-auto grid max-w-[1360px] gap-10 px-[var(--gutter)] py-16 lg:grid-cols-12">
+        <div className="mx-auto grid grid-cols-1 max-w-[1360px] gap-10 px-[var(--gutter)] py-16 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <h2 className="text-[clamp(28px,3vw,40px)]">What you can try</h2>
             <ol className="mt-6 grid gap-5">
@@ -106,7 +106,7 @@ export default async function ClientDemo({ params }: { params: Promise<{ slug: s
           </div>
           <div className="lg:col-span-6 lg:col-start-7">
             <h2 className="text-[clamp(28px,3vw,40px)]">What&apos;s included</h2>
-            <ul className="mt-6 grid gap-x-6 border-t-2 border-ink sm:grid-cols-2">
+            <ul className="mt-6 grid grid-cols-1 gap-x-6 border-t-2 border-ink sm:grid-cols-2">
               {d.capabilities.map((c) => (
                 <li key={c} className="border-b border-rule py-3 text-[16px] font-medium">{c}</li>
               ))}
@@ -116,7 +116,7 @@ export default async function ClientDemo({ params }: { params: Promise<{ slug: s
       </section>
 
       {d.system && (
-        <Reveal className="mx-auto grid max-w-[1360px] gap-8 px-[var(--gutter)] py-16 lg:grid-cols-12">
+        <Reveal className="mx-auto grid grid-cols-1 max-w-[1360px] gap-8 px-[var(--gutter)] py-16 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <h2 className="text-[clamp(28px,3vw,40px)]">Your patient website</h2>
             <p className="mt-3 text-ink-2">The site patients see, in your own brand. The revenue system runs behind it.</p>
@@ -133,7 +133,7 @@ export default async function ClientDemo({ params }: { params: Promise<{ slug: s
       )}
 
       <section className="bg-ink text-paper">
-        <div className="mx-auto grid max-w-[1360px] gap-8 px-[var(--gutter)] py-16 lg:grid-cols-12 lg:py-20">
+        <div className="mx-auto grid grid-cols-1 max-w-[1360px] gap-8 px-[var(--gutter)] py-16 lg:grid-cols-12 lg:py-20">
           <div className="lg:col-span-7">
             <h2 className="text-[clamp(32px,4vw,54px)] font-extrabold leading-[1] tracking-[-0.035em]">Next step: a walkthrough.</h2>
             <p className="mt-4 max-w-[46ch] text-[18px] text-white/80">

@@ -36,7 +36,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "vybe",
     title: "VYBE",
-    client: "VYBE — product venture",
+    client: "VYBE (product venture)",
     kind: "AI passenger experience platform",
     role: "Product discovery, requirements, solution architecture, build and demo",
     headline: "A ride that knows where it's going, who's in it, and what the car is in the mood for.",
@@ -56,11 +56,11 @@ export const caseStudies: CaseStudy[] = [
     ],
     problem: [
       "Passengers bounce between maps, music apps, restaurant searches and group chats. None of those tools know the ride: where the car is going, how long it takes, who is in it, or the mood.",
-      "The result is a trip spent negotiating apps instead of sharing an experience — and suggestions that don't fit the time or place.",
+      "The result is a trip spent negotiating apps instead of sharing an experience, and suggestions that don't fit the time or place.",
     ],
     discovery: [
       "What decisions do people actually make in a car? Four keep recurring: what to hear, what to eat, what to see, what to do.",
-      "What context changes the right answer? Destination, trip length, number of passengers and mood — so those became the ride's first-class inputs.",
+      "What context changes the right answer? Destination, trip length, number of passengers and mood. Those became the ride's first-class inputs.",
       "Who owns the ride? A shared ride has to reflect the group, not whichever phone opened the app.",
     ],
     requirements: [
@@ -69,14 +69,14 @@ export const caseStudies: CaseStudy[] = [
       "Saved VYBEs so signed-in users can save and restore a ride setup.",
       "Voice that keeps the ride context across turns, with a typed fallback everywhere.",
       "Provider secrets server-side only; shared-ride membership through authenticated calls.",
-      "Recommendations grounded in real provider results — never invented venues.",
+      "Recommendations grounded in real provider results, never invented venues.",
     ],
     architecture: {
       intro:
         "A Vite + vanilla JavaScript front end carries the locked Variation 5 design. Vercel Functions sit between the browser and every provider, and Supabase holds identity and ride state.",
       flows: [
         {
-          title: "VYBE Voice — live path",
+          title: "VYBE Voice: live path",
           steps: [
             { label: "Microphone", note: "Browser MediaRecorder captures the request" },
             { label: "/api/voice-stt", note: "ElevenLabs Scribe transcription (Web Speech API fallback)" },
@@ -86,7 +86,7 @@ export const caseStudies: CaseStudy[] = [
           ],
         },
         {
-          title: "Ride generation — credential-gated",
+          title: "Ride generation: credential-gated",
           steps: [
             { label: "Origin + destination" },
             { label: "Google Places (New)", note: "Resolve the destination" },
@@ -126,7 +126,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     demonstrates: [
       "Takes a fuzzy product idea through discovery to a requirements model a team can build against.",
-      "Designs and ships real API integrations — speech in, reasoning, speech out — with keys kept server-side.",
+      "Designs and ships real API integrations (speech in, reasoning, speech out) with keys kept server-side.",
       "Separates what is live from what is architected, and says so in the product itself.",
     ],
     next: "cactus",
@@ -135,7 +135,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "cactus",
     title: "Cactus Chiropractic",
     client: "Cactus Chiropractic · Peoria, Arizona",
-    kind: "AI patient acquisition system — sales demo",
+    kind: "AI patient acquisition system (sales demo)",
     role: "Discovery, solution mapping, workflow architecture, live demo build",
     headline: "From the first ring to a booked visit, on the practice's own brand.",
     summary:
@@ -156,7 +156,7 @@ export const caseStudies: CaseStudy[] = [
       "The owner rarely sees where inquiries stall, because nothing connects the phone, the website, the calendar and follow-up into one record.",
     ],
     discovery: [
-      "Start from the practice's positioning — gentle, unhurried care — so automation reads as attentiveness, not a call center.",
+      "Start from the practice's positioning (gentle, unhurried care) so automation reads as attentiveness, not a call center.",
       "Map every way a new patient arrives (phone, web form) and every hand-off after it.",
       "Hard constraint: the demo must never touch the practice's public line or any real patient data.",
     ],
@@ -172,7 +172,7 @@ export const caseStudies: CaseStudy[] = [
       intro: "One connected patient journey. A single prospect flows through every module without manual re-entry.",
       flows: [
         {
-          title: "Patient journey — 13 steps",
+          title: "Patient journey in 13 steps",
           steps: [
             { label: "Call / web inquiry" },
             { label: "AI or instant SMS response" },
@@ -243,7 +243,7 @@ export const caseStudies: CaseStudy[] = [
       { label: "AI voice receptionist", tally: "inactive", note: "Designed and scripted, deliberately not activated." },
     ],
     problem: [
-      "A second practice in the same category is where templates go wrong. Copy the first build and every client gets the same stages, the same messages, the same modules — whether they fit or not.",
+      "A second practice in the same category is where templates go wrong. Copy the first build and every client gets the same stages, the same messages, the same modules, whether they fit or not.",
       "Palmer & Herman is two doctors, a different state, a different phone, and a different appetite for automation.",
     ],
     discovery: [
@@ -256,7 +256,7 @@ export const caseStudies: CaseStudy[] = [
       "A 12-stage pipeline from New Lead to Completed, Reactivation or Lost.",
       "Follow-up that stops the moment a lead books, replies, opts out or is marked lost.",
       "Reminders 24 hours and 2 hours before each visit with time, address and phone.",
-      "Ungated review requests after completed visits — no incentives, no gating.",
+      "Ungated review requests after completed visits. No incentives, no gating.",
     ],
     architecture: {
       intro: "Eleven connected components share one pipeline. Routing is explicit, so every stage change has a reason.",
@@ -323,7 +323,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Blair Digital Studios",
     client: "Blair Digital Studios · AI consulting practice",
     kind: "Revenue systems for small practices",
-    role: "Principal consultant — discovery through implementation",
+    role: "Principal consultant, discovery through implementation",
     headline: "Not “I make websites.” I find where revenue leaks and design the system that closes it.",
     summary:
       "Blair Digital Studios is Emmanuel's consulting practice. Each engagement starts with an honest audit of how a practice is found, contacted and followed up with, then connects website, AI voice, CRM, booking, follow-up and reputation into one system.",
@@ -340,11 +340,11 @@ export const caseStudies: CaseStudy[] = [
     ],
     problem: [
       "Small practices lose opportunities between systems: a search that finds thin information, a call nobody answers, a form nobody follows up, a happy patient never asked for a review.",
-      "Most vendors sell one piece — a website, a phone tool, a CRM — and leave the owner to connect them.",
+      "Most vendors sell one piece (a website, a phone tool, a CRM) and leave the owner to connect them.",
     ],
     discovery: [
       "A Digital Revenue Leak Audit built only from publicly observable information, stating that private systems were not accessed.",
-      "Every finding is labeled as verified publicly, an opportunity to investigate, or a proposed solution — for example, missed calls are an operational opportunity that requires client confirmation, not an accusation.",
+      "Every finding is labeled as verified publicly, an opportunity to investigate, or a proposed solution. For example, missed calls are an operational opportunity that requires client confirmation, not an accusation.",
     ],
     requirements: [
       "An owned, fast, mobile-first website with clear calls to action.",
@@ -378,7 +378,7 @@ export const caseStudies: CaseStudy[] = [
     demo: {
       intro: "The owner sees their own practice audited honestly, then watches a missed call become a recovered opportunity.",
       shots: [
-        D("canham-rs-audit", "Canham Digital Revenue Leak Audit: Limited owned digital presence, labeled as an opportunity to investigate.", "Findings are labeled — verified, to investigate, or proposed."),
+        D("canham-rs-audit", "Canham Digital Revenue Leak Audit: Limited owned digital presence, labeled as an opportunity to investigate.", "Findings are labeled: verified, to investigate, or proposed."),
         D("canham-rs-journey", "Canham connected system: one journey from search to reactivation, stage by stage.", "What happens, why it matters, what Blair implements."),
         D("canham-rs-missed", "Canham missed-call recovery simulation with a phone mockup and a recovery sequence.", "Simulated end to end; no message is actually sent."),
       ],
