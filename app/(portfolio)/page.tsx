@@ -375,7 +375,7 @@ export default function Home() {
               <span className="num mr-4 font-bold text-ink/45">4</span>Client solution lab
             </h2>
             <div className="self-end lg:col-span-5">
-              <p className="max-w-[44ch] text-[17px]">Six live builds for Blair Digital Studios clients and prospects. Each has a client-facing page a practice owner can open directly.</p>
+              <p className="max-w-[44ch] text-[17px]">Six live spec demos built to pitch prospective Blair Digital Studios clients, each built from public information and not affiliated with the practice. Each has its own page a practice owner can open directly.</p>
               <Key href="/solutions" event="solution_lab_click" data={{ from: "home" }} variant="secondary" className="mt-5">Open the client lab <Arrow /></Key>
             </div>
           </div>

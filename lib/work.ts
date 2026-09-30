@@ -36,7 +36,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "vybe",
     title: "VYBE",
-    client: "VYBE (product venture)",
+    client: "VYBE (Emmanuel's own product)",
     kind: "AI passenger experience platform",
     role: "Product discovery, requirements, solution architecture, build and demo",
     headline: "A ride that knows where it's going, who's in it, and what the car is in the mood for.",
@@ -134,7 +134,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "cactus",
     title: "Cactus Chiropractic",
-    client: "Cactus Chiropractic · Peoria, Arizona",
+    client: "Cactus Chiropractic, Peoria, AZ (spec demo, not affiliated)",
     kind: "AI patient acquisition system (sales demo)",
     role: "Discovery, solution mapping, workflow architecture, live demo build",
     headline: "From the first ring to a booked visit, on the practice's own brand.",
@@ -225,12 +225,12 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "palmer-herman",
     title: "Palmer & Herman Chiropractic",
-    client: "Palmer & Herman Chiropractic · Naugatuck, Connecticut",
+    client: "Palmer & Herman Chiropractic, Naugatuck, CT (spec demo, not affiliated)",
     kind: "Reusable solution architecture",
     role: "Discovery, routing design, workflow logic, rollout boundaries",
     headline: "Reuse the system logic. Never reuse the client.",
     summary:
-      "The same patient-acquisition logic as Cactus, rebuilt around a two-doctor practice in Connecticut: its own pipeline stages, tags, message copy and phone number, and its own decision about what goes live now and what waits.",
+      "The same patient-acquisition logic as Cactus, rebuilt around a two-doctor practice in Connecticut: its own pipeline stages, tags, message copy and phone number, and its own rollout plan for what goes live now and what waits.",
     source: "palmer-chiropractic.vibepreview.app",
     links: [
       { label: "Open revenue system", href: "https://palmer-chiropractic.vibepreview.app/revenue-system", primary: true, event: "demo_open_palmer_rs" },
@@ -244,11 +244,11 @@ export const caseStudies: CaseStudy[] = [
     ],
     problem: [
       "A second practice in the same category is where templates go wrong. Copy the first build and every client gets the same stages, the same messages, the same modules, whether they fit or not.",
-      "Palmer & Herman is two doctors, a different state, a different phone, and a different appetite for automation.",
+      "Palmer & Herman is two doctors, a different state and a different phone, and it needs its own launch plan.",
     ],
     discovery: [
       "Separate what is structurally the same (how a lead becomes a patient) from what is specific (voice, stages, contact points, readiness).",
-      "Ask what the practice wants live now. The answer shaped the rollout: capture, recovery, reminders and reviews now; AI voice later; reactivation only when staff choose to run it.",
+      "Decide what should go live first. The demo stages the rollout: capture, recovery, reminders and reviews now; AI voice later; reactivation only when staff choose to run it. A real engagement would confirm this in discovery.",
     ],
     requirements: [
       "Every website request lands in the CRM as a tagged lead with a pipeline opportunity.",
@@ -302,7 +302,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     tradeoffs: [
       { choice: "Reuse at the logic layer", over: "Reuse at the brand layer", why: "Capture → conversation → schedule → remind → review is universal. Stage names, tags, copy and modules are not." },
-      { choice: "Voice receptionist off at launch", over: "Shipping every module", why: "The practice wasn't ready; a staged rollout protects the patient experience." },
+      { choice: "Voice receptionist off at launch", over: "Shipping every module", why: "A staged rollout keeps the first launch simple and protects the patient experience." },
       { choice: "Manual reactivation", over: "Automatic win-back blasts", why: "Staff choose who hears from the practice after a long gap." },
       { choice: "Shared site skeleton", over: "A new layout per practice", why: "Both practices sell unhurried care, so structure is reused on purpose; identity, doctors, services and contacts are theirs." },
     ],
@@ -321,7 +321,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "blair-revenue-systems",
     title: "Blair Digital Studios",
-    client: "Blair Digital Studios · AI consulting practice",
+    client: "Blair Digital Studios (Emmanuel's consulting practice)",
     kind: "Revenue systems for small practices",
     role: "Principal consultant, discovery through implementation",
     headline: "Not “I make websites.” I find where revenue leaks and design the system that closes it.",
@@ -336,7 +336,7 @@ export const caseStudies: CaseStudy[] = [
     status: [
       { label: "Canham owner presentation + audit", tally: "live", note: "Guided presentation built on public information only." },
       { label: "Missed-call recovery simulation", tally: "demo", note: "Animated demonstration. No message is sent." },
-      { label: "Six live client and reference builds", tally: "live", note: "Five chiropractic practices and a med spa reference build." },
+      { label: "Six live spec demos and reference builds", tally: "live", note: "Built to pitch five chiropractic practices, plus a med spa template. None is affiliated with the practice." },
     ],
     problem: [
       "Small practices lose opportunities between systems: a search that finds thin information, a call nobody answers, a form nobody follows up, a happy patient never asked for a review.",

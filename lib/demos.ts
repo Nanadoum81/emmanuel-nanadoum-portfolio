@@ -140,12 +140,15 @@ export const demos: Demo[] = [
     accent: "#755832",
     accentInk: "#FFFFFF",
     site: "https://blair-medspa.vibepreview.com",
-    status: [{ label: "Reference build live", tally: "live" }],
+    status: [
+      { label: "Reference template live", tally: "live" },
+      { label: "Contact details are template placeholders", tally: "demo" },
+    ],
     solves: "An editorial med spa experience designed to move visitors from treatment interest to a booked consultation.",
     detail: [
       "Treatment pages for injectables, skin rejuvenation, laser, body contouring and medical skincare.",
       "Membership and results pages that support the consultation decision.",
-      "Built as a reference for aesthetic practices; each deployment is configured with the practice's own locations and contacts.",
+      "Built as a multi-location template: address, phone and email are placeholders ({{location.*}}) that each deployment fills with the practice's own details.",
     ],
     capabilities: ["Editorial website", "Consultation booking", "Treatment pages", "Membership", "SMS terms + privacy pages"],
     desktop: "/shots/medspa-d.jpg",

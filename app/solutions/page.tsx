@@ -20,7 +20,7 @@ export default function SolutionsHub() {
         <h1 className="text-[clamp(44px,6.6vw,88px)] font-extrabold leading-[0.93] tracking-[-0.045em] lg:col-span-7">Live solution demos</h1>
         <div className="grid content-end gap-4 text-[17px] text-ink-2 lg:col-span-5">
           <p>
-            Every demo below is a working build for a real practice or a reference build. Open the one prepared for you, or look at how the same system adapts to different practices.
+            Every demo below is a working spec build, prepared from public information to show a practice what the system would look like on its own brand, plus one reference template. Open the one prepared for you, or see how the same system adapts to different practices.
           </p>
           <p>
             Dashboards and pipelines use <span className="hl text-ink">clearly labeled sample data</span>. No patient information is ever shown.

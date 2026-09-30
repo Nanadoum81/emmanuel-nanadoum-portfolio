@@ -106,7 +106,7 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
             </div>
             <dl className={`self-end border-t text-[15px] lg:col-span-5 ${isVybe ? "border-white/40" : "border-ink"}`}>
               {[
-                ["Client", c.client],
+                ["Built for", c.client],
                 ["Engagement", c.kind],
                 ["My role", c.role],
                 ["Source", c.source],

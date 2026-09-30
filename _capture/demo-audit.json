@@ -1,0 +1,1523 @@
+{
+ "cactus": {
+  "base": "https://cactus-chiro.vibepreview.app",
+  "pages": [
+   {
+    "path": "/",
+    "status": 200,
+    "title": "Cactus Chiropractic Clinic | Gentle Chiropractor in Peoria, AZ",
+    "desc": "Gentle, unhurried chiropractic care in Peoria, Arizona. A small practice with a personal approach. Call (623) 979-3998.",
+    "og": "https://vibe.filesafe.space/1789766924040764463/assets/3d3644b6-0718-43ec-a1fb-d4d4a5246278.png",
+    "canonical": "",
+    "h1": [
+     "Gentle care.\nTime to listen."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 1,
+    "empty": [],
+    "errs": [
+     "Failed to load resource: the server responded with a status of 404 ()"
+    ],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/revenue-system",
+    "status": 200,
+    "title": "The Blair Chiropractor Revenue System | Patient Acquisition Demo — Blair Digital Studios",
+    "desc": "Blair Digital Studios Chiropractor Revenue System demo for Cactus Chiropractic in Peoria, AZ: AI Voice, missed-call text-back, instant lead response, CRM pipeline, and reactivation. Illustrative demo data.",
+    "og": "https://vibe.filesafe.space/1789766924040764463/assets/e956ef81-e592-4a2f-b56c-eaa65a5843ed.png",
+    "canonical": "",
+    "h1": [
+     "The Blair Chiropractor Revenue System"
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 13,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/services",
+    "status": 200,
+    "title": "Care | Cactus Chiropractic Clinic, Peoria AZ",
+    "desc": "Gentle chiropractic care and therapeutic massage in Peoria, Arizona. An individualized approach to common musculoskeletal concerns. Call (623) 979-3998.",
+    "og": "https://vibe.filesafe.space/1789766924040764463/assets/3d3644b6-0718-43ec-a1fb-d4d4a5246278.png",
+    "canonical": "",
+    "h1": [
+     "Gentle chiropractic care in Peoria"
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 1,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/about",
+    "status": 200,
+    "title": "The Practice | Cactus Chiropractic Clinic, Peoria AZ",
+    "desc": "Cactus Chiropractic Clinic LLC in Peoria, AZ — a small chiropractic practice led by Dr. Catherine Devore-Meehan, D.C. An unhurried, personal approach to care.",
+    "og": "https://vibe.filesafe.space/1789766924040764463/assets/dc1e61bd-67d9-4bb9-bb2d-6fc0a91003da.png",
+    "canonical": "",
+    "h1": [
+     "Dr. Catherine Devore-Meehan, D.C."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 1,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/new-patient",
+    "status": 200,
+    "title": "Request an Appointment | Cactus Chiropractic, Peoria AZ",
+    "desc": "Request an appointment at Cactus Chiropractic in Peoria, AZ. Tell us what's bringing you in and we'll reach out to schedule your visit.",
+    "og": "https://vibe.filesafe.space/1789766924040764463/assets/3d3644b6-0718-43ec-a1fb-d4d4a5246278.png",
+    "canonical": "",
+    "h1": [
+     "Request a time.\nWe'll take it from there."
+    ],
+    "brokenImgs": [],
+    "forms": [
+     {
+      "action": null,
+      "method": "get",
+      "fields": [
+       "firstName",
+       "lastName",
+       "email",
+       "phone",
+       "preferredDate",
+       "reason",
+       "newPatient"
+      ]
+     }
+    ],
+    "placeholders": [],
+    "demoWords": 1,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/contact",
+    "status": 200,
+    "title": "Visit & Contact | Cactus Chiropractic Clinic, Peoria AZ",
+    "desc": "Cactus Chiropractic Clinic, 8426 W Peoria Ave Ste B, Peoria, AZ 85345. Call (623) 979-3998 for appointments, directions, and current office hours.",
+    "og": "https://vibe.filesafe.space/1789766924040764463/assets/e0a395c0-273c-4dd5-8480-c8d9ad941dc6.png",
+    "canonical": "",
+    "h1": [
+     "Come see us"
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 1,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   }
+  ],
+  "ext": [
+   "LINK tel:+16239793998",
+   "LINK tel:+18607434823",
+   "404 https://api.leadconnectorhq.com/widget/bookings/blair-chiro-revenue-demo",
+   "200 https://www.google.com/maps/search/?api=1&query=8426+W+Peoria+Ave+Ste+B+Peoria+AZ+85345"
+  ]
+ },
+ "nelson": {
+  "base": "https://nelson-chiro.vibepreview.app",
+  "pages": [
+   {
+    "path": "/",
+    "status": 200,
+    "title": "Nelson Chiropractic | Chiropractic Care in Tempe, AZ",
+    "desc": "Personalized, hands-on chiropractic care in Tempe, Arizona. Donald L. Nelson, DC — focused on neck and back discomfort, accident-related care, and ongoing wellness. Request an appointment today.",
+    "og": "https://vibe.filesafe.space/1790295706157346456/assets/d145b06c-c985-4c8e-a8c6-33e624fcf948.png",
+    "canonical": "",
+    "h1": [
+     "Move through your day with less neck and back discomfort."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 0,
+    "empty": [],
+    "errs": [
+     "Failed to load resource: the server responded with a status of 404 ()"
+    ],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/revenue-system",
+    "status": 404,
+    "title": "",
+    "desc": "",
+    "og": "",
+    "canonical": "",
+    "h1": [
+     "404"
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 0,
+    "empty": [],
+    "errs": [
+     "Failed to load resource: the server responded with a status of 404 ()"
+    ],
+    "failed": [
+     "404 https://nelson-chiro.vibepreview.app/revenue-system"
+    ],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/services",
+    "status": 200,
+    "title": "Chiropractic Services | Nelson Chiropractic, Tempe AZ",
+    "desc": "Chiropractic care, accident-related care, and wellness support in Tempe, Arizona. Explore the services offered by Donald L. Nelson, DC and request an appointment.",
+    "og": "",
+    "canonical": "",
+    "h1": [
+     "Chiropractic care, tailored to how you're feeling."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 0,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/about",
+    "status": 200,
+    "title": "About | Nelson Chiropractic, Tempe AZ",
+    "desc": "Nelson Chiropractic is a local Tempe practice offering personalized, hands-on chiropractic care with Donald L. Nelson, DC. Learn about the practice and what to expect.",
+    "og": "",
+    "canonical": "",
+    "h1": [
+     "A neighborhood practice, built on attention."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 0,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/faq",
+    "status": 200,
+    "title": "FAQ | Nelson Chiropractic, Tempe AZ",
+    "desc": "Answers to common questions about chiropractic care at Nelson Chiropractic in Tempe — appointments, location, what to expect, and more.",
+    "og": "",
+    "canonical": "",
+    "h1": [
+     "Questions, answered plainly."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 0,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/contact",
+    "status": 200,
+    "title": "Request an Appointment | Nelson Chiropractic, Tempe AZ",
+    "desc": "Request a chiropractic appointment at Nelson Chiropractic in Tempe, Arizona. Call (480) 966-1635 or submit the appointment request form.",
+    "og": "",
+    "canonical": "",
+    "h1": [
+     "Request an appointment."
+    ],
+    "brokenImgs": [],
+    "forms": [
+     {
+      "action": null,
+      "method": "get",
+      "fields": []
+     }
+    ],
+    "placeholders": [],
+    "demoWords": 0,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/privacy",
+    "status": 200,
+    "title": "Privacy Policy | Nelson Chiropractic",
+    "desc": "Privacy policy for Nelson Chiropractic in Tempe, Arizona — how patient and visitor information is handled.",
+    "og": "",
+    "canonical": "",
+    "h1": [
+     "Privacy Policy"
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 0,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   }
+  ],
+  "ext": [
+   "LINK tel:+14809661635",
+   "200 https://www.google.com/maps/search/?api=1&query=2409+S+Rural+Rd+%23D+Tempe+AZ+85282"
+  ]
+ },
+ "palmer": {
+  "base": "https://palmer-chiropractic.vibepreview.app",
+  "pages": [
+   {
+    "path": "/",
+    "status": 200,
+    "title": "Palmer & Herman Chiropractic | Naugatuck, CT",
+    "desc": "Palmer & Herman Chiropractic provides chiropractic care in Naugatuck, Connecticut. Learn about the practice, meet the doctors, and request a visit.",
+    "og": "https://vibe.filesafe.space/1790089341867139058/assets/c8f22ca7-1a58-46f1-a3b9-57f49d4dcb07.png",
+    "canonical": "",
+    "h1": [
+     "Gentle care.\nTime to listen."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 1,
+    "empty": [],
+    "errs": [
+     "Failed to load resource: the server responded with a status of 404 ()"
+    ],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/revenue-system",
+    "status": 200,
+    "title": "Revenue System Demo | Palmer & Herman Chiropractic",
+    "desc": "A connected patient acquisition and follow-up system built around the practice — lead capture, follow-up, reminders, and reactivation.",
+    "og": "",
+    "canonical": "",
+    "h1": [
+     "Turn more inquiries into booked patient conversations."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 8,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/services",
+    "status": 200,
+    "title": "Care Areas & Services | Palmer & Herman Chiropractic",
+    "desc": "Explore the chiropractic care areas at Palmer & Herman Chiropractic in Naugatuck, CT — evaluation, movement, back and neck concerns, and ongoing care.",
+    "og": "https://vibe.filesafe.space/1790089341867139058/assets/d5120748-633b-4a06-b0aa-59b0ce7fa9e2.png",
+    "canonical": "",
+    "h1": [
+     "Chiropractic care, explained plainly"
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 1,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/doctors",
+    "status": 200,
+    "title": "Meet the Doctors | Palmer & Herman Chiropractic",
+    "desc": "Meet Dr. Terry A. Palmer, DC and Dr. Glenn S. Herman, DC — the chiropractors behind Palmer & Herman Chiropractic in Naugatuck, CT.",
+    "og": "https://vibe.filesafe.space/1790089341867139058/assets/d6f63d53-eb2f-4edd-9ef3-c58596991100.png",
+    "canonical": "",
+    "h1": [
+     "Meet your chiropractors"
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 1,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/new-patients",
+    "status": 200,
+    "title": "New Patients | Palmer & Herman Chiropractic",
+    "desc": "New to Palmer & Herman Chiropractic? Learn what to expect and request your first visit in Naugatuck, CT.",
+    "og": "https://vibe.filesafe.space/1790089341867139058/assets/c8f22ca7-1a58-46f1-a3b9-57f49d4dcb07.png",
+    "canonical": "",
+    "h1": [
+     "Your first visit, made simple"
+    ],
+    "brokenImgs": [],
+    "forms": [
+     {
+      "action": null,
+      "method": "get",
+      "fields": []
+     }
+    ],
+    "placeholders": [],
+    "demoWords": 1,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/contact",
+    "status": 200,
+    "title": "Contact | Palmer & Herman Chiropractic",
+    "desc": "Contact Palmer & Herman Chiropractic in Naugatuck, CT. Call (203) 729-4047, get directions, or request a visit online.",
+    "og": "https://vibe.filesafe.space/1790089341867139058/assets/01df3bc2-f806-4639-b1b4-8f5d3b795ed3.png",
+    "canonical": "",
+    "h1": [
+     "Get in touch"
+    ],
+    "brokenImgs": [],
+    "forms": [
+     {
+      "action": null,
+      "method": "get",
+      "fields": []
+     }
+    ],
+    "placeholders": [],
+    "demoWords": 1,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   }
+  ],
+  "ext": [
+   "LINK tel:+12037294047",
+   "200 https://www.google.com/maps/search/?api=1&query=Palmer+%26+Herman+Chiropractic+331+Church+St+Naugatuck+CT+06770"
+  ]
+ },
+ "coyote": {
+  "base": "https://coyote-wellness.vibepreview.app",
+  "pages": [
+   {
+    "path": "/",
+    "status": 200,
+    "title": "Coyote Chiropractic & Wellness Center | Tempe, AZ Chiropractor",
+    "desc": "Locally established Tempe chiropractic practice led by Dr. David Merchant. Chiropractic care, massage & bodywork, and accident-related care. Request an appointment today.",
+    "og": "https://vibe.filesafe.space/1790292342127466994/assets/5919b68e-64a4-425d-9e05-b1d4a846516f.png",
+    "canonical": "",
+    "h1": [
+     "Move better. Feel more like yourself."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 0,
+    "empty": [],
+    "errs": [
+     "Failed to load resource: the server responded with a status of 404 ()"
+    ],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/revenue-system",
+    "status": 404,
+    "title": "",
+    "desc": "",
+    "og": "",
+    "canonical": "",
+    "h1": [
+     "404"
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 0,
+    "empty": [],
+    "errs": [
+     "Failed to load resource: the server responded with a status of 404 ()"
+    ],
+    "failed": [
+     "404 https://coyote-wellness.vibepreview.app/revenue-system"
+    ],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/services",
+    "status": 200,
+    "title": "Chiropractic Services in Tempe | Coyote Chiropractic",
+    "desc": "Chiropractic care, auto accident and injury care, massage & bodywork, and wellness maintenance care in Tempe, Arizona. Explore our services.",
+    "og": "https://vibe.filesafe.space/1790292342127466994/assets/53562ae5-26f3-45bb-b38d-cfd454bf192f.png",
+    "canonical": "",
+    "h1": [
+     "Chiropractic care, thoughtfully delivered."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 0,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/about",
+    "status": 200,
+    "title": "About Dr. David Merchant | Coyote Chiropractic, Tempe",
+    "desc": "Meet Dr. David Merchant and Coyote Chiropractic and Wellness Center — a locally established Tempe practice focused on personal, unhurried chiropractic care.",
+    "og": "https://vibe.filesafe.space/1790292342127466994/assets/f0ff7e28-2632-4260-8305-36e5b133596a.png",
+    "canonical": "",
+    "h1": [
+     "Personal chiropractic care, rooted in Tempe."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 0,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/what-to-expect",
+    "status": 200,
+    "title": "What to Expect | Coyote Chiropractic, Tempe",
+    "desc": "Your first visit to Coyote Chiropractic in Tempe, step by step — from scheduling and your evaluation to a clear care plan and ongoing support.",
+    "og": "https://vibe.filesafe.space/1790292342127466994/assets/5919b68e-64a4-425d-9e05-b1d4a846516f.png",
+    "canonical": "",
+    "h1": [
+     "Knowing what to expect makes it easier."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 0,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/faq",
+    "status": 200,
+    "title": "FAQ | Coyote Chiropractic & Wellness Center, Tempe",
+    "desc": "Answers to common questions about chiropractic care, first visits, auto accident care, and scheduling at Coyote Chiropractic in Tempe, Arizona.",
+    "og": "https://vibe.filesafe.space/1790292342127466994/assets/5919b68e-64a4-425d-9e05-b1d4a846516f.png",
+    "canonical": "",
+    "h1": [
+     "Frequently asked questions"
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 0,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/contact",
+    "status": 200,
+    "title": "Request an Appointment | Coyote Chiropractic, Tempe",
+    "desc": "Request a chiropractic appointment in Tempe with Dr. David Merchant, or call (480) 820-0999. Located at 3006 S Rural Rd, Tempe, AZ 85282.",
+    "og": "https://vibe.filesafe.space/1790292342127466994/assets/5919b68e-64a4-425d-9e05-b1d4a846516f.png",
+    "canonical": "",
+    "h1": [
+     "Request an appointment"
+    ],
+    "brokenImgs": [],
+    "forms": [
+     {
+      "action": null,
+      "method": "get",
+      "fields": [
+       "firstName",
+       "lastName",
+       "phone",
+       "email",
+       "serviceNeeded",
+       "preferredContact",
+       "message"
+      ]
+     }
+    ],
+    "placeholders": [],
+    "demoWords": 0,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/services/chiropractic",
+    "status": 200,
+    "title": "Chiropractic Care in Tempe | Coyote Chiropractic",
+    "desc": "Hands-on chiropractic adjustments focused on the relationship between your spine and nervous system, supporting how your body moves and feels day to day.",
+    "og": "https://vibe.filesafe.space/1790292342127466994/assets/53562ae5-26f3-45bb-b38d-cfd454bf192f.png",
+    "canonical": "",
+    "h1": [
+     "Chiropractic Care"
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 0,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/services/auto-accident",
+    "status": 200,
+    "title": "Auto Accident & Injury Care in Tempe | Coyote Chiropractic",
+    "desc": "Chiropractic evaluation and care for patients seeking support after a motor vehicle accident, focused on documenting your condition and addressing injury-related concerns.",
+    "og": "https://vibe.filesafe.space/1790292342127466994/assets/45de72ae-48b5-44a3-bba1-236cd2422209.png",
+    "canonical": "",
+    "h1": [
+     "Auto Accident & Injury Care"
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 0,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/services/massage",
+    "status": 200,
+    "title": "Massage & Bodywork in Tempe | Coyote Chiropractic",
+    "desc": "Therapeutic massage and bodywork that complements chiropractic care, addressing soft-tissue tension and helping you feel more settled between adjustments.",
+    "og": "https://vibe.filesafe.space/1790292342127466994/assets/a0048854-7d87-4808-86f6-c21fd03239cd.png",
+    "canonical": "",
+    "h1": [
+     "Massage & Bodywork"
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 0,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/services/wellness",
+    "status": 200,
+    "title": "Wellness & Maintenance Care in Tempe | Coyote Chiropractic",
+    "desc": "Periodic chiropractic visits for patients who want to stay ahead of tension and support how their body moves over time, as part of a broader wellness routine.",
+    "og": "https://vibe.filesafe.space/1790292342127466994/assets/5919b68e-64a4-425d-9e05-b1d4a846516f.png",
+    "canonical": "",
+    "h1": [
+     "Wellness & Maintenance Care"
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 0,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/privacy",
+    "status": 200,
+    "title": "Privacy Policy | Coyote Chiropractic & Wellness Center",
+    "desc": "Privacy policy for Coyote Chiropractic and Wellness Center, P.C., describing how we handle information submitted through our website.",
+    "og": "",
+    "canonical": "",
+    "h1": [
+     "Privacy Policy"
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 0,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   }
+  ],
+  "ext": [
+   "LINK tel:+14808200999",
+   "200 https://www.google.com/maps/search/?api=1&query=Coyote+Chiropractic+3006+S+Rural+Rd+Tempe+AZ+85282"
+  ]
+ },
+ "canham": {
+  "base": "https://canham-compass.vibepreview.app",
+  "pages": [
+   {
+    "path": "/",
+    "status": 200,
+    "title": "Canham Chiropractic — Dr. Rosalind L. Canham, DC | Phoenix, AZ",
+    "desc": "Personal chiropractic care with Dr. Rosalind L. Canham, DC in Phoenix, Arizona. Request an appointment or call (602) 255-0600.",
+    "og": "https://vibe.filesafe.space/1790369200444591230/assets/7e83b801-adbd-4a2a-9d7a-414d7fcf59e1.png",
+    "canonical": "",
+    "h1": [
+     "Personal chiropractic care, rooted in Phoenix."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 2,
+    "empty": [],
+    "errs": [
+     "Failed to load resource: the server responded with a status of 404 ()"
+    ],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/revenue-system",
+    "status": 200,
+    "title": "Revenue System — Canham Chiropractic | Blair Digital Studios",
+    "desc": "An owner-facing demonstration of how Blair Digital Studios connects discovery, patient inquiries, follow-up, and reputation into one growth system for Canham Chiropractic.",
+    "og": "",
+    "canonical": "",
+    "h1": [
+     "Your digital front door is only the beginning."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 22,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/about",
+    "status": 200,
+    "title": "About — Canham Chiropractic | Dr. Rosalind L. Canham, DC",
+    "desc": "Dr. Rosalind L. Canham, DC, provides personal chiropractic care in Phoenix, Arizona. Learn about the practice on North 7th Street.",
+    "og": "",
+    "canonical": "",
+    "h1": [
+     "Care delivered one patient at a time."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 2,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/care",
+    "status": 200,
+    "title": "Care & Services — Canham Chiropractic | Phoenix, AZ",
+    "desc": "Chiropractic adjustment, supportive wellness care, and new patient consultations with Dr. Rosalind L. Canham, DC in Phoenix.",
+    "og": "",
+    "canonical": "",
+    "h1": [
+     "Hands-on chiropractic, tailored to you."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 2,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/new-patients",
+    "status": 200,
+    "title": "New Patients — Canham Chiropractic | Phoenix, AZ",
+    "desc": "Starting chiropractic care with Dr. Rosalind L. Canham, DC in Phoenix. Request your first visit and learn what to expect.",
+    "og": "",
+    "canonical": "",
+    "h1": [
+     "Starting care is simple."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 2,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/faq",
+    "status": 200,
+    "title": "FAQ — Canham Chiropractic | Phoenix, AZ",
+    "desc": "Frequently asked questions about chiropractic care with Dr. Rosalind L. Canham, DC in Phoenix — location, scheduling, insurance, and more.",
+    "og": "",
+    "canonical": "",
+    "h1": [
+     "Questions, answered."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 2,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/contact",
+    "status": 200,
+    "title": "Contact — Canham Chiropractic | Phoenix, AZ",
+    "desc": "Contact Canham Chiropractic in Phoenix. Call (602) 255-0600 or request an appointment with Dr. Rosalind L. Canham, DC.",
+    "og": "",
+    "canonical": "",
+    "h1": [
+     "We'd love to hear from you."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 2,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/request-appointment",
+    "status": 200,
+    "title": "Request an Appointment — Canham Chiropractic | Phoenix, AZ",
+    "desc": "Request a chiropractic appointment with Dr. Rosalind L. Canham, DC in Phoenix. Submit your details and we'll confirm your visit.",
+    "og": "",
+    "canonical": "",
+    "h1": [
+     "Tell us when works for you."
+    ],
+    "brokenImgs": [],
+    "forms": [
+     {
+      "action": null,
+      "method": "get",
+      "fields": [
+       "firstName",
+       "lastName",
+       "phone",
+       "email",
+       "_R_jiaq_-form-item",
+       "_R_13iaq_-form-item",
+       "_R_4iaq_-form-item",
+       "reason",
+       "_R_6iaq_-form-item"
+      ]
+     }
+    ],
+    "placeholders": [],
+    "demoWords": 2,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/presentation",
+    "status": 200,
+    "title": "Guided Presentation — Canham Chiropractic | Blair Digital Studios",
+    "desc": "A guided owner presentation from Blair Digital Studios for Canham Chiropractic — what we found, the new website, where opportunities leak, the Blair system, and the next step.",
+    "og": "",
+    "canonical": "",
+    "h1": [
+     "What We Found"
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 2,
+    "empty": [],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   }
+  ],
+  "ext": [
+   "LINK tel:+16022550600",
+   "200 https://www.google.com/maps/dir/?api=1&destination=2041%20N%207th%20St%2C%20Phoenix%2C%20AZ%2085006"
+  ]
+ },
+ "medspa": {
+  "base": "https://blair-medspa.vibepreview.com",
+  "pages": [
+   {
+    "path": "/",
+    "status": 200,
+    "title": "Blair MedSpa — Personalized Aesthetic Medicine",
+    "desc": "Blair MedSpa delivers personalized aesthetic medicine — injectables, skin rejuvenation, laser and body contouring — with medical authority and natural-looking r",
+    "og": "https://vibe.filesafe.space/1788457200612800355/assets/b55f1968-9758-4731-a472-aa002c5b2b0d.png",
+    "canonical": "https://blair-medspa.vibepreview.com/",
+    "h1": [
+     "Confidence,\nrefined."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [
+     "{{location.address}}",
+     "{{location.email}}"
+    ],
+    "demoWords": 0,
+    "empty": [
+     "CALL -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "OR CALL (000) 000-0000 -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "{{location.email}} -> mailto:{{location.email}}",
+     "Call -> tel:{{location.phone}}"
+    ],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/revenue-system",
+    "status": 200,
+    "title": "Page Not Found — Blair MedSpa",
+    "desc": "The page you're looking for could not be found.",
+    "og": "https://vibe.filesafe.space/1788457200612800355/assets/b55f1968-9758-4731-a472-aa002c5b2b0d.png",
+    "canonical": "https://blair-medspa.vibepreview.com/revenue-system",
+    "h1": [
+     "Not found."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [],
+    "demoWords": 0,
+    "empty": [],
+    "errs": [
+     "404: /revenue-system"
+    ],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/treatments",
+    "status": 200,
+    "title": "Treatments — Blair MedSpa",
+    "desc": "Explore Blair MedSpa treatments: neuromodulators, dermal fillers, skin rejuvenation, laser, body contouring and medical-grade skincare. Book a personalized cons",
+    "og": "https://vibe.filesafe.space/1788457200612800355/assets/b55f1968-9758-4731-a472-aa002c5b2b0d.png",
+    "canonical": "https://blair-medspa.vibepreview.com/treatments",
+    "h1": [
+     "Treatments"
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [
+     "{{location.address}}",
+     "{{location.email}}"
+    ],
+    "demoWords": 0,
+    "empty": [
+     "CALL -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "OR CALL (000) 000-0000 -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "{{location.email}} -> mailto:{{location.email}}",
+     "Call -> tel:{{location.phone}}"
+    ],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/about",
+    "status": 200,
+    "title": "About & Providers — Blair MedSpa",
+    "desc": "Blair MedSpa is a medical aesthetics practice built on provider expertise, personalized care and natural-looking outcomes. Meet the practice.",
+    "og": "https://vibe.filesafe.space/1788457200612800355/assets/b55f1968-9758-4731-a472-aa002c5b2b0d.png",
+    "canonical": "https://blair-medspa.vibepreview.com/about",
+    "h1": [
+     "Medicine, with an\neditorial eye."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [
+     "{{location.address}}",
+     "{{location.email}}"
+    ],
+    "demoWords": 0,
+    "empty": [
+     "CALL -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "OR CALL (000) 000-0000 -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "{{location.email}} -> mailto:{{location.email}}",
+     "Call -> tel:{{location.phone}}"
+    ],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/results",
+    "status": 200,
+    "title": "Results Gallery — Blair MedSpa",
+    "desc": "Real before-and-after results from Blair MedSpa. Honest, unaltered imagery reflecting individualized treatment plans. Book your consultation.",
+    "og": "https://vibe.filesafe.space/1788457200612800355/assets/b55f1968-9758-4731-a472-aa002c5b2b0d.png",
+    "canonical": "https://blair-medspa.vibepreview.com/results",
+    "h1": [
+     "The difference is\nimperceptible."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [
+     "{{location.address}}",
+     "{{location.email}}"
+    ],
+    "demoWords": 0,
+    "empty": [
+     "CALL -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "OR CALL (000) 000-0000 -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "{{location.email}} -> mailto:{{location.email}}",
+     "Call -> tel:{{location.phone}}"
+    ],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/membership",
+    "status": 200,
+    "title": "Membership — Blair MedSpa",
+    "desc": "Blair MedSpa membership structures savings on maintenance treatments, priority scheduling and a personalized skincare program. Protect your results.",
+    "og": "https://vibe.filesafe.space/1788457200612800355/assets/b55f1968-9758-4731-a472-aa002c5b2b0d.png",
+    "canonical": "https://blair-medspa.vibepreview.com/membership",
+    "h1": [
+     "Maintenance,\nmade simple."
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [
+     "{{location.address}}",
+     "{{location.email}}"
+    ],
+    "demoWords": 0,
+    "empty": [
+     "CALL -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "OR CALL (000) 000-0000 -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "{{location.email}} -> mailto:{{location.email}}",
+     "Call -> tel:{{location.phone}}"
+    ],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/contact",
+    "status": 200,
+    "title": "Contact & Book Consultation — Blair MedSpa",
+    "desc": "Book a personalized consultation at Blair MedSpa. Call, email or request your appointment online. Captured securely for a private, no-obligation assessment.",
+    "og": "https://vibe.filesafe.space/1788457200612800355/assets/b55f1968-9758-4731-a472-aa002c5b2b0d.png",
+    "canonical": "https://blair-medspa.vibepreview.com/contact",
+    "h1": [
+     "Begin the conversation."
+    ],
+    "brokenImgs": [],
+    "forms": [
+     {
+      "action": null,
+      "method": "get",
+      "fields": [
+       "sms-consent"
+      ]
+     }
+    ],
+    "placeholders": [
+     "{{location.email}}",
+     "{{location.address}}",
+     "{{location.address}}",
+     "{{location.email}}"
+    ],
+    "demoWords": 0,
+    "empty": [
+     "CALL -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "{{location.email}} -> mailto:{{location.email}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "{{location.email}} -> mailto:{{location.email}}"
+    ],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/consultation",
+    "status": 200,
+    "title": "Book Your Consultation — Blair MedSpa",
+    "desc": "A personalized, no-obligation consultation with a licensed medical aesthetic provider. Share your goals and book your appointment.",
+    "og": "https://vibe.filesafe.space/1788457200612800355/assets/b55f1968-9758-4731-a472-aa002c5b2b0d.png",
+    "canonical": "https://blair-medspa.vibepreview.com/consultation",
+    "h1": [
+     "Your consultation."
+    ],
+    "brokenImgs": [],
+    "forms": [
+     {
+      "action": null,
+      "method": "get",
+      "fields": [
+       "sms-consent"
+      ]
+     }
+    ],
+    "placeholders": [
+     "{{location.address}}",
+     "{{location.email}}"
+    ],
+    "demoWords": 0,
+    "empty": [
+     "CALL -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "{{location.email}} -> mailto:{{location.email}}",
+     "Call -> tel:{{location.phone}}"
+    ],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/treatments/neuromodulators",
+    "status": 200,
+    "title": "Neuromodulators — Blair MedSpa",
+    "desc": "Botox & Dysport — refined movement, not frozen expression. Dynamic lines caused by repeated facial movement — forehead, glabella (between the brows) ",
+    "og": "https://vibe.filesafe.space/1788457200612800355/assets/b55f1968-9758-4731-a472-aa002c5b2b0d.png",
+    "canonical": "https://blair-medspa.vibepreview.com/treatments/neuromodulators",
+    "h1": [
+     "Neuromodulators"
+    ],
+    "brokenImgs": [],
+    "forms": [
+     {
+      "action": null,
+      "method": "get",
+      "fields": [
+       "sms-consent"
+      ]
+     }
+    ],
+    "placeholders": [
+     "{{location.address}}",
+     "{{location.email}}"
+    ],
+    "demoWords": 0,
+    "empty": [
+     "CALL -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "OR CALL (000) 000-0000 -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "{{location.email}} -> mailto:{{location.email}}",
+     "Call -> tel:{{location.phone}}"
+    ],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/treatments/microneedling",
+    "status": 200,
+    "title": "Microneedling — Blair MedSpa",
+    "desc": "Collagen-induction therapy for texture, tone and refinement. Uneven skin texture, enlarged pores, superficial scarring and dullness from accumulated su",
+    "og": "https://vibe.filesafe.space/1788457200612800355/assets/b55f1968-9758-4731-a472-aa002c5b2b0d.png",
+    "canonical": "https://blair-medspa.vibepreview.com/treatments/microneedling",
+    "h1": [
+     "Microneedling"
+    ],
+    "brokenImgs": [],
+    "forms": [
+     {
+      "action": null,
+      "method": "get",
+      "fields": [
+       "sms-consent"
+      ]
+     }
+    ],
+    "placeholders": [
+     "{{location.address}}",
+     "{{location.email}}"
+    ],
+    "demoWords": 0,
+    "empty": [
+     "CALL -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "OR CALL (000) 000-0000 -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "{{location.email}} -> mailto:{{location.email}}",
+     "Call -> tel:{{location.phone}}"
+    ],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/treatments/laser-resurfacing",
+    "status": 200,
+    "title": "Laser Resurfacing — Blair MedSpa",
+    "desc": "Precision light for pigment, texture and collagen renewal. Sun damage, uneven pigment, vascular concerns, fine lines and loss of firmness.",
+    "og": "https://vibe.filesafe.space/1788457200612800355/assets/b55f1968-9758-4731-a472-aa002c5b2b0d.png",
+    "canonical": "https://blair-medspa.vibepreview.com/treatments/laser-resurfacing",
+    "h1": [
+     "Laser Resurfacing"
+    ],
+    "brokenImgs": [],
+    "forms": [
+     {
+      "action": null,
+      "method": "get",
+      "fields": [
+       "sms-consent"
+      ]
+     }
+    ],
+    "placeholders": [
+     "{{location.address}}",
+     "{{location.email}}"
+    ],
+    "demoWords": 0,
+    "empty": [
+     "CALL -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "OR CALL (000) 000-0000 -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "{{location.email}} -> mailto:{{location.email}}",
+     "Call -> tel:{{location.phone}}"
+    ],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/treatments/body-contouring",
+    "status": 200,
+    "title": "Non-Surgical Body Contouring — Blair MedSpa",
+    "desc": "Sculpting and skin-tightening protocols tailored to your anatomy. Localized fat deposits and skin laxity resistant to diet and exercise.",
+    "og": "https://vibe.filesafe.space/1788457200612800355/assets/b55f1968-9758-4731-a472-aa002c5b2b0d.png",
+    "canonical": "https://blair-medspa.vibepreview.com/treatments/body-contouring",
+    "h1": [
+     "Non-Surgical Body Contouring"
+    ],
+    "brokenImgs": [],
+    "forms": [
+     {
+      "action": null,
+      "method": "get",
+      "fields": [
+       "sms-consent"
+      ]
+     }
+    ],
+    "placeholders": [
+     "{{location.address}}",
+     "{{location.email}}"
+    ],
+    "demoWords": 0,
+    "empty": [
+     "CALL -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "OR CALL (000) 000-0000 -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "{{location.email}} -> mailto:{{location.email}}",
+     "Call -> tel:{{location.phone}}"
+    ],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/treatments/medical-skincare",
+    "status": 200,
+    "title": "Medical-Grade Skincare — Blair MedSpa",
+    "desc": "Prescription-strength regimens engineered for measurable change. Inadequate over-the-counter routines that fail to address pigment, aging, acne or barrier ",
+    "og": "https://vibe.filesafe.space/1788457200612800355/assets/b55f1968-9758-4731-a472-aa002c5b2b0d.png",
+    "canonical": "https://blair-medspa.vibepreview.com/treatments/medical-skincare",
+    "h1": [
+     "Medical-Grade Skincare"
+    ],
+    "brokenImgs": [],
+    "forms": [
+     {
+      "action": null,
+      "method": "get",
+      "fields": [
+       "sms-consent"
+      ]
+     }
+    ],
+    "placeholders": [
+     "{{location.address}}",
+     "{{location.email}}"
+    ],
+    "demoWords": 0,
+    "empty": [
+     "CALL -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "OR CALL (000) 000-0000 -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "{{location.email}} -> mailto:{{location.email}}",
+     "Call -> tel:{{location.phone}}"
+    ],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/privacy",
+    "status": 200,
+    "title": "Privacy Policy — Blair MedSpa",
+    "desc": "Privacy Policy for Blair MedSpa — how we collect, use and protect your personal information.",
+    "og": "https://vibe.filesafe.space/1788457200612800355/assets/b55f1968-9758-4731-a472-aa002c5b2b0d.png",
+    "canonical": "https://blair-medspa.vibepreview.com/privacy",
+    "h1": [
+     "Privacy Policy"
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [
+     "{{location.email}}",
+     "{{location.address}}",
+     "{{location.email}}"
+    ],
+    "demoWords": 0,
+    "empty": [
+     "CALL -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "{{location.email}} -> mailto:{{location.email}}",
+     "Call -> tel:{{location.phone}}"
+    ],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/terms",
+    "status": 200,
+    "title": "Terms of Service — Blair MedSpa",
+    "desc": "Terms of Service governing use of the Blair MedSpa website.",
+    "og": "https://vibe.filesafe.space/1788457200612800355/assets/b55f1968-9758-4731-a472-aa002c5b2b0d.png",
+    "canonical": "https://blair-medspa.vibepreview.com/terms",
+    "h1": [
+     "Terms of Service"
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [
+     "{{location.address}}",
+     "{{location.email}}"
+    ],
+    "demoWords": 0,
+    "empty": [
+     "CALL -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "{{location.email}} -> mailto:{{location.email}}",
+     "Call -> tel:{{location.phone}}"
+    ],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/sms-terms",
+    "status": 200,
+    "title": "SMS Terms — Blair MedSpa",
+    "desc": "SMS messaging terms and consent for Blair MedSpa.",
+    "og": "https://vibe.filesafe.space/1788457200612800355/assets/b55f1968-9758-4731-a472-aa002c5b2b0d.png",
+    "canonical": "https://blair-medspa.vibepreview.com/sms-terms",
+    "h1": [
+     "SMS Terms"
+    ],
+    "brokenImgs": [],
+    "forms": [],
+    "placeholders": [
+     "{{location.address}}",
+     "{{location.email}}"
+    ],
+    "demoWords": 0,
+    "empty": [
+     "CALL -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "{{location.email}} -> mailto:{{location.email}}",
+     "Call -> tel:{{location.phone}}"
+    ],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/treatments/dermal-fillers",
+    "status": 200,
+    "title": "Dermal Fillers — Blair MedSpa",
+    "desc": "Hyaluronic-acid fillers for volume, contour and structural support. Age-related volume loss in the midface, temples and lips, along with deflated contours and",
+    "og": "https://vibe.filesafe.space/1788457200612800355/assets/b55f1968-9758-4731-a472-aa002c5b2b0d.png",
+    "canonical": "https://blair-medspa.vibepreview.com/treatments/dermal-fillers",
+    "h1": [
+     "Dermal Fillers"
+    ],
+    "brokenImgs": [],
+    "forms": [
+     {
+      "action": null,
+      "method": "get",
+      "fields": [
+       "sms-consent"
+      ]
+     }
+    ],
+    "placeholders": [
+     "{{location.address}}",
+     "{{location.email}}"
+    ],
+    "demoWords": 0,
+    "empty": [
+     "CALL -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "OR CALL (000) 000-0000 -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "{{location.email}} -> mailto:{{location.email}}",
+     "Call -> tel:{{location.phone}}"
+    ],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/treatments/medical-peels",
+    "status": 200,
+    "title": "Medical-Grade Peels — Blair MedSpa",
+    "desc": "Chemical resurfacing for tone, clarity and luminosity. Pigment irregularity, dullness, rough texture and superficial sun damage that dull the com",
+    "og": "https://vibe.filesafe.space/1788457200612800355/assets/b55f1968-9758-4731-a472-aa002c5b2b0d.png",
+    "canonical": "https://blair-medspa.vibepreview.com/treatments/medical-peels",
+    "h1": [
+     "Medical-Grade Peels"
+    ],
+    "brokenImgs": [],
+    "forms": [
+     {
+      "action": null,
+      "method": "get",
+      "fields": [
+       "sms-consent"
+      ]
+     }
+    ],
+    "placeholders": [
+     "{{location.address}}",
+     "{{location.email}}"
+    ],
+    "demoWords": 0,
+    "empty": [
+     "CALL -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "OR CALL (000) 000-0000 -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "{{location.email}} -> mailto:{{location.email}}",
+     "Call -> tel:{{location.phone}}"
+    ],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   },
+   {
+    "path": "/treatments/laser-hair-reduction",
+    "status": 200,
+    "title": "Laser Hair Reduction — Blair MedSpa",
+    "desc": "Long-term reduction of unwanted hair with precision. Unwanted hair growth requiring frequent shaving, waxing or plucking.",
+    "og": "https://vibe.filesafe.space/1788457200612800355/assets/b55f1968-9758-4731-a472-aa002c5b2b0d.png",
+    "canonical": "https://blair-medspa.vibepreview.com/treatments/laser-hair-reduction",
+    "h1": [
+     "Laser Hair Reduction"
+    ],
+    "brokenImgs": [],
+    "forms": [
+     {
+      "action": null,
+      "method": "get",
+      "fields": [
+       "sms-consent"
+      ]
+     }
+    ],
+    "placeholders": [
+     "{{location.address}}",
+     "{{location.email}}"
+    ],
+    "demoWords": 0,
+    "empty": [
+     "CALL -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "OR CALL (000) 000-0000 -> tel:{{location.phone}}",
+     "(000) 000-0000 -> tel:{{location.phone}}",
+     "{{location.email}} -> mailto:{{location.email}}",
+     "Call -> tel:{{location.phone}}"
+    ],
+    "errs": [],
+    "failed": [],
+    "mobileOverflowPx": 0
+   }
+  ],
+  "ext": [
+   "LINK tel:{{location.phone}}",
+   "200 https://instagram.com",
+   "400 https://facebook.com",
+   "LINK mailto:{{location.email}}"
+  ]
+ }
+}
