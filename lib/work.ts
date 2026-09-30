@@ -140,10 +140,10 @@ export const caseStudies: CaseStudy[] = [
     headline: "From the first ring to a booked visit, on the practice's own brand.",
     summary:
       "A two-layer demo: a patient website in Cactus's own identity, and a revenue-system page that lets the owner call a live AI receptionist, submit a test patient form, and walk every stage of a connected patient journey.",
-    source: "cactus-chiro.vibepreview.app",
+    source: "blair-demo-cactus.vercel.app",
     links: [
-      { label: "Open revenue system", href: "https://cactus-chiro.vibepreview.app/revenue-system", primary: true, event: "demo_open_cactus_rs" },
-      { label: "Patient website", href: "https://cactus-chiro.vibepreview.app", event: "demo_open_cactus" },
+      { label: "Open revenue system", href: "https://blair-demo-cactus.vercel.app/revenue-system", primary: true, event: "demo_open_cactus_rs" },
+      { label: "Patient website", href: "https://blair-demo-cactus.vercel.app", event: "demo_open_cactus" },
     ],
     cover: D("cactus-rs-d", "Cactus Chiropractic revenue system page: The Chiropractor Revenue System with a call-the-AI-receptionist panel."),
     status: [
@@ -231,10 +231,10 @@ export const caseStudies: CaseStudy[] = [
     headline: "Reuse the system logic. Never reuse the client.",
     summary:
       "The same patient-acquisition logic as Cactus, rebuilt around a two-doctor practice in Connecticut: its own pipeline stages, tags, message copy and phone number, and its own rollout plan for what goes live now and what waits.",
-    source: "palmer-chiropractic.vibepreview.app",
+    source: "blair-demo-palmer.vercel.app",
     links: [
-      { label: "Open revenue system", href: "https://palmer-chiropractic.vibepreview.app/revenue-system", primary: true, event: "demo_open_palmer_rs" },
-      { label: "Patient website", href: "https://palmer-chiropractic.vibepreview.app", event: "demo_open_palmer" },
+      { label: "Open revenue system", href: "https://blair-demo-palmer.vercel.app/revenue-system", primary: true, event: "demo_open_palmer_rs" },
+      { label: "Patient website", href: "https://blair-demo-palmer.vercel.app", event: "demo_open_palmer" },
     ],
     cover: D("palmer-rs-d", "Palmer & Herman revenue system: Turn more inquiries into booked patient conversations."),
     status: [
@@ -327,9 +327,9 @@ export const caseStudies: CaseStudy[] = [
     headline: "Not “I make websites.” I find where revenue leaks and design the system that closes it.",
     summary:
       "Blair Digital Studios is Emmanuel's consulting practice. Each engagement starts with an honest audit of how a practice is found, contacted and followed up with, then connects website, AI voice, CRM, booking, follow-up and reputation into one system.",
-    source: "canham-compass.vibepreview.app",
+    source: "blair-demo-canham.vercel.app",
     links: [
-      { label: "Open Canham growth system", href: "https://canham-compass.vibepreview.app/revenue-system", primary: true, event: "demo_open_canham_rs" },
+      { label: "Open Canham growth system", href: "https://blair-demo-canham.vercel.app/revenue-system", primary: true, event: "demo_open_canham_rs" },
       { label: "Client solution lab", href: "/solutions", event: "solution_lab_click" },
     ],
     cover: D("canham-rs-d", "Canham Chiropractic owner experience: Your digital front door is only the beginning."),

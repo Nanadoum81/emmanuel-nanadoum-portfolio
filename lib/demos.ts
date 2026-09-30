@@ -26,8 +26,8 @@ export const demos: Demo[] = [
     category: "Chiropractic",
     accent: "#E47F19",
     accentInk: "#1F140B",
-    site: "https://cactus-chiro.vibepreview.app",
-    system: "https://cactus-chiro.vibepreview.app/revenue-system",
+    site: "https://blair-demo-cactus.vercel.app",
+    system: "https://blair-demo-cactus.vercel.app/revenue-system",
     status: [
       { label: "Website live", tally: "live" },
       { label: "AI receptionist line live", tally: "live" },
@@ -51,8 +51,8 @@ export const demos: Demo[] = [
     category: "Chiropractic",
     accent: "#0E2D20",
     accentInk: "#FFFFFF",
-    site: "https://palmer-chiropractic.vibepreview.app",
-    system: "https://palmer-chiropractic.vibepreview.app/revenue-system",
+    site: "https://blair-demo-palmer.vercel.app",
+    system: "https://blair-demo-palmer.vercel.app/revenue-system",
     status: [
       { label: "Website live", tally: "live" },
       { label: "Simulator uses demo contacts", tally: "demo" },
@@ -76,8 +76,8 @@ export const demos: Demo[] = [
     category: "Chiropractic",
     accent: "#352C20",
     accentInk: "#FFFFFF",
-    site: "https://canham-compass.vibepreview.app",
-    system: "https://canham-compass.vibepreview.app/revenue-system",
+    site: "https://blair-demo-canham.vercel.app",
+    system: "https://blair-demo-canham.vercel.app/revenue-system",
     status: [
       { label: "Website live", tally: "live" },
       { label: "Owner presentation live", tally: "live" },
@@ -101,7 +101,7 @@ export const demos: Demo[] = [
     category: "Chiropractic",
     accent: "#3F6F4A",
     accentInk: "#FFFFFF",
-    site: "https://nelson-chiro.vibepreview.app",
+    site: "https://blair-demo-nelson.vercel.app",
     status: [{ label: "Website live", tally: "live" }],
     solves: "A clear, calm website that turns local searches into appointment requests and phone calls.",
     detail: [
@@ -120,7 +120,7 @@ export const demos: Demo[] = [
     category: "Chiropractic & wellness",
     accent: "#312A25",
     accentInk: "#FFFFFF",
-    site: "https://coyote-wellness.vibepreview.app",
+    site: "https://blair-demo-coyote.vercel.app",
     status: [{ label: "Website live", tally: "live" }],
     solves: "A considered, unhurried website for chiropractic, injury care, massage and wellness, with a clear path to book.",
     detail: [
@@ -139,7 +139,7 @@ export const demos: Demo[] = [
     category: "Aesthetic medicine",
     accent: "#755832",
     accentInk: "#FFFFFF",
-    site: "https://blair-medspa.vibepreview.com",
+    site: "https://blair-demo-medspa.vercel.app",
     status: [
       { label: "Reference template live", tally: "live" },
       { label: "Contact details are template placeholders", tally: "demo" },

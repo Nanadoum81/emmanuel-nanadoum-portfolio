@@ -103,12 +103,12 @@ export default function Home() {
               </Link>
               <Link href="/work/cactus" data-depth="10" className="w-[84%] shrink-0 snap-start sm:absolute sm:left-0 sm:top-[42%] sm:z-20 sm:w-[60%]">
                 <div data-plate>
-                  <ExhibitPlate letter="B" label="Cactus" src="/shots/cactus-rs-d.jpg" alt={cactus.cover.alt} source="cactus-chiro.vibepreview.app/revenue-system" priority sizes="(min-width:1024px) 32vw, 84vw" tabColor="bg-ink text-white" />
+                  <ExhibitPlate letter="B" label="Cactus" src="/shots/cactus-rs-d.jpg" alt={cactus.cover.alt} source="blair-demo-cactus.vercel.app/revenue-system" priority sizes="(min-width:1024px) 32vw, 84vw" tabColor="bg-ink text-white" />
                 </div>
               </Link>
               <Link href="/work/palmer-herman" data-depth="16" className="w-[84%] shrink-0 snap-start sm:absolute sm:bottom-0 sm:right-[3%] sm:z-30 sm:w-[46%]">
                 <div data-plate>
-                  <ExhibitPlate letter="C" label="Palmer & Herman" src="/shots/palmer-rs-pipeline.jpg" alt="Palmer & Herman 12-stage patient pipeline" source="palmer-chiropractic.vibepreview.app" sizes="(min-width:1024px) 26vw, 84vw" tabColor="bg-yellow text-ink" />
+                  <ExhibitPlate letter="C" label="Palmer & Herman" src="/shots/palmer-rs-pipeline.jpg" alt="Palmer & Herman 12-stage patient pipeline" source="blair-demo-palmer.vercel.app" sizes="(min-width:1024px) 26vw, 84vw" tabColor="bg-yellow text-ink" />
                 </div>
               </Link>
             </div>
@@ -263,7 +263,7 @@ export default function Home() {
             </div>
             <div className="relative lg:col-span-7">
               <div data-r="mask">
-                <ExhibitPlate src="/shots/cactus-rs-journey.jpg" alt="Cactus revenue system: One connected patient journey across 13 steps." source="cactus-chiro.vibepreview.app/revenue-system" sizes="(min-width:1024px) 56vw, 100vw" />
+                <ExhibitPlate src="/shots/cactus-rs-journey.jpg" alt="Cactus revenue system: One connected patient journey across 13 steps." source="blair-demo-cactus.vercel.app/revenue-system" sizes="(min-width:1024px) 56vw, 100vw" />
               </div>
               <div data-r="mask" className="absolute -bottom-8 right-4 hidden w-[24%] sm:block">
                 <ExhibitPlate src="/shots/cactus-m.jpg" alt="Cactus Chiropractic patient site on a phone." aspect="390/844" sizes="16vw" />

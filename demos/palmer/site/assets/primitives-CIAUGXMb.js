@@ -1,0 +1,1 @@
+import{p as e,t}from"./index-CvsfUL5X.js";var n=e();function r({children:e,className:r}){return(0,n.jsx)(`span`,{className:t(`label-mono text-accent`,r),children:e})}export{r as t};

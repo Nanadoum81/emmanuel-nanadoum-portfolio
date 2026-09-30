@@ -29,11 +29,10 @@ export const resume = {
       where: "Remote",
       when: "2020 – Present",
       bullets: [
-        "Lead discovery with small-practice owners (chiropractic, med spa), find where leads and revenue leak, and map business goals to CRM, automation, web, and AI voice solutions.",
-        "Build proof-of-concept demos on each prospect's own brand: six live prospect demos and reference builds, including a revenue system with a live two-way AI receptionist line, test patient form, and 13-step patient journey.",
-        "Design reusable solution architecture customized per client: a 12-stage CRM pipeline with tagged lead routing, missed-call text-back, 24-hour and 2-hour reminders, no-show recovery, review requests, and explicit follow-up stop conditions.",
-        "Deliver public-information revenue-leak audits that separate verified findings from open questions, then present solution diagrams, scopes, proposals, and implementation plans with clear tradeoffs.",
-        "Own handoff from solution design into configuration, testing, launch, training, troubleshooting, and post-launch optimization using GoHighLevel, Twilio voice/SMS, REST APIs, and webhooks.",
+        "Lead discovery and public-information revenue-leak audits for small practices (chiropractic, med spa), pinpoint where leads and revenue leak, and map goals to CRM, automation, web, and AI voice solutions.",
+        "Build proof-of-concept demos on each prospect's own brand: six live prospect demos, including a revenue system with a live two-way AI receptionist line, test patient form, and 13-step patient journey.",
+        "Design reusable solution architecture customized per client: a 12-stage CRM pipeline with tagged lead routing, missed-call text-back, 24-hour and 2-hour reminders, no-show recovery, and review requests.",
+        "Present solution diagrams, scopes, and implementation plans with clear tradeoffs, then own handoff into configuration, testing, launch, and training using GoHighLevel, Twilio, REST APIs, and webhooks.",
       ],
     },
     {
@@ -44,6 +43,7 @@ export const resume = {
       bullets: [
         "Guided customers through complex digital vehicle, financing, and documentation workflows using consultative discovery.",
         "Resolved objections and account issues, and coordinated escalations when technical or operational support was needed.",
+        "Translated financing, product, and transaction details into clear recommendations and next steps toward purchase.",
         "Maintained accurate CRM and case documentation across high transaction volume and compliance-sensitive information.",
       ],
     },
@@ -56,6 +56,7 @@ export const resume = {
         "Managed a high-volume, high-ticket pipeline from discovery through close, matching needs to vehicle and financing options.",
         "Delivered product presentations, handled objections, and coordinated finance, service, and operations to close deals.",
         "Built repeat and referral business through CRM follow-up and structured outreach; consistently a top performer.",
+        "Balanced revenue goals, customer satisfaction, and documentation accuracy across complex multi-step transactions.",
       ],
     },
   ],
