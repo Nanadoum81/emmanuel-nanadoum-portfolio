@@ -1,0 +1,110 @@
+{
+  "title": "Choose the visual world for Emmanuel's portfolio",
+  "question": "The roll assigned Demo Control Room. Keep it, take an alternate, or re-roll. (Client demo sites stay exactly as approved in every option — this only governs the portfolio's own pages.)",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Demo Control Room",
+      "kicker": "THE ROLL",
+      "lineage": "Live-broadcast production galleries: program/preview monitors, tally lights, the run sheet",
+      "thesis": "The portfolio is the gallery where the demo goes live: real builds on the monitor wall, honest tally status on every source.",
+      "palette": ["#0d0f12", "#1a1d22", "#e9e6df", "#e5372b", "#f0b43c", "#3fae6a"],
+      "materials": ["graphite control-surface panels", "lit monitor glass showing real captures", "tally lamps", "lower-third caption bars"],
+      "viewport": "Left: name, role, one-line value prop, Resume / View Work / Contact. Right: a multiview wall — VYBE on the large PROGRAM monitor, Cactus revenue system and Palmer on preview monitors, each with a source label and tally (LIVE / DEMO DATA / NOT ACTIVATED).",
+      "risk": "Could read as a fake dashboard if any monitor shows anything other than a real, clickable build.",
+      "raised": [
+        {"from": "challenger-split-flap", "raise": "The Solution Lab is a semantic status board: each client build is a row whose tally restyles it without breaking the grid."},
+        {"from": "challenger-shareware", "raise": "Case studies run as a strict linear run sheet — Problem → Discovery → Architecture → Demo → Tradeoffs → Handoff — with a visible current-step state."},
+        {"from": "challenger-posada", "raise": "One signal color, tally red, is reserved for LIVE only; everything else is graphite and paper."},
+        {"from": "challenger-ebru", "raise": "Motion comes from the medium: hard cuts and dissolves between sources, never floaty easing."},
+        {"from": "challenger-multiplane", "raise": "Rack focus between program and preview monitors as the hero's scroll interaction."}
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "Statement of Work",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "Presales technical proposals and SOWs",
+      "thesis": "Every case study is set as the proposal Emmanuel would hand a buyer: scope, assumptions, architecture, out-of-scope, sign-off.",
+      "palette": ["#f4f1ea", "#16181c", "#2a4a8a", "#c9c3b5"],
+      "materials": ["numbered document sections", "scope tables", "revision block", "signature line"],
+      "viewport": "A cover sheet: name, role, 'Prepared for: hiring teams', with the live-build index as the table of contents beside it.",
+      "risk": "Familiar document-editorial territory; paper-and-serif renditions are where many runs land."
+    },
+    {
+      "id": "challenger-split-flap",
+      "label": "Split-Flap Concourse",
+      "verdict": "competitive",
+      "lineage": "Rail concourse departure boards",
+      "thesis": "Every build is a departure: destination, platform, status — cascading when it changes.",
+      "palette": ["#111111", "#f2f2f2", "#f0a020", "#b02a2a"],
+      "materials": ["matte flap faces", "brushed steel frame", "amber row lamps"],
+      "viewport": "A full-width board of builds — VYBE, Cactus, Palmer, Canham — with status and 'Open' columns.",
+      "case": "Holds product clarity (status rows map to live/demo/inactive) but recruiters don't identify presales with rail boards.",
+      "risk": "Novelty wears off after the first cascade; case-study depth is hard to carry."
+    },
+    {
+      "id": "challenger-shareware",
+      "label": "Shareware Installer",
+      "verdict": "declined",
+      "lineage": "1990s install wizards",
+      "palette": ["#c0c0c0", "#000080", "#ffffff"],
+      "materials": ["beveled dialog chrome", "dithered banner"],
+      "thesis": "The career as an install sequence.",
+      "viewport": "A centered wizard dialog.",
+      "case": "Gated steps block recruiters; reads as a gag.",
+      "kept": "Strict linear sequence with visible step state.",
+      "risk": "Gimmick."
+    },
+    {
+      "id": "challenger-posada",
+      "label": "Calavera Broadside",
+      "verdict": "declined",
+      "lineage": "Posada penny-press sheets",
+      "palette": ["#efe6d2", "#141414", "#c8321e"],
+      "materials": ["relief ink", "newsprint"],
+      "thesis": "Dense two-column broadside.",
+      "viewport": "Engraving band over verse columns.",
+      "case": "No audience identification; unclear offer.",
+      "kept": "Single-ink restraint with one alarm color.",
+      "risk": "Off-register tone."
+    },
+    {
+      "id": "challenger-ebru",
+      "label": "Ebru Marbling",
+      "verdict": "declined",
+      "lineage": "Floated-pigment marbling",
+      "palette": ["#1e3a5f", "#d9a441", "#f1ece2"],
+      "materials": ["floated pigment", "sized paper"],
+      "thesis": "Liquid displacement canvas.",
+      "viewport": "A pigment bath.",
+      "case": "Loses both axes.",
+      "kept": "Motion made by the medium itself.",
+      "risk": "Decorative."
+    },
+    {
+      "id": "challenger-multiplane",
+      "label": "Multiplane Dawn",
+      "verdict": "declined",
+      "lineage": "Cel-animation multiplane",
+      "palette": ["#2f4a3a", "#9fb2b8", "#e0a040"],
+      "materials": ["painted planes", "mist"],
+      "thesis": "Parallax painted depth.",
+      "viewport": "Layered forest planes.",
+      "case": "Loses both axes.",
+      "kept": "Rack focus between depth planes.",
+      "risk": "Whimsical."
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "canon": true,
+  "canonCard": {
+    "label": "The category standard",
+    "thesis": "The polished tech-consultant portfolio, executed impeccably.",
+    "palette": ["#0b0b0c", "#f5f5f4", "#3b82f6"],
+    "materials": ["clean grid", "project screenshots"],
+    "viewport": "Name + role left, stacked project screenshots right.",
+    "risk": "Indistinguishable from other portfolios by design."
+  },
+  "steer": true
+}

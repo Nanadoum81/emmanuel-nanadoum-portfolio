@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+.vercel
+.env*
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+_capture/raw
+_capture/text
+.impeccable/review
+.impeccable/config.local.json
+.claude/settings.local.json
+.impeccable/questions
