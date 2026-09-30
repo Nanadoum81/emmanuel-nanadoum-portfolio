@@ -43,11 +43,11 @@ export default function SolutionsHub() {
                 </div>
               </div>
               <div className="md:col-span-7">
-                <div className="flex items-center gap-2.5">
-                  <span aria-hidden className="h-3 w-6" style={{ background: d.accent }} />
-                  <p className="text-[14.5px] text-ink-2">{d.category} · {d.location}</p>
-                </div>
-                <h2 className="mt-2 text-[clamp(26px,2.8vw,36px)] font-extrabold tracking-[-0.025em]">{d.name}</h2>
+                <h2 className="flex items-center gap-3 text-[clamp(26px,2.8vw,36px)] font-extrabold tracking-[-0.025em]">
+                  <span aria-hidden className="h-[0.5em] w-[0.9em] shrink-0" style={{ background: d.accent }} />
+                  {d.name}
+                </h2>
+                <p className="mt-1 text-[15px] text-ink-2">{d.category} · {d.location}</p>
                 <p className="mt-2 max-w-[56ch] text-[17px]">{d.solves}</p>
                 <ul className="mt-4 flex flex-wrap gap-2" aria-label="Status">
                   {d.status.map((s) => (
@@ -60,8 +60,8 @@ export default function SolutionsHub() {
                     Open demo <Arrow dir="out" />
                   </TrackLink>
                   {d.system && (
-                    <TrackLink href={d.site} event="demo_open" data={{ slug: d.slug, from: "hub_site" }} className="doc-link inline-flex min-h-11 items-center font-semibold">
-                      Patient website ↗
+                    <TrackLink href={d.site} event="demo_open" data={{ slug: d.slug, from: "hub_site" }} className="doc-link group inline-flex min-h-11 items-center gap-1 font-semibold">
+                      Patient website <Arrow dir="out" className="size-3.5" />
                     </TrackLink>
                   )}
                   <Link href={`/solutions/${d.slug}`} className="doc-link inline-flex min-h-11 items-center">

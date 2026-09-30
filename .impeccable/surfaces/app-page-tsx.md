@@ -25,4 +25,10 @@ FIRST VIEWPORT: Desktop 12-col cover sheet. Left 6 cols: document header table (
 
 FORM: Statement of Work — candidate 1 of my ordered list (SOW, architecture diagram, control room, transit map, blueprint set, workshop whiteboard, terminal); user chose IMPECCABLE'S PICK over the roll. Seed key 08da5693. Signature interaction: the tracked change — the redline strike draws through "I make websites." and the blue insertion writes in, once, on load; binder tabs track the current section. Kept from the round: case studies as a strict linear sequence with current-step state; honest status as document stamps; one hard-edged transition grammar.
 
+CHOICE RECORD: The decision page (key b268fb6a) closed unanswered (serve-question exit 4; its answer.json holds a stray `reroll` with no steer). Per protocol the round was re-presented through the structured question tool on 2026-09-30, where the user answered verbatim: "Statement of Work" (the IMPECCABLE'S PICK card; roll seed 08da5693 had assigned candidate 3, Demo Control Room). Telemetry ping sent with --kind pick.
+
+CITED ADAPTATIONS (brief-pinned, not drift):
+- Exhibit A band and the /work/vybe header are painted in VYBE Variation 5's own tokens (#010409 ground, #16c8ff cyan, #0b76c8→#5345c0 CTA gradient) and the VYBE figures use them too. Source: the user's brief — "The VYBE section should visually feel like an automotive technology launch site", "Variation 5 is LOCKED", and "If Impeccable complains about the intentional VYBE cyan / blue / violet brand language, preserve the approved identity". Everywhere else stays in the document world.
+- /solutions/[slug] is a proposal addressed to one practice: its cover rule, primary key and ordinals take that client's own brand colour (sampled from their live site) because the brief requires client pages to feel client-facing and forbids standardising client identities into the portfolio's system. Contrast is checked per client (Cactus orange carries dark ink).
+
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance

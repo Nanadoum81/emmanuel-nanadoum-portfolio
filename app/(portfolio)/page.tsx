@@ -42,6 +42,7 @@ export default function Home() {
                   ["Prepared by", "Emmanuel Nanadoum"],
                   ["Based in", `${person.location} · ${person.availability}`],
                   ["Roles", "Solutions Engineer · Sales Engineer · AI Consultant"],
+                  ["Revision", "September 2026 · every exhibit verified live"],
                 ].map(([k, v]) => (
                   <tr key={k} className="border-b border-rule first:border-t">
                     <th scope="row" className="w-[124px] py-1.5 pr-3 text-left align-top font-normal text-ink-2">{k}</th>
@@ -206,17 +207,16 @@ export default function Home() {
           <div className="mx-auto max-w-[1360px] px-[var(--gutter)] py-16 lg:py-24">
             <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
               <div className="lg:col-span-5">
-                <div className="flex items-center gap-3">
+                <h3 className="flex items-center gap-4 text-[clamp(34px,4vw,54px)] font-extrabold tracking-[-0.035em]">
+                  <span className="num text-[#9fb0c1]">A</span>
                   <Image src="/brand/vybe-mark.svg" alt="" width={44} height={44} className="rounded-[10px]" />
-                  <p className="num text-[15px] font-semibold text-[#9fb0c1]">Exhibit A · {vybe.kind}</p>
-                </div>
-                <h3 className="mt-6 text-[clamp(34px,4vw,54px)] font-extrabold tracking-[-0.035em]">VYBE</h3>
+                  VYBE
+                </h3>
                 <p className="mt-3 text-[clamp(19px,1.6vw,22px)] leading-snug text-[#f7fbff]">{vybe.headline}</p>
                 <p className="mt-5 text-[#a8b7c8]">{vybe.summary}</p>
                 <ul className="mt-6 flex flex-wrap gap-2" aria-label="Status">
-                  <li><Stamp tally="live" className="border-[#16c8ff]! text-[#16c8ff]!">Site + voice live</Stamp></li>
-                  <li><Stamp tally="live" className="border-[#16c8ff]! text-[#16c8ff]!">ElevenLabs + Supabase</Stamp></li>
-                  <li><Stamp tally="inactive" className="border-[#ff8a7a]! text-[#ff8a7a]!">Places + model gated</Stamp></li>
+                  <li><Stamp tally="live" className="border-[#16c8ff]! text-[#16c8ff]!">Site + VYBE Voice live</Stamp></li>
+                                    <li><Stamp tally="inactive" className="border-[#ff8a7a]! text-[#ff8a7a]!">Route generation not activated</Stamp></li>
                 </ul>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <TrackLink href={vybe.links[0].href} event="vybe_voice_click" data={{ from: "home" }} className="group inline-flex min-h-11 items-center gap-2 rounded-[10px] bg-[linear-gradient(100deg,#0b76c8,#5345c0)] px-5 text-[15px] font-semibold text-white shadow-[0_8px_30px_-8px_rgba(83,69,192,0.7)] transition-[filter] hover:brightness-110">
@@ -249,14 +249,13 @@ export default function Home() {
         <Reveal className="border-b border-rule">
           <div className="mx-auto grid grid-cols-1 max-w-[1360px] gap-12 px-[var(--gutter)] py-16 lg:grid-cols-12 lg:py-24">
             <div className="lg:col-span-5 lg:pt-10">
-              <p className="num text-[15px] font-semibold text-ink-3">Exhibit B · {cactus.kind}</p>
-              <h3 className="mt-4 text-[clamp(32px,3.6vw,48px)] font-extrabold tracking-[-0.03em]">{cactus.title}</h3>
+              <h3 className="text-[clamp(32px,3.6vw,48px)] font-extrabold tracking-[-0.03em]"><span className="num mr-3 text-ink-3">B</span>{cactus.title}</h3>
               <p className="mt-3 text-[clamp(19px,1.6vw,22px)] leading-snug">{cactus.headline}</p>
               <p className="mt-5 text-ink-2">{cactus.summary}</p>
               <ul className="mt-6 flex flex-wrap gap-2" aria-label="Status">
-                <li><Stamp tally="live">AI receptionist line</Stamp></li>
-                <li><Stamp tally="live">Website</Stamp></li>
-                <li><Stamp tally="demo">Dashboards</Stamp></li>
+                <li><Stamp tally="live">AI receptionist line live</Stamp></li>
+                <li><Stamp tally="live">Website live</Stamp></li>
+                <li><Stamp tally="demo">Dashboards use sample data</Stamp></li>
               </ul>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Key href={cactus.links[0].href} event="demo_open_cactus_rs" data={{ from: "home" }}>Open the revenue system <Arrow dir="out" /></Key>
@@ -279,8 +278,7 @@ export default function Home() {
           <div className="mx-auto max-w-[1360px] px-[var(--gutter)] py-16 lg:py-24">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
               <div className="lg:col-span-6">
-                <p className="num text-[15px] font-semibold text-ink-3">Exhibit C · {palmer.kind}</p>
-                <h3 className="mt-4 text-[clamp(32px,3.6vw,48px)] font-extrabold tracking-[-0.03em]">{palmer.title}</h3>
+                <h3 className="text-[clamp(32px,3.6vw,48px)] font-extrabold tracking-[-0.03em]"><span className="num mr-3 text-ink-3">C</span>{palmer.title}</h3>
                 <p className="mt-3 text-[clamp(19px,1.6vw,22px)] leading-snug">{palmer.headline}</p>
               </div>
               <p className="text-ink-2 lg:col-span-5 lg:col-start-8 lg:pt-12">{palmer.summary}</p>
@@ -323,9 +321,9 @@ export default function Home() {
                   </tbody>
                 </table>
                 <ul className="mt-6 flex flex-wrap gap-2" aria-label="Status">
-                  <li><Stamp tally="live">Website + system</Stamp></li>
-                  <li><Stamp tally="demo">Simulator</Stamp></li>
-                  <li><Stamp tally="inactive">AI voice</Stamp></li>
+                  <li><Stamp tally="live">Website and system live</Stamp></li>
+                  <li><Stamp tally="demo">Simulator uses demo contacts</Stamp></li>
+                  <li><Stamp tally="inactive">AI voice not yet activated</Stamp></li>
                 </ul>
                 <div className="mt-6 flex flex-wrap items-center gap-3">
                   <Key href={palmer.links[0].href} event="demo_open_palmer_rs" data={{ from: "home" }}>Run the simulator <Arrow dir="out" /></Key>
@@ -341,8 +339,7 @@ export default function Home() {
           <div className="mx-auto max-w-[1360px] px-[var(--gutter)] py-16 lg:py-24">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
               <div className="lg:col-span-7">
-                <p className="num text-[15px] font-semibold text-ink-3">Exhibit D · {blair.kind}</p>
-                <h3 className="mt-4 text-[clamp(32px,3.6vw,48px)] font-extrabold tracking-[-0.03em]">{blair.title}</h3>
+                <h3 className="text-[clamp(32px,3.6vw,48px)] font-extrabold tracking-[-0.03em]"><span className="num mr-3 text-ink-3">D</span>{blair.title}</h3>
                 <p className="mt-3 max-w-[38ch] text-[clamp(19px,1.6vw,22px)] leading-snug">{blair.headline}</p>
               </div>
               <div className="lg:col-span-5 lg:pt-12">
@@ -421,12 +418,12 @@ export default function Home() {
                   </td>
                   <td className="col-span-2 align-top md:py-4 md:pl-5 md:text-right">
                     <span className="flex flex-wrap gap-x-4 gap-y-1 md:flex-col md:items-end">
-                      <TrackLink href={d.system ?? d.site} event="demo_open" data={{ slug: d.slug, from: "home_lab" }} className="doc-link inline-flex min-h-8 items-center gap-1 whitespace-nowrap font-semibold">
-                        {d.system ? "Revenue system" : "Open site"} ↗
+                      <TrackLink href={d.system ?? d.site} event="demo_open" data={{ slug: d.slug, from: "home_lab" }} className="doc-link group inline-flex min-h-8 items-center gap-1 whitespace-nowrap font-semibold">
+                        {d.system ? "Revenue system" : "Open site"} <Arrow dir="out" className="size-3.5" />
                       </TrackLink>
                       {d.system && (
-                        <TrackLink href={d.site} event="demo_open" data={{ slug: d.slug, from: "home_lab_site" }} className="doc-link inline-flex min-h-8 items-center gap-1 whitespace-nowrap">
-                          Website ↗
+                        <TrackLink href={d.site} event="demo_open" data={{ slug: d.slug, from: "home_lab_site" }} className="doc-link group inline-flex min-h-8 items-center gap-1 whitespace-nowrap">
+                          Website <Arrow dir="out" className="size-3.5" />
                         </TrackLink>
                       )}
                       <Link href={`/solutions/${d.slug}`} className="doc-link inline-flex min-h-8 items-center text-ink-2">Client page</Link>

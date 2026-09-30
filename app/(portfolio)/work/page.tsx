@@ -32,10 +32,11 @@ export default function WorkIndex() {
                   <ExhibitPlate src={c.cover.src} alt={c.cover.alt} sizes="(min-width:768px) 40vw, 100vw" />
                 </div>
                 <div className="md:col-span-6 md:col-start-7">
-                  <p className="num text-[15px] font-semibold text-ink-3">Exhibit {letters[i]} · {c.kind}</p>
-                  <h2 className="mt-2 flex items-center gap-3 text-[clamp(28px,3.2vw,42px)] font-extrabold tracking-[-0.03em] group-hover:text-blue">
+                  <h2 className="flex items-center gap-3 text-[clamp(28px,3.2vw,42px)] font-extrabold tracking-[-0.03em] group-hover:text-blue">
+                    <span className="num text-ink-3">{letters[i]}</span>
                     {c.title} <Arrow className="size-6" />
                   </h2>
+                  <p className="mt-1 text-[15px] text-ink-2">{c.kind}</p>
                   <p className="mt-3 max-w-[52ch] text-[17px] text-ink-2">{c.headline}</p>
                   <ul className="mt-5 flex flex-wrap gap-2" aria-label="Status">
                     {c.status.map((s) => (

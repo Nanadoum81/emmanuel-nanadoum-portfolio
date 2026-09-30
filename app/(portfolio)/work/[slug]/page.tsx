@@ -79,11 +79,10 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
           </nav>
           <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-12">
             <div className="lg:col-span-7">
-              <p className={`num flex items-center gap-3 text-[15px] font-semibold ${sub}`}>
-                {isVybe && <Image src="/brand/vybe-mark.svg" alt="" width={36} height={36} className="rounded-[8px]" />}
-                Exhibit {letter} · {c.kind}
-              </p>
-              <h1 className="mt-4 text-[clamp(44px,6.4vw,84px)] font-extrabold leading-[0.95] tracking-[-0.04em]">{c.title}</h1>
+              <h1 className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[clamp(44px,6.4vw,84px)] font-extrabold leading-[0.95] tracking-[-0.04em]">
+                {isVybe && <Image src="/brand/vybe-mark.svg" alt="" width={64} height={64} className="size-[0.8em] rounded-[0.18em]" />}
+                {c.title}
+              </h1>
               <p className="mt-5 max-w-[30ch] text-[clamp(21px,2.1vw,27px)] font-medium leading-[1.3] tracking-[-0.01em]">{c.headline}</p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 {c.links.map((l) =>

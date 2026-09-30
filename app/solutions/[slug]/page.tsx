@@ -120,8 +120,8 @@ export default async function ClientDemo({ params }: { params: Promise<{ slug: s
           <div className="lg:col-span-4">
             <h2 className="text-[clamp(28px,3vw,40px)]">Your patient website</h2>
             <p className="mt-3 text-ink-2">The site patients see, in your own brand. The revenue system runs behind it.</p>
-            <TrackLink href={d.site} event="client_site_open" data={{ slug: d.slug, from: "site_section" }} className="doc-link mt-4 inline-flex min-h-11 items-center font-semibold">
-              Open the website ↗
+            <TrackLink href={d.site} event="client_site_open" data={{ slug: d.slug, from: "site_section" }} className="doc-link group mt-4 inline-flex min-h-11 items-center gap-1 font-semibold">
+              Open the website <Arrow dir="out" className="size-3.5" />
             </TrackLink>
           </div>
           <div className="lg:col-span-8" data-r="mask">
