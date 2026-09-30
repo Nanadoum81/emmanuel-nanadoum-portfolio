@@ -13,7 +13,7 @@ export const resume = {
   portfolio: { label: "Portfolio & live demos", url: "https://emmanuel-nanadoum.vercel.app" },
 
   summary:
-    "Customer-facing technical and sales professional with 8+ years of consultative, high-ticket selling and 4+ years designing CRM, automation, web, and AI voice solutions. Leads discovery, turns business pain into technical requirements, builds proof-of-concept demos on the prospect's own business, and guides customers from evaluation through implementation. Portfolio: six live spec demos for prospects and a deployed AI voice product.",
+    "Customer-facing technical and sales professional with 8+ years of consultative, high-ticket selling and 4+ years designing CRM, automation, web, and AI voice solutions. Leads discovery, turns business pain into technical requirements, builds proof-of-concept demos on the prospect's own business, and guides customers from evaluation through implementation. Portfolio: six live prospect demos and a deployed AI voice product.",
 
   skills: [
     ["Presales", "Technical discovery, needs analysis, solution mapping, technical demos, proof of concept (POC), technical validation, objection handling, value articulation, scoping and proposals"],
@@ -30,7 +30,7 @@ export const resume = {
       when: "2020 – Present",
       bullets: [
         "Lead discovery with small-practice owners (chiropractic, med spa), find where leads and revenue leak, and map business goals to CRM, automation, web, and AI voice solutions.",
-        "Build proof-of-concept demos on each prospect's own brand: six live spec demos and reference builds, including a revenue system with a live two-way AI receptionist line, test patient form, and 13-step patient journey.",
+        "Build proof-of-concept demos on each prospect's own brand: six live prospect demos and reference builds, including a revenue system with a live two-way AI receptionist line, test patient form, and 13-step patient journey.",
         "Design reusable solution architecture customized per client: a 12-stage CRM pipeline with tagged lead routing, missed-call text-back, 24-hour and 2-hour reminders, no-show recovery, review requests, and explicit follow-up stop conditions.",
         "Deliver public-information revenue-leak audits that separate verified findings from open questions, then present solution diagrams, scopes, proposals, and implementation plans with clear tradeoffs.",
         "Own handoff from solution design into configuration, testing, launch, training, troubleshooting, and post-launch optimization using GoHighLevel, Twilio voice/SMS, REST APIs, and webhooks.",

@@ -134,7 +134,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "cactus",
     title: "Cactus Chiropractic",
-    client: "Cactus Chiropractic, Peoria, AZ (spec demo, not affiliated)",
+    client: "Cactus Chiropractic, Peoria, AZ (prospect demo)",
     kind: "AI patient acquisition system (sales demo)",
     role: "Discovery, solution mapping, workflow architecture, live demo build",
     headline: "From the first ring to a booked visit, on the practice's own brand.",
@@ -225,7 +225,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: "palmer-herman",
     title: "Palmer & Herman Chiropractic",
-    client: "Palmer & Herman Chiropractic, Naugatuck, CT (spec demo, not affiliated)",
+    client: "Palmer & Herman Chiropractic, Naugatuck, CT (prospect demo)",
     kind: "Reusable solution architecture",
     role: "Discovery, routing design, workflow logic, rollout boundaries",
     headline: "Reuse the system logic. Never reuse the client.",
@@ -336,7 +336,7 @@ export const caseStudies: CaseStudy[] = [
     status: [
       { label: "Canham owner presentation + audit", tally: "live", note: "Guided presentation built on public information only." },
       { label: "Missed-call recovery simulation", tally: "demo", note: "Animated demonstration. No message is sent." },
-      { label: "Six live spec demos and reference builds", tally: "live", note: "Built to pitch five chiropractic practices, plus a med spa template. None is affiliated with the practice." },
+      { label: "Six live prospect demos and reference builds", tally: "live", note: "Built for five prospective chiropractic clients, plus a med spa template." },
     ],
     problem: [
       "Small practices lose opportunities between systems: a search that finds thin information, a call nobody answers, a form nobody follows up, a happy patient never asked for a review.",

@@ -47,7 +47,7 @@ Emmanuel Nanadoum — AI Consultant / Solutions Engineer / Sales Engineer (AI, C
 - Live: VYBE site https://vybe-app-blue.vercel.app/variation5/ and VYBE Voice https://vybe-app-blue.vercel.app/variation5/experience/
 - Live client builds: cactus-chiro.vibepreview.app (+ /revenue-system), nelson-chiro.vibepreview.app, palmer-chiropractic.vibepreview.app (+ /revenue-system), coyote-wellness.vibepreview.app, canham-compass.vibepreview.app (+ /revenue-system), blair-medspa.vibepreview.com
 - Real screenshots captured 2026-09-30 in `_capture/raw/` (desktop 1440 and mobile 390).
-- The five chiropractic builds are spec demos built from public information and not affiliated with the practices (the Cactus README: "Not affiliated with, endorsed by, or operated on behalf of the practice"). Describe them as spec or prospect demos, never as clients, unless the user confirms an engagement. Blair MedSpa is a template with `{{location.*}}` placeholders.
+- The five chiropractic builds are prospect demos built from public information; the user said on 2026-09-30 they are "about to be clients" but none had signed yet (the Cactus README: "Not affiliated with, endorsed by, or operated on behalf of the practice"). Describe them as spec or prospect demos, never as clients, unless the user confirms an engagement. Blair MedSpa is a template with `{{location.*}}` placeholders.
 - Absent and never to be fabricated: client results, revenue numbers, conversion rates, testimonials, client logos, "trusted by" rows, certifications beyond the resume, employer claims beyond the resume.
 
 ## Product Principles

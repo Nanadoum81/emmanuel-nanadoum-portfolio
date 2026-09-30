@@ -9,7 +9,7 @@ For each entry, fill **Project name**, **Description**, **Skills** (LinkedIn all
 
 **Associated with:** *Principal Consultant — Blair Digital Studios* for #1 and #3–#7. Use no association (or your own name) for #2 (VYBE).
 
-**Honesty note:** the chiropractic builds are described as **spec demos** built from public information and not affiliated with the practices. That is accurate even if one later becomes a client. Change the wording only for a practice that actually hires you.
+**Honesty note:** the chiropractic builds are described as **prospect demos** built from public information before any engagement. Once a practice signs, change its entry to client work (for example, "Built for Cactus Chiropractic").
 
 **Links:** point to your portfolio's `/work/...` pages or `/solutions`, not `/solutions/<practice>`. Those individual client pages are hidden from crawlers, so LinkedIn would show a link without a preview image.
 
@@ -55,7 +55,7 @@ Try the live voice demo at the link.
 **Skills:** Sales Engineering · Customer Relationship Management (CRM) · Workflow Automation · GoHighLevel · Voice AI
 
 **Description:**
-A two-layer proof of concept built to pitch a chiropractic practice in Peoria, AZ. It is a spec demo built from public information and not affiliated with the practice.
+A two-layer proof of concept built to pitch a chiropractic practice in Peoria, AZ. It is a prospect demo built from public information before engagement.
 
 Layer one is a patient website in the practice's own brand. Layer two is a revenue-system page where the owner can call a two-way AI receptionist on a dedicated demo line (kept separate from the practice's real number), submit a test patient form, and walk a 13-step patient journey:
 
@@ -72,7 +72,7 @@ Every dashboard number is labeled as sample data. The case study covers discover
 **Skills:** Solution Architecture · CRM Automation · Workflow Design · Lead Management · Implementation Planning
 
 **Description:**
-How to reuse solution architecture without turning every client into the same template. This is a spec demo for a two-doctor practice in Connecticut, built from public information and not affiliated with the practice.
+How to reuse solution architecture without turning every client into the same template. This is a prospect demo for a two-doctor practice in Connecticut, built from public information before engagement.
 
 • The system logic is reused: capture → conversation → schedule → remind → review.
 • What gets customized per practice: pipeline stage names, lead tags, message copy in the practice's voice, and which modules launch first.
@@ -89,7 +89,7 @@ How to reuse solution architecture without turning every client into the same te
 **Skills:** Consultative Selling · Business Analysis · Solution Selling · Customer Discovery · Presentations
 
 **Description:**
-An owner-facing guided presentation and audit, built as a spec demo for a Phoenix chiropractic practice (not affiliated).
+An owner-facing guided presentation and audit, built as a prospect demo for a Phoenix chiropractic practice.
 
 The audit uses only publicly observable information and labels every finding as either verified, an opportunity to investigate, or a proposed solution. For example, missed calls are framed as an opportunity requiring the owner's confirmation, not an accusation.
 
@@ -99,14 +99,14 @@ The consulting approach: find where revenue leaks before proposing technology, a
 
 ---
 
-## 6. Conversion-Focused Practice Websites (2 spec builds)
+## 6. Conversion-Focused Practice Websites (2 prospect builds)
 
 **Project URL:** https://emmanuel-nanadoum.vercel.app/solutions
 
 **Skills:** Web Design · Conversion Rate Optimization · Local SEO · HTML/CSS · User Experience (UX)
 
 **Description:**
-Two chiropractic practice websites built as spec demos (not affiliated with the practices):
+Two chiropractic practice websites built as prospect demos:
 • A single-practice site built around how patients describe the problem.
 • A multi-service site covering chiropractic, auto-accident care, massage and wellness, with a "what to expect" path for first visits.
 
