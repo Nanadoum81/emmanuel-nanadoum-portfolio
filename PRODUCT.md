@@ -33,7 +33,7 @@ Emmanuel Nanadoum — AI Consultant / Solutions Engineer / Sales Engineer (AI, C
 
 - Core competencies (from resume): discovery, needs analysis, solution mapping, technical demos, POCs, objection handling, workflow architecture, REST APIs, webhooks, CRM automation, AI voice, implementation planning, SQL, Python, HTML/CSS/JS, Supabase, Twilio, GoHighLevel, HubSpot, Salesforce, Jira, Git/GitHub, AWS fundamentals, troubleshooting, documentation.
 - VYBE production health (verified 2026-09-30 via /api/health): Supabase ✓, ElevenLabs ✓, Google Places/Routes ✗ (not configured), OpenAI/AI Gateway ✗ (not configured). Live voice path: browser MediaRecorder → /api/voice-stt (ElevenLabs Scribe; Web Speech API fallback) → /api/voice-live (ride context + history) → /api/voice-tts (ElevenLabs). Route-aware, provider-grounded recommendations are architected but require production Google credentials — never present them as live.
-- Cactus revenue system has a live AI receptionist demo line (860-743-4823). Palmer & Herman's AI voice receptionist is explicitly "not yet activated". All revenue-system dashboards use labeled sample/demo data.
+- Cactus revenue system links to a live browser AI receptionist (/receptionist?demo=1, Gemini + Web Speech API); the old 860 GoHighLevel demo line is retired. Palmer & Herman's AI voice receptionist is explicitly "not yet activated". All revenue-system dashboards use labeled sample/demo data.
 - Nelson and Coyote have no /revenue-system route (404).
 
 ## Brand Commitments

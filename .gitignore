@@ -12,3 +12,6 @@ _capture/text
 .impeccable/config.local.json
 .claude/settings.local.json
 .impeccable/questions
+
+# Private ops notes (phone-number migration, carrier messages)
+blair-ai-receptionist/
