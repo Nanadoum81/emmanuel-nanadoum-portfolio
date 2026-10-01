@@ -6,7 +6,7 @@ import { put } from "@vercel/blob";
 
 export const runtime = "nodejs";
 
-const DEMOS = ["cactus", "palmer", "canham", "nelson", "coyote", "medspa"] as const;
+const DEMOS = ["cactus", "palmer", "canham", "nelson", "nelson-thatcher", "coyote", "medspa"] as const;
 const MAX_BYTES = 20_000;
 const WINDOW_MS = 10 * 60 * 1000;
 const MAX_REQUESTS = 20;

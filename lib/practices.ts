@@ -15,6 +15,20 @@ export type PracticeProfile = {
 };
 
 export const PRACTICES: Record<string, PracticeProfile> = {
+  nelson-thatcher: {
+    "name": "Nelson Chiropractic (Dr. Jared Nelson, D.C.)",
+    "short": "Nelson Chiropractic",
+    "city": "Thatcher, Arizona",
+    "phone": "(928) 792-9686",
+    "address": "745 N. Allred Lane, Suite 100, Thatcher, AZ 85552",
+    "doctors": [
+      "Dr. Jared Nelson, D.C. (Doctor of Chiropractic, Parker University; B.B.A., BYU–Hawaii; A.G.S., BYU–Idaho)"
+    ],
+    "hours": "Published hours: Monday and Wednesday 9 to 12:30 and 3:30 to 7; Thursday 9 to 12:30 and 3:30 to 5:30; Friday 9 to 12:30; closed Tuesday, Saturday and Sunday. Add that callers should confirm with the office.",
+    "services": "Chiropractic adjustments using a variety of adjusting styles, myofascial release, assisted stretching, neuromuscular re-education, rehabilitation, taping and exercises. Care for getting out of pain, improving athletics, and preparing for the birth of a baby. Published prices: initial consultation $65 (new patients start here), chiropractic adjustment $45 (returning patients), myofascial release $50.",
+    "insurance": "Not published; the office answers insurance questions by phone.",
+    "extras": "Office email: nelsonchiropracticshl@gmail.com. The practice's mission is 'Strong, Healthy Lives'."
+  },
   coyote: {
     "name": "Coyote Chiropractic & Wellness Center",
     "short": "Coyote Chiropractic",

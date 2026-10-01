@@ -112,7 +112,7 @@ const footer = () => `
 </section>
 <footer class="foot">
   <div class="wrap foot-grid">
-    <div><p class="foot-brand"><span class="mark" aria-hidden="true">${esc(P.monogram)}</span>${esc(P.name)}</p><p class="muted">${esc(P.kind)} in ${esc(P.region)} since ${P.founded}.</p></div>
+    <div><p class="foot-brand"><span class="mark" aria-hidden="true">${esc(P.monogram)}</span>${esc(P.name)}</p><p class="muted">${esc(P.kind)} in ${esc(P.region)}${P.founded ? ` since ${P.founded}` : ""}.</p></div>
     <div><h3>Explore</h3><ul>${NAV.map(([h, l]) => `<li><a href="${h}">${l}</a></li>`).join("")}</ul></div>
     <div><h3>The office</h3><p>${esc(P.address.street)}<br>${esc(P.address.city)}, ${esc(P.address.state)} ${esc(P.address.zip)}</p><p><a href="tel:${P.tel}">${esc(P.phone)}</a>${P.fax ? `<br>Fax ${esc(P.fax)}` : ""}</p></div>
     <div><h3>Hours</h3><p>${hoursSummary}</p><p class="muted small">Call to confirm.</p></div>
@@ -293,7 +293,7 @@ page("doctors.html", "/doctors", `The doctors · ${P.name}`, `Meet ${P.doctors.m
 </div></section>
 <section class="band"><div class="wrap docs">${P.doctors.map((d, i) => `
   <article class="doc">
-    <div class="doc-photo">${img(fs.existsSync(path.join(here, "practices", slug, "img", `doctor-${i + 1}.jpg`)) ? `doctor-${i + 1}` : i === 0 ? "shoulder" : "care-hands", "Illustrative photo of chiropractic care", "")}<span class="ph-note">Portrait of ${esc(d.short)} to be photographed</span></div>
+    <div class="doc-photo">${img(fs.existsSync(path.join(here, "practices", slug, "img", `doctor-${i + 1}.jpg`)) ? `doctor-${i + 1}` : i === 0 ? "shoulder" : "care-hands", "Illustrative photo of chiropractic care", "")}${d.realPhoto ? "" : `<span class="ph-note">Portrait of ${esc(d.short)} to be photographed</span>`}</div>
     <div class="doc-body">
       <h2 class="h2">${esc(d.name)}</h2>
       <dl class="facts tight">${d.facts.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>
