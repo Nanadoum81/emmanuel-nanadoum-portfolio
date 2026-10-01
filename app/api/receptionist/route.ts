@@ -112,8 +112,8 @@ export async function POST(req: Request) {
         res?.status,
         detail.slice(0, 300),
       );
-      // A retired (404) or overloaded (500/503) model is worth retrying with the next name.
-      if (res && ![404, 500, 503].includes(res.status)) break outer;
+      // A retired (404), rate-limited (429) or overloaded (500/503) model is worth retrying with the next name.
+      if (res && ![404, 429, 500, 503].includes(res.status)) break outer;
     }
   }
 
