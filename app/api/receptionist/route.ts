@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { PRACTICES, practicePrompt } from "@/lib/practices";
 
 // Blair Digital Studios AI receptionist: browser speech in/out, Gemini for the replies.
 // Free-tier friendly: short replies, capped history, best-effort per-IP rate limit.
@@ -45,7 +46,25 @@ const clean = (s: string) =>
     .replace(/\s+/g, " ")
     .trim();
 
+// Demo sites (blair-demo-*.vercel.app) call this cross-origin for their AI front desk.
+const corsHeaders = (req: Request): Record<string, string> => {
+  const origin = req.headers.get("origin") || "";
+  return /^https:\/\/blair-demo-[a-z0-9-]+\.vercel\.app$/.test(origin) || /^http:\/\/localhost:\d+$/.test(origin)
+    ? { "access-control-allow-origin": origin, "access-control-allow-methods": "POST, OPTIONS", "access-control-allow-headers": "content-type", vary: "origin" }
+    : {};
+};
+
+export function OPTIONS(req: Request) {
+  return new NextResponse(null, { status: 204, headers: corsHeaders(req) });
+}
+
 export async function POST(req: Request) {
+  const res = await handle(req);
+  for (const [k, v] of Object.entries(corsHeaders(req))) res.headers.set(k, v);
+  return res;
+}
+
+async function handle(req: Request) {
   const key = process.env.GEMINI_API_KEY;
   if (!key) return NextResponse.json({ error: "offline" }, { status: 503 });
 
@@ -58,7 +77,7 @@ export async function POST(req: Request) {
   else if (++h.n > MAX_REQUESTS)
     return NextResponse.json({ error: "rate_limited" }, { status: 429 });
 
-  let body: { messages?: Msg[]; demo?: boolean };
+  let body: { messages?: Msg[]; demo?: boolean; practice?: string };
   try {
     body = await req.json();
   } catch {
@@ -77,9 +96,12 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "bad_request" }, { status: 400 });
   }
 
-  const system = body.demo
-    ? `${SYSTEM}\n\nThis conversation starts in DEMO MODE.`
-    : SYSTEM;
+  const practice = body.practice ? PRACTICES[body.practice] : undefined;
+  const system = practice
+    ? practicePrompt(practice)
+    : body.demo
+      ? `${SYSTEM}\n\nThis conversation starts in DEMO MODE.`
+      : SYSTEM;
   const payload = JSON.stringify({
     systemInstruction: { parts: [{ text: system }] },
     contents: messages.map((m) => ({
