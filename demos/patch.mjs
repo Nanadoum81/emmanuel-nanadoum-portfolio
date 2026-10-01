@@ -91,15 +91,62 @@ if (slug === "medspa") {
   fs.writeFileSync(path.join(site, "_template", "booking.html"), `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Booking calendar preview</title><style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#f6f2ec;color:#2a241f;font:15px/1.55 system-ui,-apple-system,sans-serif}.b{max-width:420px;padding:32px;text-align:center}h1{font:500 22px/1.2 Georgia,serif;margin:0 0 10px}p{margin:0;color:#6b6259}</style></head><body><div class="b"><h1>Booking calendar preview</h1><p>In a live deployment, the practice's scheduling calendar appears here so new patients can choose a consultation time.</p></div></body></html>`);
 }
 
-// Vercel packaging: static site + a tiny endpoint that accepts demo form posts.
+// Vercel packaging: static site + a tiny endpoint that forwards demo form posts to the portfolio's /api/leads.
 fs.mkdirSync(path.join(site, "api"), { recursive: true });
 fs.writeFileSync(
   path.join(site, "api", "demo-lead.js"),
-  `// Receives demo form submissions that previously went to GoHighLevel.
-// Logs a minimal summary (no message bodies) and answers 204 so the form behaves normally.
+  `// Receives demo form submissions (formerly sent to GoHighLevel) and forwards them to the
+// portfolio's /api/leads, which saves them privately. Always answers 204 so the form behaves normally.
+const DEMO = ${JSON.stringify(slug)};
+const LEADS_URL = "https://emmanuel-nanadoum.vercel.app/api/leads";
+const MAX_BODY = 2 * 1024 * 1024;
+
+async function readBody(req) {
+  const chunks = [];
+  let size = 0;
+  for await (const chunk of req) {
+    size += chunk.length;
+    if (size > MAX_BODY) throw new Error("body too large");
+    chunks.push(chunk);
+  }
+  return Buffer.concat(chunks);
+}
+
+// Keep the lead small: drop uploaded files and long base64 strings.
+function slim(event) {
+  if (!event || typeof event !== "object" || !event.formData) return event;
+  const formData = {};
+  for (const [k, v] of Object.entries(event.formData)) {
+    if (typeof v === "string" && v.length > 2000) formData[k] = "[omitted: " + v.length + " chars]";
+    else if (v && typeof v === "object") formData[k] = "[file omitted]";
+    else formData[k] = v;
+  }
+  return { ...event, formData };
+}
+
 export default async function handler(req, res) {
   if (req.method !== "POST") { res.status(405).end(); return; }
-  console.log(JSON.stringify({ demo: ${JSON.stringify(slug)}, at: new Date().toISOString(), contentType: req.headers["content-type"] || "" }));
+  try {
+    const type = String(req.headers["content-type"] || "");
+    const body = await readBody(req);
+    let event = null;
+    if (type.includes("multipart/form-data") || type.includes("urlencoded")) {
+      const form = await new Request("http://local", { method: "POST", headers: { "content-type": type }, body }).formData();
+      const raw = form.get("event");
+      event = typeof raw === "string" ? JSON.parse(raw) : null;
+    } else if (body.length) {
+      event = JSON.parse(body.toString("utf8"));
+    }
+    const r = await fetch(LEADS_URL, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ demo: DEMO, ip: String(req.headers["x-forwarded-for"] || ""), page: String(req.headers.referer || ""), event: slim(event) }),
+      signal: AbortSignal.timeout(8000),
+    });
+    if (!r.ok) console.error("lead forward failed", r.status);
+  } catch (err) {
+    console.error("lead forward error", err instanceof Error ? err.message : "unknown");
+  }
   res.status(204).end();
 }
 `
