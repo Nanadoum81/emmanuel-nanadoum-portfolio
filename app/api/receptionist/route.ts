@@ -7,7 +7,10 @@ export const runtime = "nodejs";
 
 type Msg = { role: "user" | "assistant"; text: string };
 
-const MODEL = process.env.GEMINI_MODEL || "gemini-2.5-flash";
+// Google retires model names over time, so try the env override, then the "latest" alias, then older names.
+const MODELS = [process.env.GEMINI_MODEL, "gemini-flash-latest", "gemini-2.5-flash", "gemini-2.0-flash"].filter(
+  (m, i, a): m is string => !!m && a.indexOf(m) === i,
+);
 const MAX_TURNS = 24;
 const MAX_CHARS = 600;
 const WINDOW_MS = 10 * 60 * 1000;
@@ -64,19 +67,27 @@ export async function POST(req: Request) {
   }
 
   const system = body.demo ? `${SYSTEM}\n\nThis conversation starts in DEMO MODE.` : SYSTEM;
-  const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent`, {
-    method: "POST",
-    headers: { "content-type": "application/json", "x-goog-api-key": key },
-    body: JSON.stringify({
-      systemInstruction: { parts: [{ text: system }] },
-      contents: messages.map((m) => ({ role: m.role === "assistant" ? "model" : "user", parts: [{ text: m.text }] })),
-      generationConfig: { temperature: 0.4, maxOutputTokens: 260 },
-    }),
-  }).catch(() => null);
+  const payload = JSON.stringify({
+    systemInstruction: { parts: [{ text: system }] },
+    contents: messages.map((m) => ({ role: m.role === "assistant" ? "model" : "user", parts: [{ text: m.text }] })),
+    generationConfig: { temperature: 0.4, maxOutputTokens: 1024 },
+  });
+  let res: Response | null = null;
+  for (const model of MODELS) {
+    res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
+      method: "POST",
+      headers: { "content-type": "application/json", "x-goog-api-key": key },
+      body: payload,
+    }).catch(() => null);
+    if (res?.ok) break;
+    const detail = res ? await res.text().catch(() => "") : "network error";
+    console.error("receptionist upstream", model, res?.status, detail.slice(0, 300));
+    // Only a missing model is worth retrying with the next name.
+    if (res?.status !== 404) break;
+  }
 
   if (!res || !res.ok) {
     const status = res?.status === 429 ? 429 : 502;
-    console.error("receptionist upstream", res?.status);
     return NextResponse.json({ error: status === 429 ? "busy" : "upstream" }, { status });
   }
   const data = await res.json();
