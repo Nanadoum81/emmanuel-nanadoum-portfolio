@@ -15,7 +15,7 @@ export type PracticeProfile = {
 };
 
 export const PRACTICES: Record<string, PracticeProfile> = {
-  nelson-thatcher: {
+  "nelson-thatcher": {
     "name": "Nelson Chiropractic (Dr. Jared Nelson, D.C.)",
     "short": "Nelson Chiropractic",
     "city": "Thatcher, Arizona",
