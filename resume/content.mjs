@@ -19,7 +19,7 @@ export const resume = {
     ["Presales", "Technical discovery, needs analysis, solution mapping, technical demos, proof of concept (POC), technical validation, objection handling, value articulation, scoping and proposals"],
     ["Solution design", "Solution architecture, workflow and integration diagrams, implementation planning, technical documentation, stakeholder communication, customer training and enablement"],
     ["Technical", "REST APIs, webhooks, SQL, Python, JavaScript, HTML/CSS, serverless functions (Vercel), Supabase (Postgres, auth), AWS fundamentals, Git/GitHub, troubleshooting"],
-    ["Platforms & AI", "GoHighLevel, HubSpot, Salesforce, Twilio (voice/SMS), ElevenLabs (speech-to-text, text-to-speech), AI voice agents, CRM automation, Jira"],
+    ["Platforms & AI", "GoHighLevel, HubSpot, Salesforce, Twilio (voice/SMS), ElevenLabs (speech-to-text, text-to-speech), Google Gemini API, Web Speech API, AI voice agents, CRM automation, Jira"],
   ],
 
   experience: [
@@ -33,18 +33,6 @@ export const resume = {
         "Build proof-of-concept demos on each prospect's own brand: six live prospect demos, including a revenue system with a live AI voice receptionist, test patient form, and 13-step patient journey.",
         "Design reusable solution architecture customized per client: a 12-stage CRM pipeline with tagged lead routing, missed-call text-back, 24-hour and 2-hour reminders, no-show recovery, and review requests.",
         "Present solution diagrams, scopes, and implementation plans with clear tradeoffs, then own handoff into configuration, testing, launch, and training using GoHighLevel, Twilio, REST APIs, and webhooks.",
-      ],
-    },
-    {
-      role: "Online Experience Advisor",
-      org: "DriveTime",
-      where: "Tempe, AZ",
-      when: "Jul 2026 – Sep 2026",
-      bullets: [
-        "Guided customers through complex digital vehicle, financing, and documentation workflows using consultative discovery.",
-        "Resolved objections and account issues, and coordinated escalations when technical or operational support was needed.",
-        "Translated financing, product, and transaction details into clear recommendations and next steps toward purchase.",
-        "Maintained accurate CRM and case documentation across high transaction volume and compliance-sensitive information.",
       ],
     },
     {
@@ -68,6 +56,14 @@ export const resume = {
       bullets: [
         "Designed and deployed a voice concierge that keeps ride context (destination, trip length, passengers, mood): browser audio → ElevenLabs Scribe → context-aware response → ElevenLabs speech, on Vercel serverless functions.",
         "Supabase for auth, shared rides, and saved setups; provider keys kept server-side; Google Places/Routes recommendations integrated behind production credentials.",
+      ],
+    },
+    {
+      name: "AI voice receptionist, browser voice agent",
+      link: "emmanuel-nanadoum.vercel.app/receptionist",
+      bullets: [
+        "Built a two-way voice receptionist that runs in the browser: Web Speech API for listening and speaking, Google Gemini for replies, plus a demo mode that runs a sample practice's front desk.",
+        "Guardrails in the system prompt (discloses it is AI; no prices, results, or medical advice; never claims a booking), per-IP rate limiting, and automatic fallback across Gemini models.",
       ],
     },
   ],

@@ -27,7 +27,7 @@ Emmanuel Nanadoum — AI Consultant / Solutions Engineer / Sales Engineer (AI, C
 
 - Contact: Phoenix, Arizona · Remote / Hybrid · nanadoum81@gmail.com · 602-810-1271 · linkedin.com/in/emmanuel-nanadoum-7971b7a8
 - Resume: `public/Emmanuel_Nanadoum_Sales_Engineer_Resume.pdf` (source: ~/Downloads/Emmanuel_Nanadoum_Sales_Engineer_Resume_Updated.pdf, 2026-09-29; the "Interview_Optimized" filename named in the brief does not exist on disk — this file carries the exact positioning language from the brief).
-- Current role on resume: Principal Consultant — CRM, AI Automation & Technical Solutions, Blair Digital Studios (2020–present). Prior: Online Experience Advisor, DriveTime Automotive (Jul–Sep 2026); Sales Representative, A Better Way Wholesale Autos (2017–2025). Education: B.S. Cybersecurity & Information Assurance, WGU (in progress); TripleTen Software Engineering training; HubSpot, Salesforce Trailhead, SQL, AWS fundamentals.
+- Current role on resume: Principal Consultant — CRM, AI Automation & Technical Solutions, Blair Digital Studios (2020–present). Prior: Sales Representative, A Better Way Wholesale Autos (2017–2025). (DriveTime, Jul–Sep 2026, is intentionally left off the résumé and site as a short stint; keep it on full-history applications.) Education: B.S. Cybersecurity & Information Assurance, WGU (in progress); TripleTen Software Engineering training; HubSpot, Salesforce Trailhead, SQL, AWS fundamentals.
 
 ## Capabilities and Constraints
 

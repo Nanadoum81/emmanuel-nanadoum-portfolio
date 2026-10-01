@@ -115,16 +115,6 @@ export const experience = [
     ],
   },
   {
-    role: "Online Experience Advisor",
-    org: "DriveTime Automotive",
-    where: "Tempe, AZ",
-    when: "Jul 2026 – Sep 2026",
-    points: [
-      "Guided customers through complex digital vehicle, financing and documentation workflows using consultative discovery and clear product explanations.",
-      "Resolved objections and account issues and coordinated escalations when technical or operational support was needed, with accurate CRM and case documentation.",
-    ],
-  },
-  {
     role: "Sales Representative",
     org: "A Better Way Wholesale Autos",
     where: "Naugatuck, CT",
