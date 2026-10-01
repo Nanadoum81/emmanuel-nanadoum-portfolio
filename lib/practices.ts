@@ -15,6 +15,34 @@ export type PracticeProfile = {
 };
 
 export const PRACTICES: Record<string, PracticeProfile> = {
+  nelson: {
+    "name": "Nelson Chiropractic",
+    "short": "Nelson Chiropractic",
+    "city": "Tempe, Arizona",
+    "phone": "(480) 966-1635",
+    "address": "2409 S Rural Rd, Suite D, Tempe, AZ 85282",
+    "doctors": [
+      "Dr. Donald L. Nelson, D.C. (Los Angeles College of Chiropractic, 1983)"
+    ],
+    "hours": "Listed hours on Google: Monday to Friday 7 a.m. to 6 p.m.; Saturday 7 a.m. to 1 p.m.; closed Sunday. Always add that callers should confirm hours with the office.",
+    "services": "Chiropractic adjustments (hands-on spinal manipulation) by Dr. Nelson, care after car accidents, and physical therapy and soft-tissue work as listed for the practice in public directories. Dr. Nelson can order an MRI when it is warranted. Common reasons people come in: low back pain, neck pain, disc and nerve symptoms in the shoulder or arm, lifting and training strains, headaches, and injuries after a car accident.",
+    "insurance": "Aetna is listed for Dr. Nelson on WebMD. Other plans and auto-accident claims: the office confirms coverage by phone.",
+    "extras": "Dr. Nelson has practiced on South Rural Road in Tempe since at least 1995; some older directories still list 5125 S Rural Rd, but the current office is Suite D at 2409 S Rural Rd. Wheelchair-accessible entrance, parking and restroom are listed for the office. After a car accident, callers should phone the office first to talk through their situation and what paperwork to bring."
+  },
+  canham: {
+    "name": "Canham Chiropractic (Rosalind L. Canham, D.C.)",
+    "short": "Canham Chiropractic",
+    "city": "Phoenix, Arizona",
+    "phone": "(602) 255-0600",
+    "address": "2041 N 7th St, Phoenix, AZ 85006",
+    "doctors": [
+      "Dr. Rosalind L. Canham, D.C. (Doctor of Chiropractic, Cleveland Chiropractic College; M.S. in Human Anatomy and Physiology Instruction, New York Chiropractic College; registered as a chiropractor specializing in rehabilitation)"
+    ],
+    "hours": "Office hours are not published. Do not state any hours; tell callers the office will confirm a time and they can call (602) 255-0600.",
+    "services": "Chiropractic spinal adjustments, exercise rehabilitation, manual medicine and therapeutic procedures. People commonly ask about back pain, neck and upper-back tension, stiffness, and rebuilding strength after an injury; the doctor decides what fits after an exam.",
+    "insurance": "Public registry records list Blue Cross Blue Shield of Arizona and Arizona Medicaid provider IDs; Dr. Canham does not participate in Medicare. The office confirms coverage by phone.",
+    "extras": "Dr. Canham has been in private practice in Phoenix since 1998 and founded Canham College (Professional Online Education), which trains chiropractic assistants. The listing shows a wheelchair-accessible entrance, parking and restroom. Physicians and attorneys can fax records to (602) 255-0601."
+  },
   palmer: {
     name: "Palmer & Herman Chiropractic Physicians",
     short: "Palmer & Herman",
