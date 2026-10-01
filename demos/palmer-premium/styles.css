@@ -135,10 +135,10 @@ p { margin: 0; }
   color: var(--on-door);
   padding: clamp(48px, 9vh, 96px) clamp(40px, 8vw, 120px);
 }
-.door-panel { display: flex; flex-direction: column; align-items: center; gap: clamp(22px, 3.4vh, 34px); width: 100%; }
+.door-panel { display: flex; flex-direction: column; align-items: center; gap: clamp(18px, 2.6vh, 28px); width: 100%; }
 .plaque {
   --mx: 30%; --my: 20%;
-  position: relative; width: min(540px, 100%, 52vh * 1.333);
+  position: relative; width: min(500px, 100%, 40vh * 1.333);
   border-radius: 6px; overflow: hidden; isolation: isolate;
   box-shadow: 0 2px 3px rgba(0,0,0,.45), 0 14px 28px -10px rgba(0,0,0,.55), 0 40px 60px -30px rgba(0,0,0,.45);
 }
@@ -196,10 +196,9 @@ figcaption { margin-top: 10px; font-size: 12.5px; color: var(--ink-2); }
 .ledger dd { margin: 0; font-size: 16.5px; }
 .ledger.on-dark { border-top-color: var(--metal); }
 .ledger.on-dark div { border-bottom-color: var(--rule-door); }
-.ledger.on-dark dt { color: var(--metal); }
-[data-colorway="limestone"] .ledger.on-dark dt { color: var(--metal-lo); }
+.ledger.on-dark dt { color: var(--on-door-2); }
 .ledger a { text-decoration-color: var(--metal); }
-.photo-slot { display: grid; place-content: center; gap: 8px; text-align: center; aspect-ratio: 4 / 3; padding: 24px; border: 1px dashed var(--rule); border-radius: 3px; background: color-mix(in srgb, var(--stock-2) 60%, var(--stock)); }
+.photo-slot { display: grid; place-content: center; gap: 8px; text-align: center; aspect-ratio: 4 / 3; padding: 24px; border: 1px solid var(--ink); background: var(--stock-2); box-shadow: inset 0 0 0 14px var(--stock), inset 0 0 0 15px var(--rule); }
 .photo-slot span { font: 400 clamp(20px, 1.8vw, 24px)/1.25 "Gilda Display", serif; color: var(--ink); }
 .photo-slot small { font-size: 13.5px; color: var(--ink-2); }
 .since-photo .photo-slot { aspect-ratio: 4 / 5; }
@@ -219,8 +218,7 @@ figcaption { margin-top: 10px; font-size: 12.5px; color: var(--ink-2); }
   font: 400 clamp(24px, 2.6vw, 30px)/1.2 "Marcellus SC", serif; letter-spacing: 0.06em; color: var(--metal-hi);
 }
 [data-colorway="limestone"] .nameplate .engraved { color: var(--metal-lo); }
-.np-role { margin-top: 18px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--metal); }
-[data-colorway="limestone"] .np-role { color: var(--metal-lo); }
+.np-role { margin-top: 18px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--on-door-2); }
 .np-facts { margin: 22px 0 0; }
 .np-facts div { display: grid; grid-template-columns: 10rem 1fr; gap: 14px; padding: 11px 0; border-top: 1px solid var(--rule-door); }
 .np-facts dt { font-size: 14px; color: var(--on-door-2); }
@@ -299,11 +297,11 @@ figcaption { margin-top: 10px; font-size: 12.5px; color: var(--ink-2); }
 .quotes .who { margin-top: 14px; font: 600 14px/1.3 "Hanken Grotesk", sans-serif; color: var(--ink-2); }
 
 /* visit */
-.visit { display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(36px, 6vw, 88px); align-items: stretch; }
+.visit-text { display: grid; grid-template-columns: 1fr 1.2fr; gap: 0 clamp(36px, 6vw, 88px); align-items: start; }
+.visit-text .band-title { grid-row: span 2; }
+.visit-text .ledger { margin-top: 0; }
+.visit-text .outline-btn { justify-self: start; }
 .visit .ledger { margin-bottom: 32px; }
-.address-block { display: grid; align-content: center; font-style: normal; padding: clamp(28px, 4vw, 48px); border: 1px solid var(--rule-door); border-radius: 3px; }
-.address-block span { font: 400 clamp(30px, 3.8vw, 52px)/1.12 "Gilda Display", serif; }
-.address-block span:last-child { margin-top: 10px; font: 500 15px/1 "Hanken Grotesk", sans-serif; letter-spacing: .2em; color: var(--on-door-2); font-variant-numeric: tabular-nums; }
 .outline-btn {
   display: inline-flex; align-items: center; min-height: 46px; padding: 0 20px;
   font: 600 14px/1 "Hanken Grotesk", sans-serif; letter-spacing: .04em; text-decoration: none;
@@ -318,7 +316,9 @@ figcaption { margin-top: 10px; font-size: 12.5px; color: var(--ink-2); }
 .request-alt a { font-weight: 600; text-decoration-color: var(--accent-ink); }
 .request-photo { margin: 36px 0 0; }
 .request-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 2px; }
-.form { display: grid; gap: 22px; padding: clamp(24px, 3.4vw, 44px); background: var(--stock); border: 1px solid var(--rule); border-radius: 3px; box-shadow: 0 30px 60px -40px rgba(0,0,0,.35); }
+.form { display: grid; gap: 22px; padding: clamp(24px, 3.4vw, 44px); background: var(--stock); border: 1px solid var(--ink); border-radius: 0; box-shadow: inset 0 0 0 5px var(--stock), inset 0 0 0 6px var(--rule); }
+.letterhead { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--ink); box-shadow: 0 3px 0 -2px var(--rule); font: 400 15px/1.2 "Marcellus SC", serif; letter-spacing: .14em; color: var(--accent-ink); }
+.letterhead span:last-child { font-size: 12.5px; color: var(--ink-2); }
 .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .field { display: grid; gap: 8px; }
 .field > span, legend { font-size: 14px; font-weight: 600; color: var(--ink); }
@@ -399,6 +399,8 @@ legend { padding: 0; margin-bottom: 10px; }
   .bar-end { justify-content: flex-end; }
 }
 @media (max-width: 900px) {
+  .visit-text { grid-template-columns: 1fr; gap: 28px; }
+  .visit-text .band-title { grid-row: auto; }
   .since, .care-head, .care-cols, .hours, .reviews-head, .visit, .request, .fv-grid { grid-template-columns: 1fr; }
   .care-head, .reviews-head { gap: 20px; }
   .nameplates { grid-template-columns: 1fr; }
@@ -408,7 +410,7 @@ legend { padding: 0; margin-bottom: 10px; }
   .quotes { grid-template-columns: 1fr 1fr; }
   .quotes li:not(:nth-child(3n + 1)) { padding-left: 0; border-left: 0; }
   .quotes li:nth-child(even) { padding-left: 24px; border-left: 1px solid var(--rule); }
-  .photo-slot { display: grid; place-content: center; gap: 8px; text-align: center; aspect-ratio: 4 / 3; padding: 24px; border: 1px dashed var(--rule); border-radius: 3px; background: color-mix(in srgb, var(--stock-2) 60%, var(--stock)); }
+  .photo-slot { display: grid; place-content: center; gap: 8px; text-align: center; aspect-ratio: 4 / 3; padding: 24px; border: 1px solid var(--ink); background: var(--stock-2); box-shadow: inset 0 0 0 14px var(--stock), inset 0 0 0 15px var(--rule); }
 .photo-slot span { font: 400 clamp(20px, 1.8vw, 24px)/1.25 "Gilda Display", serif; color: var(--ink); }
 .photo-slot small { font-size: 13.5px; color: var(--ink-2); }
 .since-photo .photo-slot { aspect-ratio: 4 / 5; }
