@@ -124,6 +124,16 @@ export const experience = [
       "Delivered product presentations, handled objections, and coordinated finance, service and operations to remove barriers to purchase; consistently ranked among top performers.",
     ],
   },
+  {
+    role: "Customer Success Specialist",
+    org: "Family First Life",
+    where: "Manchester, CT (Remote)",
+    when: "Jan 2023 – Jan 2024",
+    points: [
+      "Onboarded and educated 15–20 new customers a month, translating complex product options into clear, needs-based recommendations.",
+      "Owned renewal conversations and resolved concerns in a regulated environment through consistent follow-up and value-based communication.",
+    ],
+  },
 ] as const;
 
 export const education = [

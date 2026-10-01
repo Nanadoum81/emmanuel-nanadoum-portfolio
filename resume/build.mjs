@@ -22,7 +22,7 @@ const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>
 <style>
   @page { size: Letter; margin: 0.4in 0.5in 0.32in; }
   * { box-sizing: border-box; }
-  body { margin: 0; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; color: #16181c; font-size: 9.4pt; line-height: 1.265; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; color: #16181c; font-size: 9.3pt; line-height: 1.24; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   a { color: inherit; text-decoration: none; }
   h1 { font-size: 21pt; letter-spacing: -0.2pt; margin: 0; line-height: 1.05; }
   .headline { color: #1d3fcf; font-weight: 700; font-size: 10.6pt; margin-top: 3pt; }

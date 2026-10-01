@@ -13,7 +13,7 @@ export const resume = {
   portfolio: { label: "Portfolio & live demos", url: "https://emmanuel-nanadoum.vercel.app" },
 
   summary:
-    "Customer-facing technical and sales professional with 8+ years of consultative, high-ticket selling and 4+ years designing CRM, automation, web, and AI voice solutions. Leads discovery, turns business pain into technical requirements, builds proof-of-concept demos on the prospect's own business, and guides customers from evaluation through implementation. Portfolio: six live prospect demos and a deployed AI voice product.",
+    "Customer-facing technical and sales professional with 8+ years of consultative, high-ticket selling, customer success experience, and 4+ years designing CRM, automation, web, and AI voice solutions. Leads discovery, turns business pain into technical requirements, builds proof-of-concept demos on the prospect's own business, and guides customers from evaluation through implementation, onboarding, and renewal. Portfolio: six live prospect demos and two deployed AI voice products.",
 
   skills: [
     ["Presales", "Technical discovery, needs analysis, solution mapping, technical demos, proof of concept (POC), technical validation, objection handling, value articulation, scoping and proposals"],
@@ -47,6 +47,18 @@ export const resume = {
         "Balanced revenue goals, customer satisfaction, and documentation accuracy across complex multi-step transactions.",
       ],
     },
+    {
+      role: "Customer Success Specialist",
+      org: "Family First Life",
+      where: "Manchester, CT (Remote)",
+      when: "Jan 2023 – Jan 2024",
+      bullets: [
+        "Onboarded and educated 15–20 new customers a month, turning complex product options into clear recommendations.",
+        "Owned renewal conversations, using consultative discovery to reconfirm each customer's goals and the value of their plan.",
+        "Resolved concerns and objections through consistent follow-up, clear expectations, and value-based communication.",
+        "Worked within a regulated, compliance-sensitive process, handling customer information and records accurately.",
+      ],
+    },
   ],
 
   projects: [
@@ -54,16 +66,16 @@ export const resume = {
       name: "VYBE, AI passenger experience platform",
       link: "vybe-app-blue.vercel.app",
       bullets: [
-        "Designed and deployed a voice concierge that keeps ride context (destination, trip length, passengers, mood): browser audio → ElevenLabs Scribe → context-aware response → ElevenLabs speech, on Vercel serverless functions.",
-        "Supabase for auth, shared rides, and saved setups; provider keys kept server-side; Google Places/Routes recommendations integrated behind production credentials.",
+        "Deployed a context-aware voice concierge: browser audio → ElevenLabs Scribe → ride-context reply → ElevenLabs speech.",
+        "Supabase auth and shared rides; keys kept server-side; Google Places/Routes behind production credentials.",
       ],
     },
     {
       name: "AI voice receptionist, browser voice agent",
       link: "emmanuel-nanadoum.vercel.app/receptionist",
       bullets: [
-        "Built a two-way voice receptionist that runs in the browser: Web Speech API for listening and speaking, Google Gemini for replies, plus a demo mode that runs a sample practice's front desk.",
-        "Guardrails in the system prompt (discloses it is AI; no prices, results, or medical advice; never claims a booking), per-IP rate limiting, and automatic fallback across Gemini models.",
+        "Two-way browser voice agent: Web Speech API in and out, Google Gemini replies, sample front-desk demo mode.",
+        "Guardrails (discloses it is AI; no prices or medical advice; never claims a booking), per-IP rate limiting, and model fallback.",
       ],
     },
   ],
