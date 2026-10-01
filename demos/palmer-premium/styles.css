@@ -19,6 +19,7 @@
   --ink-2: #4b413c;
   --rule: #bdb6aa;
   --accent-ink: #6e1d24;
+  --door-img: url(img/door-oxblood.webp);
   color-scheme: light;
 }
 [data-colorway="green"] {
@@ -28,6 +29,7 @@
   --on-door: #ece9dc;
   --on-door-2: #c4cbbb;
   --accent-ink: #1d4a37;
+  --door-img: url(img/door-green.webp);
 }
 [data-colorway="navy"] {
   --door: #101d33;
@@ -43,6 +45,7 @@
   --stock: #e3e4e2;
   --stock-2: #d6d8d6;
   --accent-ink: #1f3657;
+  --door-img: url(img/door-navy.webp);
 }
 [data-colorway="limestone"] {
   --door: #d8d2c5;
@@ -58,6 +61,7 @@
   --stock: #f1eee8;
   --stock-2: #e7e2d8;
   --accent-ink: #6a4c20;
+  --door-img: url(img/door-limestone.webp);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -97,11 +101,11 @@ p { margin: 0; }
 .mono {
   display: inline-flex; align-items: center; justify-content: center; height: 40px; padding: 0 9px; white-space: nowrap;
   font: 400 15px/1 "Marcellus SC", serif; letter-spacing: 0.02em;
-  color: var(--engrave);
-  background: linear-gradient(135deg, var(--metal-hi), var(--metal) 45%, var(--metal-lo));
+  color: var(--on-door);
+  border: 1px solid var(--rule-door);
   border-radius: 2px;
-  text-shadow: 0 1px 0 color-mix(in srgb, var(--metal-hi) 70%, transparent);
 }
+[data-colorway="limestone"] .mono { color: #efe9df; border-color: rgba(255,255,255,.25); }
 .mono i { font-style: normal; font-size: 11px; margin: 0 1px; }
 .bar-name { font: 400 17px/1.1 "Gilda Display", serif; }
 .bar-name small { display: block; font: 500 11px/1.4 "Hanken Grotesk", sans-serif; letter-spacing: 0.14em; text-transform: uppercase; color: var(--on-door-2); }
@@ -123,80 +127,28 @@ p { margin: 0; }
 .bar-call:hover { background: var(--metal); color: var(--engrave); }
 
 /* ---------- the door ---------- */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .door {
-  background:
-    radial-gradient(120% 70% at 50% 0%, color-mix(in srgb, var(--door-2) 80%, white 4%) 0%, transparent 60%),
-    linear-gradient(180deg, var(--door) 0%, var(--door-deep) 100%);
+  min-height: calc(100svh - 65px);
+  display: grid; place-items: center;
+  background: var(--door) var(--door-img) center / cover no-repeat;
   color: var(--on-door);
-  padding: clamp(28px, 5vh, 56px) 24px clamp(48px, 8vh, 88px);
+  padding: clamp(48px, 9vh, 96px) clamp(40px, 8vw, 120px);
 }
-.door-panel {
-  position: relative; width: min(760px, 100%); margin-inline: auto;
-  min-height: calc(100svh - 64px - clamp(76px, 13vh, 144px));
-  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(22px, 3.4vh, 36px);
-  padding: clamp(40px, 7vh, 80px) clamp(18px, 4vw, 56px);
-}
-.door-moulding {
-  position: absolute; inset: 0; border-radius: 3px; pointer-events: none;
-  box-shadow:
-    inset 0 0 0 1px color-mix(in srgb, black 35%, var(--door)),
-    inset 0 0 0 10px var(--door),
-    inset 0 0 0 11px color-mix(in srgb, white 10%, var(--door)),
-    inset 0 0 0 12px color-mix(in srgb, black 30%, var(--door)),
-    inset 0 30px 60px -30px rgba(0,0,0,.45),
-    inset 0 -40px 80px -40px rgba(0,0,0,.5);
-}
-[data-colorway="limestone"] .door { background: radial-gradient(120% 70% at 50% 0%, #e6e1d6 0%, transparent 60%), linear-gradient(180deg, var(--door) 0%, var(--door-2) 100%); }
-[data-colorway="limestone"] .lacquer { background: linear-gradient(180deg, var(--door) 0%, var(--door-2) 100%); }
-.nb { white-space: nowrap; }
-[data-colorway="limestone"] .door-moulding {
-  box-shadow:
-    inset 0 0 0 1px rgba(60,48,32,.25), inset 0 0 0 10px var(--door), inset 0 0 0 11px rgba(255,255,255,.55), inset 0 0 0 12px rgba(60,48,32,.18),
-    inset 0 30px 60px -30px rgba(60,48,32,.12);
-}
-
+.door-panel { display: flex; flex-direction: column; align-items: center; gap: clamp(22px, 3.4vh, 34px); width: 100%; }
 .plaque {
   --mx: 30%; --my: 20%;
-  position: relative; width: min(560px, 100%);
-  padding: clamp(30px, 5vw, 48px) clamp(22px, 5vw, 56px) clamp(26px, 4vw, 40px);
-  text-align: center; color: var(--engrave);
-  background:
-    repeating-linear-gradient(90deg, rgba(255,255,255,.07) 0 1px, rgba(0,0,0,.035) 1px 2px, transparent 2px 4px),
-    linear-gradient(160deg, var(--metal-hi) 0%, var(--metal) 32%, color-mix(in srgb, var(--metal) 80%, var(--metal-lo)) 64%, var(--metal) 100%);
-  border-radius: 3px;
-  box-shadow:
-    inset 0 1px 0 color-mix(in srgb, var(--metal-hi) 90%, white),
-    inset 0 -2px 0 color-mix(in srgb, var(--metal-lo) 80%, black),
-    inset 0 0 0 1px color-mix(in srgb, var(--metal-lo) 60%, transparent),
-    0 2px 2px rgba(0,0,0,.35),
-    0 18px 40px -12px rgba(0,0,0,.55);
-  overflow: hidden;
-  isolation: isolate;
+  position: relative; width: min(540px, 100%, 52vh * 1.333);
+  border-radius: 6px; overflow: hidden; isolation: isolate;
+  box-shadow: 0 2px 3px rgba(0,0,0,.45), 0 14px 28px -10px rgba(0,0,0,.55), 0 40px 60px -30px rgba(0,0,0,.45);
 }
+[data-colorway="limestone"] .plaque { box-shadow: 0 2px 3px rgba(40,30,15,.35), 0 14px 28px -10px rgba(40,30,15,.4); }
+.plaque-img { width: 100%; height: auto; }
 .sheen {
-  position: absolute; inset: 0; z-index: -1; pointer-events: none;
-  background: radial-gradient(420px 260px at var(--mx) var(--my), rgba(255,255,255,.55), rgba(255,255,255,0) 60%);
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(360px 220px at var(--mx) var(--my), rgba(255,255,255,.42), rgba(255,255,255,0) 62%);
   mix-blend-mode: soft-light;
-  transition: background-position .2s;
 }
-.screw {
-  position: absolute; width: 11px; height: 11px; border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, var(--metal-hi), var(--metal-lo) 70%);
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,.25), 0 1px 0 rgba(255,255,255,.35);
-}
-.screw::after { content: ""; position: absolute; left: 2px; right: 2px; top: 50%; height: 1.5px; margin-top: -.75px; background: rgba(0,0,0,.45); transform: rotate(var(--r, 35deg)); }
-.screw.tl { top: 12px; left: 12px; } .screw.tr { top: 12px; right: 12px; --r: -20deg; }
-.screw.bl { bottom: 12px; left: 12px; --r: 70deg; } .screw.br { bottom: 12px; right: 12px; --r: 10deg; }
-
-.plaque-name, .plaque-sub, .plaque-doctors, .plaque-foot, .engraved {
-  text-shadow: 0 1px 0 color-mix(in srgb, var(--metal-hi) 75%, transparent), 0 -1px 0 rgba(0,0,0,.18);
-}
-.plaque-name { font: 400 clamp(38px, 6.2vw, 64px)/1 "Marcellus SC", serif; letter-spacing: 0.04em; }
-.plaque-name span { font-family: "Gilda Display", serif; font-size: .82em; margin: 0 .06em; }
-.plaque-sub { margin-top: 10px; font: 400 clamp(13px, 1.7vw, 16px)/1.2 "Marcellus SC", serif; letter-spacing: 0.32em; }
-.plaque-rule { display: block; height: 1px; width: 64%; margin: clamp(16px, 2.6vw, 22px) auto; background: color-mix(in srgb, var(--engrave) 55%, transparent); box-shadow: 0 1px 0 color-mix(in srgb, var(--metal-hi) 70%, transparent); }
-.plaque-doctors { list-style: none; margin: 0; padding: 0; font: 400 clamp(17px, 2.3vw, 22px)/1.5 "Marcellus SC", serif; letter-spacing: 0.1em; }
-.plaque-foot { font: 400 clamp(11.5px, 1.4vw, 13px)/1.4 "Marcellus SC", serif; letter-spacing: 0.22em; }
 
 .door-line { max-width: 34ch; text-align: center; font: 400 clamp(19px, 2.2vw, 23px)/1.4 "Gilda Display", serif; color: var(--on-door); }
 .door-actions { display: flex; flex-direction: column; align-items: center; gap: 14px; }
@@ -209,17 +161,12 @@ p { margin: 0; }
   position: relative; display: inline-flex; align-items: center; justify-content: center;
   min-height: 54px; padding: 0 30px; border: 0; cursor: pointer;
   font: 600 15px/1 "Hanken Grotesk", sans-serif; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none;
-  color: var(--engrave);
-  background:
-    repeating-linear-gradient(90deg, rgba(255,255,255,.06) 0 1px, transparent 1px 3px),
-    linear-gradient(180deg, var(--metal-hi), var(--metal) 55%, color-mix(in srgb, var(--metal) 70%, var(--metal-lo)));
-  border-radius: 2px;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.55), inset 0 -2px 0 rgba(0,0,0,.25), 0 1px 1px rgba(0,0,0,.3), 0 10px 22px -10px rgba(0,0,0,.6);
-  transition: transform .18s cubic-bezier(.2,.7,.2,1), box-shadow .18s, filter .18s;
+  color: var(--engrave); background: var(--metal); border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 24px -12px rgba(0,0,0,.6);
+  transition: transform .18s cubic-bezier(.2,.7,.2,1), background-color .18s, box-shadow .18s;
 }
-.pushplate span { text-shadow: 0 1px 0 rgba(255,255,255,.45); }
-.pushplate:hover { filter: brightness(1.05) saturate(1.05); }
-.pushplate:active { transform: translateY(1px); box-shadow: inset 0 1px 0 rgba(255,255,255,.4), inset 0 -1px 0 rgba(0,0,0,.25), 0 0 0 rgba(0,0,0,0); }
+.pushplate:hover { background: color-mix(in srgb, var(--metal) 82%, var(--metal-hi)); }
+.pushplate:active { transform: translateY(1px); box-shadow: 0 1px 1px rgba(0,0,0,.3); }
 .pushplate.small { min-height: 46px; padding: 0 22px; font-size: 13.5px; }
 .pushplate.wide { width: 100%; }
 .pushplate[disabled] { filter: grayscale(.4) brightness(.92); cursor: progress; }
@@ -235,7 +182,7 @@ p { margin: 0; }
 .band-title { font: 400 clamp(34px, 4.6vw, 58px)/1.05 "Gilda Display", serif; letter-spacing: -0.012em; max-width: 20ch; }
 .band-lede { margin-top: 20px; max-width: 54ch; font-size: clamp(17.5px, 1.5vw, 19.5px); line-height: 1.55; color: var(--ink-2); }
 .lacquer .band-lede { color: var(--on-door-2); }
-.col-title { font: 600 13px/1.3 "Hanken Grotesk", sans-serif; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-ink); margin-bottom: 14px; }
+.col-title { font: 400 clamp(23px, 2vw, 27px)/1.2 "Gilda Display", serif; color: var(--ink); margin-bottom: 16px; }
 .fine { margin-top: 28px; font-size: 13.5px; line-height: 1.5; color: var(--ink-2); max-width: 70ch; }
 .fine.on-dark { color: var(--on-door-2); }
 figcaption { margin-top: 10px; font-size: 12.5px; color: var(--ink-2); }
@@ -252,6 +199,10 @@ figcaption { margin-top: 10px; font-size: 12.5px; color: var(--ink-2); }
 .ledger.on-dark dt { color: var(--metal); }
 [data-colorway="limestone"] .ledger.on-dark dt { color: var(--metal-lo); }
 .ledger a { text-decoration-color: var(--metal); }
+.photo-slot { display: grid; place-content: center; gap: 8px; text-align: center; aspect-ratio: 4 / 3; padding: 24px; border: 1px dashed var(--rule); border-radius: 3px; background: color-mix(in srgb, var(--stock-2) 60%, var(--stock)); }
+.photo-slot span { font: 400 clamp(20px, 1.8vw, 24px)/1.25 "Gilda Display", serif; color: var(--ink); }
+.photo-slot small { font-size: 13.5px; color: var(--ink-2); }
+.since-photo .photo-slot { aspect-ratio: 4 / 5; }
 .since-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 2px; box-shadow: 0 30px 60px -30px rgba(0,0,0,.45); }
 
 /* doctors */
@@ -264,12 +215,10 @@ figcaption { margin-top: 10px; font-size: 12.5px; color: var(--ink-2); }
 }
 [data-colorway="limestone"] .nameplate { background: #e6e0d4; box-shadow: inset 0 1px 0 rgba(255,255,255,.7), 0 20px 50px -30px rgba(60,48,32,.35); }
 .nameplate .engraved {
-  display: inline-block; padding: 14px 22px; color: var(--engrave);
-  font: 400 clamp(20px, 2.3vw, 26px)/1.2 "Marcellus SC", serif; letter-spacing: 0.08em;
-  background: repeating-linear-gradient(90deg, rgba(255,255,255,.07) 0 1px, transparent 1px 3px), linear-gradient(160deg, var(--metal-hi), var(--metal) 40%, color-mix(in srgb, var(--metal) 78%, var(--metal-lo)));
-  border-radius: 2px;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.5), inset 0 -1px 0 rgba(0,0,0,.25), 0 8px 18px -8px rgba(0,0,0,.6);
+  display: block; padding-bottom: 16px; border-bottom: 1px solid var(--metal);
+  font: 400 clamp(24px, 2.6vw, 30px)/1.2 "Marcellus SC", serif; letter-spacing: 0.06em; color: var(--metal-hi);
 }
+[data-colorway="limestone"] .nameplate .engraved { color: var(--metal-lo); }
 .np-role { margin-top: 18px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--metal); }
 [data-colorway="limestone"] .np-role { color: var(--metal-lo); }
 .np-facts { margin: 22px 0 0; }
@@ -323,9 +272,10 @@ figcaption { margin-top: 10px; font-size: 12.5px; color: var(--ink-2); }
 .track b {
   position: absolute; top: 0; bottom: 0;
   left: calc(var(--s) / var(--cols) * 100%); width: calc((var(--e) - var(--s)) / var(--cols) * 100%);
-  background: linear-gradient(180deg, var(--metal-hi), var(--metal) 60%, var(--metal-lo));
-  border-radius: 1px; box-shadow: inset 0 1px 0 rgba(255,255,255,.5);
+  background: var(--on-door); opacity: .82;
+  border-radius: 1px;
 }
+.day.today .track b { opacity: 1; }
 .day.today .d { color: var(--metal); }
 [data-colorway="limestone"] .day.today .d { color: var(--metal-lo); }
 .day.today .t { color: var(--on-door); font-weight: 600; }
@@ -351,19 +301,16 @@ figcaption { margin-top: 10px; font-size: 12.5px; color: var(--ink-2); }
 /* visit */
 .visit { display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(36px, 6vw, 88px); align-items: stretch; }
 .visit .ledger { margin-bottom: 32px; }
-.map {
-  position: relative; min-height: 380px; border-radius: 3px; overflow: hidden;
-  display: grid; place-content: center; justify-items: center; gap: 8px;
-  background:
-    linear-gradient(0deg, var(--rule-door) 1px, transparent 1px) 0 0 / 100% 48px,
-    linear-gradient(90deg, var(--rule-door) 1px, transparent 1px) 0 0 / 48px 100%,
-    color-mix(in srgb, var(--door-deep) 50%, var(--door));
-  border: 1px solid var(--rule-door);
+.address-block { display: grid; align-content: center; font-style: normal; padding: clamp(28px, 4vw, 48px); border: 1px solid var(--rule-door); border-radius: 3px; }
+.address-block span { font: 400 clamp(30px, 3.8vw, 52px)/1.12 "Gilda Display", serif; }
+.address-block span:last-child { margin-top: 10px; font: 500 15px/1 "Hanken Grotesk", sans-serif; letter-spacing: .2em; color: var(--on-door-2); font-variant-numeric: tabular-nums; }
+.outline-btn {
+  display: inline-flex; align-items: center; min-height: 46px; padding: 0 20px;
+  font: 600 14px/1 "Hanken Grotesk", sans-serif; letter-spacing: .04em; text-decoration: none;
+  color: var(--on-door); border: 1px solid color-mix(in srgb, var(--on-door) 55%, transparent); border-radius: 2px;
+  transition: background .2s, color .2s, border-color .2s;
 }
-.map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: grayscale(.35) contrast(1.02); }
-.map-load { font: 600 14px/1 "Hanken Grotesk", sans-serif; letter-spacing: .06em; text-transform: uppercase; padding: 14px 20px; border: 1px solid var(--metal); background: transparent; color: var(--on-door); cursor: pointer; border-radius: 2px; }
-.map-load:hover { background: var(--metal); color: var(--engrave); }
-.map-note { font-size: 12.5px; color: var(--on-door-2); }
+.outline-btn:hover { background: var(--on-door); color: var(--door-deep); border-color: var(--on-door); }
 
 /* request */
 .request { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(36px, 6vw, 88px); align-items: start; }
@@ -405,7 +352,7 @@ legend { padding: 0; margin-bottom: 10px; }
 .form-error { color: #a12a22; font-weight: 600; font-size: 15px; }
 .form .fine { margin-top: -6px; }
 .form-done { padding: 28px; background: var(--door); color: var(--on-door); border-radius: 3px; display: grid; gap: 14px; }
-.form-done .engraved { justify-self: start; color: var(--engrave); padding: 10px 18px; font: 400 22px/1.2 "Marcellus SC", serif; letter-spacing: .08em; background: linear-gradient(160deg, var(--metal-hi), var(--metal) 45%, var(--metal-lo)); border-radius: 2px; }
+.form-done .engraved { font: 400 26px/1.2 "Marcellus SC", serif; letter-spacing: .08em; color: var(--metal); }
 .form-done a { color: inherit; font-weight: 600; }
 .form.sent > :not(.form-done) { display: none; }
 .form-done[hidden], .form-error[hidden] { display: none; }
@@ -461,7 +408,11 @@ legend { padding: 0; margin-bottom: 10px; }
   .quotes { grid-template-columns: 1fr 1fr; }
   .quotes li:not(:nth-child(3n + 1)) { padding-left: 0; border-left: 0; }
   .quotes li:nth-child(even) { padding-left: 24px; border-left: 1px solid var(--rule); }
-  .since-photo img { aspect-ratio: 16 / 11; }
+  .photo-slot { display: grid; place-content: center; gap: 8px; text-align: center; aspect-ratio: 4 / 3; padding: 24px; border: 1px dashed var(--rule); border-radius: 3px; background: color-mix(in srgb, var(--stock-2) 60%, var(--stock)); }
+.photo-slot span { font: 400 clamp(20px, 1.8vw, 24px)/1.25 "Gilda Display", serif; color: var(--ink); }
+.photo-slot small { font-size: 13.5px; color: var(--ink-2); }
+.since-photo .photo-slot { aspect-ratio: 4 / 5; }
+.since-photo img { aspect-ratio: 16 / 11; }
   .foot-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 640px) {
@@ -486,9 +437,8 @@ legend { padding: 0; margin-bottom: 10px; }
     background: var(--door-deep); border-top: 1px solid var(--rule-door);
   }
   .mobile-bar a { display: grid; place-items: center; min-height: 48px; font-weight: 600; text-decoration: none; color: #f1e8dc; border: 1px solid var(--metal); border-radius: 2px; }
-  .mobile-bar .go { color: var(--engrave); background: linear-gradient(180deg, var(--metal-hi), var(--metal)); border: 0; }
-  .colorways { left: 8px; bottom: 78px; padding: 8px; }
-  .colorways:not([data-collapsed="true"]) { right: 8px; }
+  .mobile-bar .go { color: var(--engrave); background: var(--metal); border: 0; }
+  .colorways { position: static; margin: 0; border-radius: 0; border-width: 1px 0 0; padding: 14px 16px; backdrop-filter: none; box-shadow: none; }
   .cw-list { grid-template-columns: repeat(4, 1fr); }
   .cw-list button { flex-direction: column; gap: 4px; font-size: 10.5px; padding: 4px; text-align: center; min-height: 48px; }
 }

@@ -6,10 +6,13 @@
   const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // ---- colorways (prospect preview control) ----
+  const METAL = { oxblood: "brass", green: "brass", navy: "nickel", limestone: "bronze" };
   const THEME = { oxblood: "#230709", green: "#081a13", navy: "#08111f", limestone: "#2a241d" };
   const setColorway = (cw, push) => {
     if (!THEME[cw]) cw = "oxblood";
     root.dataset.colorway = cw;
+    const img = $("[data-plaque-img]");
+    if (img) img.src = `img/plaque-${METAL[cw]}.webp`;
     $('meta[name="theme-color"]').setAttribute("content", THEME[cw]);
     $$("[data-cw]").forEach((b) => b.setAttribute("aria-checked", String(b.dataset.cw === cw)));
     if (push) {
@@ -35,7 +38,7 @@
   // Collapsible on small screens so it never covers the page.
   const cwBox = $("[data-colorways]"), cwBtn = $("[data-cw-toggle]");
   const collapse = (c) => { cwBox.dataset.collapsed = String(c); cwBtn.setAttribute("aria-expanded", String(!c)); cwBtn.textContent = c ? "Colorways" : "Hide"; };
-  collapse(matchMedia("(max-width: 640px)").matches);
+  collapse(false);
   cwBtn.addEventListener("click", () => collapse(cwBox.dataset.collapsed !== "true"));
 
   // ---- plaque: light follows the pointer across the brass ----
@@ -123,12 +126,6 @@
   renderHours();
   setInterval(renderHours, 60_000);
   addEventListener("resize", renderHours);
-
-  // ---- map loads only when asked ----
-  $("[data-map-load]")?.addEventListener("click", () => {
-    const map = $("[data-map]");
-    map.innerHTML = '<iframe title="Map of 331 Church Street, Naugatuck" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=331+Church+St,+Naugatuck,+CT+06770&output=embed"></iframe>';
-  });
 
   // ---- appointment request ----
   const form = $("[data-form]");
