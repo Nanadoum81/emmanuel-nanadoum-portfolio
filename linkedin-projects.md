@@ -57,7 +57,7 @@ Try the live voice demo at the link.
 **Description:**
 A two-layer proof of concept built to pitch a chiropractic practice in Peoria, AZ. It is a prospect demo built from public information before engagement.
 
-Layer one is a patient website in the practice's own brand. Layer two is a revenue-system page where the owner can call a two-way AI receptionist on a dedicated demo line (kept separate from the practice's real number), submit a test patient form, and walk a 13-step patient journey:
+Layer one is a patient website in the practice's own brand. Layer two is a revenue-system page where the owner can talk to a two-way AI receptionist in the browser (kept separate from the practice's real line), submit a test patient form, and walk a 13-step patient journey:
 
 call or web inquiry → instant response → CRM contact → pipeline → booking → SMS and email confirmation → reminders → show/no-show → follow-up → review request → reactivation → reporting.
 

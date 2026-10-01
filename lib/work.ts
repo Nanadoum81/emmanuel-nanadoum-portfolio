@@ -139,16 +139,17 @@ export const caseStudies: CaseStudy[] = [
     role: "Discovery, solution mapping, workflow architecture, live demo build",
     headline: "From the first ring to a booked visit, on the practice's own brand.",
     summary:
-      "A two-layer demo: a patient website in Cactus's own identity, and a revenue-system page that lets the owner call a live AI receptionist, submit a test patient form, and walk every stage of a connected patient journey.",
+      "A two-layer demo: a patient website in Cactus's own identity, and a revenue-system page where the owner can talk to a live AI receptionist, submit a test patient form, and walk every stage of a connected patient journey.",
     source: "blair-demo-cactus.vercel.app",
     links: [
       { label: "Open revenue system", href: "https://blair-demo-cactus.vercel.app/revenue-system", primary: true, event: "demo_open_cactus_rs" },
       { label: "Patient website", href: "https://blair-demo-cactus.vercel.app", event: "demo_open_cactus" },
+      { label: "Talk to the AI receptionist", href: "/receptionist?demo=1", event: "receptionist_open" },
     ],
-    cover: D("cactus-rs-d", "Cactus Chiropractic revenue system page: The Chiropractor Revenue System with a call-the-AI-receptionist panel."),
+    cover: D("cactus-rs-d", "Cactus Chiropractic revenue system page: The Chiropractor Revenue System with a talk-to-the-AI-receptionist panel."),
     status: [
       { label: "Patient website", tally: "live", note: "Published demo in the practice's brand." },
-      { label: "AI receptionist demo line", tally: "live", note: "Real two-way voice conversation on a dedicated demo number." },
+      { label: "AI receptionist", tally: "live", note: "Two-way voice conversation in the browser at /receptionist; the original phone demo line has been retired." },
       { label: "Pipeline, counts and reporting", tally: "demo", note: "Illustrative sample data, labeled on the page. No patient information." },
     ],
     problem: [
@@ -192,7 +193,7 @@ export const caseStudies: CaseStudy[] = [
       ],
     },
     demo: {
-      intro: "The prospect calls the AI receptionist, pretends to be a new patient, then watches the journey the call would start.",
+      intro: "The prospect talks to the AI receptionist, pretends to be a new patient, then watches the journey that conversation would start.",
       shots: [
         D("cactus-d", "Cactus Chiropractic patient website hero: Gentle care. Time to listen.", "Patient-facing site in Cactus's own identity."),
         D("cactus-rs-journey", "Cactus revenue system: One connected patient journey, a grid of 13 journey steps.", "Every step is visible, so the demo sells the whole path."),
@@ -206,7 +207,7 @@ export const caseStudies: CaseStudy[] = [
       { from: "Appointment status", to: "Follow-up, review, reactivation", note: "Outcome drives the next workflow" },
     ],
     tradeoffs: [
-      { choice: "Dedicated demo number", over: "Forwarding the practice's real line", why: "The public line and real patients stay untouched; the owner still hears the real agent." },
+      { choice: "A separate demo channel", over: "Forwarding the practice's real line", why: "The public line and real patients stay untouched; the owner still hears the real agent. It now runs in the browser, so no phone number is needed." },
       { choice: "Live voice agent", over: "A recorded sample call", why: "Harder to build, but it proves the product instead of describing it." },
       { choice: "Labeled sample data", over: "Plausible-looking results", why: "A fabricated number would be the first thing a sharp owner questions." },
       { choice: "One connected journey", over: "Separate point tools", why: "The value is in the hand-offs, so the demo shows the hand-offs." },

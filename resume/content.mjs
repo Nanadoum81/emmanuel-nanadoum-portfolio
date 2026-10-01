@@ -30,7 +30,7 @@ export const resume = {
       when: "2020 – Present",
       bullets: [
         "Lead discovery and public-information revenue-leak audits for small practices (chiropractic, med spa), pinpoint where leads and revenue leak, and map goals to CRM, automation, web, and AI voice solutions.",
-        "Build proof-of-concept demos on each prospect's own brand: six live prospect demos, including a revenue system with a live two-way AI receptionist line, test patient form, and 13-step patient journey.",
+        "Build proof-of-concept demos on each prospect's own brand: six live prospect demos, including a revenue system with a live AI voice receptionist, test patient form, and 13-step patient journey.",
         "Design reusable solution architecture customized per client: a 12-stage CRM pipeline with tagged lead routing, missed-call text-back, 24-hour and 2-hour reminders, no-show recovery, and review requests.",
         "Present solution diagrams, scopes, and implementation plans with clear tradeoffs, then own handoff into configuration, testing, launch, and training using GoHighLevel, Twilio, REST APIs, and webhooks.",
       ],

@@ -20,6 +20,18 @@ const perSite = {
     ["https://api.leadconnectorhq.com/widget/bookings/blair-chiro-revenue-demo", "mailto:nanadoum81@gmail.com?subject=Blair%20Revenue%20System%20walkthrough"],
     ["OPENS BLAIR DIGITAL STUDIOS BOOKING CALENDAR", "EMAILS BLAIR DIGITAL STUDIOS"],
     ["Opens Blair Digital Studios booking calendar", "Emails Blair Digital Studios"],
+    // The GHL phone demo line is retired; the AI receptionist now runs in the browser.
+    ["tel:+18607434823", "https://emmanuel-nanadoum.vercel.app/receptionist?demo=1"],
+    ["(860) 743-4823", "Talk in your browser"],
+    ["Call the number. Pretend you&#x27;re a new patient.", "Talk to it. Pretend you&#x27;re a new patient."],
+    ["Call the number. Pretend you're a new patient.", "Talk to it. Pretend you're a new patient."],
+    ["Call the number and pretend you're a new patient.", "Talk to it and pretend you're a new patient."],
+    ["Call AI Receptionist", "Talk to AI Receptionist"],
+    ["Connected Number — Test Call Required", "Live in your browser — no phone needed"],
+    ["CONNECTED — TEST CALL REQUIRED", "LIVE IN YOUR BROWSER"],
+    ["Test Call Required", "Live in your browser"],
+    ["AI Voice Demo Line", "AI Voice Demo"],
+    ["Demo number is separate from the public Cactus line", "Runs separately from the public Cactus line"],
   ],
   medspa: [
     ["tel:{{location.phone}}", "#consultation-template"],

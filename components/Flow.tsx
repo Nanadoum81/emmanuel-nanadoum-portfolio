@@ -15,16 +15,19 @@ export function Flow({
   tone = "paper",
   caption,
   dense = false,
+  stack = false,
   captionClassName,
 }: {
   steps: readonly Step[];
   tone?: keyof typeof tones;
   caption?: string;
   dense?: boolean;
+  /** Narrow containers: two columns at most. */
+  stack?: boolean;
   captionClassName?: string;
 }) {
   const t = tones[tone];
-  const cols = dense ? "sm:grid-cols-3 lg:grid-cols-5" : steps.length <= 5 ? "lg:grid-cols-5" : steps.length <= 7 ? "sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7" : "sm:grid-cols-3 lg:grid-cols-5";
+  const cols = stack ? "sm:grid-cols-2" : dense ? "sm:grid-cols-3 lg:grid-cols-5" : steps.length <= 5 ? "lg:grid-cols-5" : steps.length <= 7 ? "sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7" : "sm:grid-cols-3 lg:grid-cols-5";
   return (
     <figure>
       <ol className={`grid grid-cols-1 gap-x-7 gap-y-3 ${cols}`}>

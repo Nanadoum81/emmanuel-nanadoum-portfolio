@@ -252,12 +252,13 @@ export default function Home() {
               <p className="mt-3 text-[clamp(19px,1.6vw,22px)] leading-snug">{cactus.headline}</p>
               <p className="mt-5 text-ink-2">{cactus.summary}</p>
               <ul className="mt-6 flex flex-wrap gap-2" aria-label="Status">
-                <li><Stamp tally="live">AI receptionist line live</Stamp></li>
+                <li><Stamp tally="live">AI receptionist live</Stamp></li>
                 <li><Stamp tally="live">Website live</Stamp></li>
                 <li><Stamp tally="demo">Dashboards use sample data</Stamp></li>
               </ul>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Key href={cactus.links[0].href} event="demo_open_cactus_rs" data={{ from: "home" }}>Open the revenue system <Arrow dir="out" /></Key>
+                <Key href="/receptionist?demo=1" event="receptionist_open" data={{ from: "home" }} variant="secondary">Talk to the AI receptionist</Key>
                 <Key href="/work/cactus" event="case_open" data={{ slug: "cactus" }} variant="quiet">Read the case study <Arrow /></Key>
               </div>
             </div>

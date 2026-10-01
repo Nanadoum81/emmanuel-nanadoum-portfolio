@@ -30,12 +30,12 @@ export const demos: Demo[] = [
     system: "https://blair-demo-cactus.vercel.app/revenue-system",
     status: [
       { label: "Website live", tally: "live" },
-      { label: "AI receptionist line live", tally: "live" },
+      { label: "AI receptionist live (browser)", tally: "live" },
       { label: "Dashboards use sample data", tally: "demo" },
     ],
     solves: "Every new-patient call and form is answered, tracked and followed up, from first ring to a booked visit.",
     detail: [
-      "Call a real AI receptionist on a dedicated demo line and ask what a new patient would ask.",
+      "Talk to a live AI receptionist in your browser and ask what a new patient would ask.",
       "Submit a test patient form and see where it lands in the pipeline.",
       "Walk the full 13-step journey: confirmation, reminders, no-show follow-up, reviews and reactivation.",
     ],

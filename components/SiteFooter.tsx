@@ -14,6 +14,7 @@ export function SiteFooter() {
         <ul className="grid content-start gap-1.5">
           <li><Link className="hover:text-blue" href="/work">Work</Link></li>
           <li><Link className="hover:text-blue" href="/solutions">Client solution lab</Link></li>
+          <li><Link className="hover:text-blue" href="/receptionist">AI receptionist</Link></li>
           <li><Link className="hover:text-blue" href="/about">About</Link></li>
           <li><Link className="hover:text-blue" href="/resume">Résumé</Link></li>
         </ul>
