@@ -15,7 +15,7 @@ const outHtml = path.join(here, `${BASE}.html`);
 
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 const href = (c) =>
-  c.includes("@") ? `mailto:${c}` : c.startsWith("linkedin") || c.includes(".vercel.app") ? `https://${c}` : /^\d{3}-/.test(c) ? `tel:+1${c.replace(/-/g, "")}` : null;
+  c.includes("@") ? `mailto:${c}` : c.startsWith("linkedin") ? `https://www.${c}` : c.includes(".vercel.app") ? `https://${c}` : /^\d{3}-/.test(c) ? `tel:+1${c.replace(/-/g, "")}` : null;
 const link = (c) => (href(c) ? `<a href="${href(c)}">${esc(c)}</a>` : esc(c));
 
 const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>${r.name} — Résumé</title>
@@ -31,6 +31,7 @@ const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>
   .portfolio { margin-top: 2.5pt; font-size: 9.6pt; }
   .portfolio b { color: #16181c; }
   .portfolio a { color: #1d3fcf; font-weight: 700; }
+  .contact a[href^="mailto:"], .contact a[href*="linkedin.com"] { color: #1d3fcf; text-decoration: underline; text-underline-offset: 1.5pt; }
   h2 { font-size: 9.2pt; letter-spacing: 1pt; text-transform: uppercase; color: #1d3fcf; margin: 7pt 0 3pt; padding-bottom: 2pt; border-bottom: 0.75pt solid #c9c8c2; }
   header { border-bottom: 1.4pt solid #16181c; padding-bottom: 6pt; }
   p { margin: 0; }
@@ -95,7 +96,7 @@ const { Document, Packer, Paragraph, TextRun, ExternalHyperlink, TabStopType, Bo
 const BLUE = "1D3FCF";
 const INK = "16181C";
 const FONT = "Arial";
-const run = (text, o = {}) => new TextRun({ text, font: FONT, size: o.size ?? 18, bold: o.bold, color: o.color ?? INK });
+const run = (text, o = {}) => new TextRun({ text, font: FONT, size: o.size ?? 18, bold: o.bold, color: o.color ?? INK, underline: o.underline ? {} : undefined });
 const hyper = (text, url, o = {}) => new ExternalHyperlink({ link: url, children: [run(text, o)] });
 const heading = (text) =>
   new Paragraph({
@@ -116,7 +117,8 @@ const contactRuns = [];
 r.contact.forEach((c, i) => {
   if (i) contactRuns.push(run(" | ", { color: "9A9CA3", size: 18 }));
   const u = href(c);
-  contactRuns.push(u ? hyper(c, u, { size: 18, color: "3D4047" }) : run(c, { size: 18, color: "3D4047" }));
+  const web = u && !u.startsWith("tel:");
+  contactRuns.push(u ? hyper(c, u, { size: 18, color: web ? BLUE : "3D4047", underline: web }) : run(c, { size: 18, color: "3D4047" }));
 });
 
 const doc = new Document({

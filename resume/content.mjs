@@ -64,7 +64,7 @@ export const resume = {
   projects: [
     {
       name: "VYBE, AI passenger experience platform",
-      link: "vybe-app-blue.vercel.app",
+      link: "vybe-app-blue.vercel.app/variation5",
       bullets: [
         "Deployed a context-aware voice concierge: browser audio → ElevenLabs Scribe → ride-context reply → ElevenLabs speech.",
         "Supabase auth and shared rides; keys kept server-side; Google Places/Routes behind production credentials.",
