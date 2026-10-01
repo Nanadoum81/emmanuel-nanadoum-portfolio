@@ -24,23 +24,25 @@ export default {
 
   // Sonoran clay and saguaro-shade ink, warmed from the current demo's clay/sand accents; deliberately not Palmer's green/brass.
   theme: {
-    bg: "#fbf6f0",
+    bg: "#f7f8f6",
     surface: "#ffffff",
-    sand: "#f3e8dc",
-    sand2: "#e8d8c6",
-    ink: "#2a1d17",
-    ink2: "#5e4a3f",
-    rule: "#e2d3c3",
-    brand: "#9a4126",
-    brandDeep: "#6e2c18",
+    sand: "#eaf0ee",
+    sand2: "#d7e2df",
+    ink: "#172427",
+    ink2: "#46575b",
+    rule: "#d3dedb",
+    brand: "#1d4d57",
+    brandDeep: "#12333a",
     brandInk: "#ffffff",
-    accent: "#b9822f",
-    accentSoft: "#f4e3c8",
-    display: "Young Serif",
+    accent: "#a9582f",
+    accentSoft: "#f5e4d8",
+    display: "Spectral",
     body: "Albert Sans",
-    fontsHref: "https://fonts.googleapis.com/css2?family=Young+Serif&family=Albert+Sans:wght@400;500;600;700&display=swap",
-    radius: "14px",
+    fontsHref: "https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,500;0,600;1,500&family=Albert+Sans:wght@400;500;600;700&display=swap",
+    radius: "10px",
   },
+  heroVariant: "full",
+
 
   // No hours are published on Google (the listing shows "Add hours"). One aggregator (Birdeye) shows Mon–Fri 9–6,
   // but it is unconfirmed and conflicts with the empty Google field, so the kit shows "Call for current hours".
@@ -52,8 +54,8 @@ export default {
     "Canham Chiropractic: Dr. Rosalind L. Canham, D.C., chiropractic and rehabilitation in central Phoenix since 1998. Request a visit online or call (602) 255-0600.",
 
   hero: {
-    title: "Chiropractic and rehab from the doctor who trains Arizona's chiropractic teams.",
-    lede: "Dr. Rosalind Canham has been in private practice in Phoenix since 1998, is registered in chiropractic rehabilitation, and founded the board-approved chiropractic assistant program that has trained more than 12,000 CAs.",
+    title: "Chiropractic and rehabilitation in central Phoenix, since 1998.",
+    lede: "Dr. Rosalind Canham is registered in chiropractic rehabilitation and founded the chiropractic assistant program that has trained more than 12,000 CAs. Now her own patients can book online.",
     img: "hero",
     alt: "A clinician guiding a seated patient's shoulder through a range-of-motion check",
   },
