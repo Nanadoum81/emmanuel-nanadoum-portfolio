@@ -69,9 +69,17 @@
   }
 
   // ---------- header status + hours ----------
-  const H = P.hours;
+  // No verifiable hours: status says "call", booking uses clearly labeled demo availability.
+  const DEMO_HOURS = { 0: [], 1: [[540, 720], [840, 1080]], 2: [[540, 720], [840, 1080]], 3: [[540, 720], [840, 1080]], 4: [[540, 720], [840, 1080]], 5: [[540, 720], [840, 1020]], 6: [] };
+  const H = P.hours || DEMO_HOURS;
   const renderStatus = () => {
     const { dow, min } = nowLocal();
+    if (!P.hours) {
+      $$("[data-status]").forEach((el) => { $("[data-status-text]", el).textContent = "Call for hours"; });
+      $$("[data-hours-now]").forEach((el) => (el.innerHTML = `Call <b>${esc(P.phone)}</b> for current office hours.`));
+      $$("[data-week]").forEach((el) => (el.hidden = true));
+      return;
+    }
     const open = (H[dow] || []).find(([s, e]) => min >= s && min < e);
     let short, long;
     if (open) { short = `Open now · until ${fmtShort(open[1])}`; long = `<b>Open now</b>, until ${fmtT(open[1])} today.`; }

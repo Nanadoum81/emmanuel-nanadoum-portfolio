@@ -59,13 +59,19 @@ export default {
     alt: "A chiropractor gently adjusting a smiling patient's shoulders",
   },
 
+  heroPlace: "331 Church St, Naugatuck, Connecticut",
+  tagline: "Chiropractic Physicians in Naugatuck, Connecticut since 1989. Book online or call (203) 729-4047.",
+  homeFacts: [["Since", "1989"], ["Doctors", "2, both New York Chiropractic College, 1987"], ["Google rating", "5.0 from 10 reviews"], ["Access", "Wheelchair accessible"]],
+  doctorsHomeTitle: "Two doctors who know Naugatuck",
+  doctorsTitle: "The two names on the door",
+  doctorsIntro: "Terry A. Palmer, D.C. and Glenn S. Herman, D.C. are the two doctors behind the practice on Church Street, in business since 1989. Both earned their Doctor of Chiropractic at New York Chiropractic College in 1987, and both are registered as chiropractic sports physicians.",
   intro:
     "A two-doctor practice that has kept the same address and the same phone number since 1989.",
 
   conditions: [
     { title: "Low back pain", text: "Strain, spasm and pain that has lingered for months.", img: "low-back" },
     { title: "Neck pain and headaches", text: "Including headaches that start in the neck after an old injury.", img: "neck" },
-    { title: "Sports and active-life strains", text: "Care from a registered chiropractic sports physician.", img: "sports" },
+    { title: "Sports and active-life strains", text: "Care from registered chiropractic sports physicians.", img: "sports" },
     { title: "Disc problems", text: "Including herniated discs, evaluated by the doctor.", img: null },
     { title: "After a car accident", text: "Records can be shared with your physician or attorney.", img: null },
     { title: "Knee and hip trouble", text: "Patients' reviews mention knees and hips, not only backs.", img: null },
@@ -79,8 +85,8 @@ export default {
   ],
 
   featured: {
-    title: "Sports chiropractic, from a registered sports physician",
-    text: "Dr. Terry Palmer is registered as a chiropractic sports physician. Whether you lift, run, coach or work on your feet all day, care is built around getting you back to it.",
+    title: "Sports chiropractic, from registered sports physicians",
+    text: "Both doctors are registered as chiropractic sports physicians. Whether you lift, run, coach or work on your feet all day, care is built around getting you back to it.",
     img: "stretch",
     alt: "A patient doing a resistance-band stretch guided by a clinician",
   },
@@ -95,7 +101,7 @@ export default {
     {
       name: "Glenn S. Herman, D.C.",
       short: "Dr. Herman",
-      facts: [["Degree", "Doctor of Chiropractic, New York Chiropractic College, 1987"], ["Most often sees", "Back strain, back spasm and disc problems"]],
+      facts: [["Degree", "Doctor of Chiropractic, New York Chiropractic College, 1987"], ["Registered as", "Chiropractor, sports physician"], ["Most often sees", "Back strain, back spasm and disc problems"]],
       quote: { text: "Been going to Dr. Herman for years. He's amazing. Very professional practice.", by: "David Boisvert, Google review" },
     },
   ],

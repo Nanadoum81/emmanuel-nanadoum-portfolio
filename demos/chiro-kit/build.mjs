@@ -57,7 +57,14 @@ const I = {
 const icon = (n, cls = "i") => `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${I[n]}</svg>`;
 
 const NAV = [["/", "Home"], ["/care", "Care"], ["/doctors", "The doctors"], ["/new-patients", "New patients"], ["/visit", "Visit"]];
-const hoursSummary = "Mon, Tue, Wed, Fri 8–12 &amp; 2–5:30 · Thu &amp; Sat 8:30–10:30 · Sun closed";
+const fmtM = (m) => { const h = Math.floor(m / 60), mm = m % 60; return `${((h + 11) % 12) + 1}${mm ? ":" + String(mm).padStart(2, "0") : ""}`; };
+const DN = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const hoursSummary = (() => {
+  if (!P.hours) return "Call for current office hours";
+  const groups = new Map();
+  for (const d of [1, 2, 3, 4, 5, 6, 0]) { const k = (P.hours[d] || []).map(([a, b]) => `${fmtM(a)}–${fmtM(b)}`).join(" &amp; ") || "closed"; groups.set(k, [...(groups.get(k) || []), DN[d]]); }
+  return [...groups].map(([k, ds]) => `${ds.join(", ")} ${k}`).join(" · ");
+})();
 
 const head = (title, desc) => `<!doctype html>
 <html lang="en">
@@ -65,12 +72,12 @@ const head = (title, desc) => `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
-<meta name="description" content="${esc(desc)}">
+<meta name="description" content="${esc(P.tagline || desc)}">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="${T.brand}">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=${T.display.replace(/ /g, "+")}:ital,opsz,wght@${T.displayWeights}&family=${T.body.replace(/ /g, "+")}:wght@${T.bodyWeights}&display=swap" rel="stylesheet">
+<link href="${T.fontsHref || `https://fonts.googleapis.com/css2?family=${T.display.replace(/ /g, "+")}:ital,opsz,wght@${T.displayWeights}&family=${T.body.replace(/ /g, "+")}:wght@${T.bodyWeights}&display=swap`}" rel="stylesheet">
 <style>:root{--bg:${T.bg};--surface:${T.surface};--sand:${T.sand};--sand-2:${T.sand2};--ink:${T.ink};--ink-2:${T.ink2};--rule:${T.rule};--brand:${T.brand};--brand-deep:${T.brandDeep};--brand-ink:${T.brandInk};--accent:${T.accent};--accent-soft:${T.accentSoft};--display:"${T.display}",Georgia,serif;--body:"${T.body}",system-ui,sans-serif;--radius:${T.radius}}</style>
 <link rel="stylesheet" href="assets/site.css">
 <script>window.PRACTICE=${JSON.stringify({ name: P.name, kind: P.kind, phone: P.phone, tel: P.tel, key: P.practiceKey, hours: P.hours, tz: P.timezone, slug: P.slug, monogram: P.monogram, addr })};</script>
@@ -124,15 +131,15 @@ const footer = () => `
 const page = (file, active, title, desc, body) =>
   fs.writeFileSync(path.join(out, file), head(title, desc) + header(active) + `\n<main id="main">${body}</main>` + footer());
 
-const reviewsBlock = (n = 6) => `
+const reviewsBlock = (n = 6) => !P.reviews?.length ? "" : `
 <section class="band" aria-labelledby="rv">
   <div class="wrap">
     <div class="sec-head">
-      <h2 class="h2" id="rv">Rated ${P.rating.value} by patients on ${P.rating.source}</h2>
-      <p class="stars" aria-label="${P.rating.value} out of 5 stars">${icon("star", "i star")}${icon("star", "i star")}${icon("star", "i star")}${icon("star", "i star")}${icon("star", "i star")}<span>${P.rating.value} · ${P.rating.count} reviews</span></p>
+      <h2 class="h2" id="rv">${P.rating ? `Rated ${P.rating.value} by patients on ${P.rating.source}` : "What patients say"}</h2>
+      ${P.rating ? `<p class="stars" aria-label="${P.rating.value} out of 5 stars">${icon("star", "i star")}${icon("star", "i star")}${icon("star", "i star")}${icon("star", "i star")}${icon("star", "i star")}<span>${P.rating.value} · ${P.rating.count} reviews</span></p>` : ""}
     </div>
     <div class="reviews">${P.reviews.slice(0, n).map((r, i) => `<figure class="review${i === 0 ? " lead" : ""}"><blockquote><p>“${esc(r.text)}”</p></blockquote><figcaption>${esc(r.by)}${r.meta ? ` <span>· ${esc(r.meta)}</span>` : ""}</figcaption></figure>`).join("")}</div>
-    <p class="fine">Quoted from ${P.rating.source} reviews, lightly shortened. Individual experiences vary.</p>
+    <p class="fine">Quoted from ${P.rating?.source || "public"} reviews, lightly shortened. Individual experiences vary.</p>
   </div>
 </section>`;
 
@@ -141,7 +148,7 @@ const hoursBlock = () => `
   <h3 class="h3">Office hours</h3>
   <p class="hours-now" data-hours-now></p>
   <div class="week" data-week></div>
-  <p class="fine">${esc(P.hoursNote)}</p>
+  <p class="fine">${esc(P.hours ? P.hoursNote : "Call the office for current hours. Online booking shows demo availability.")}</p>
 </div>`;
 
 const bookingBlock = () => `
@@ -163,10 +170,10 @@ const bookingBlock = () => `
 
 // ---------- Home ----------
 page("index.html", "/", `${P.name} ${P.kind} · ${P.region}`, `${P.kind} in ${P.region} since ${P.founded}. Book online or call ${P.phone}.`, `
-<section class="hero">
+<section class="hero${P.heroVariant === "full" ? " hero-full" : ""}">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="hero-place">${icon("pin")}${esc(P.address.street)}, ${esc(P.region)}</p>
+      <p class="hero-place">${icon("pin")}${esc(P.heroPlace || `${P.address.street}, ${P.region}`)}</p>
       <h1 class="h1">${esc(P.hero.title)}</h1>
       <p class="lede">${esc(P.hero.lede)}</p>
       <div class="hero-act">
@@ -174,7 +181,7 @@ page("index.html", "/", `${P.name} ${P.kind} · ${P.region}`, `${P.kind} in ${P.
         <a class="btn btn-line btn-lg" href="tel:${P.tel}">${icon("phone")}${esc(P.phone)}</a>
       </div>
       <div class="next-slots" data-next-slots></div>
-      <p class="hero-proof"><span class="stars-s" aria-hidden="true">${icon("star", "i star")}${icon("star", "i star")}${icon("star", "i star")}${icon("star", "i star")}${icon("star", "i star")}</span><b>${P.rating.value}</b> on ${P.rating.source} · Since ${P.founded} · Two doctors</p>
+      <p class="hero-proof">${P.rating ? `<span class="stars-s" aria-hidden="true">${icon("star", "i star").repeat(5)}</span>` : ""}${P.rating ? `<b>${P.rating.value}</b> on ${P.rating.source}` : ""}${P.founded ? ` · Since ${P.founded}` : ""}${P.doctors.length > 1 ? ` · ${P.doctors.length === 2 ? "Two" : P.doctors.length} doctors` : ""}</p>
     </div>
     <div class="hero-media">
       ${img(P.hero.img, P.hero.alt, "hero-img", 'fetchpriority="high" loading="eager"')}
@@ -186,12 +193,7 @@ page("index.html", "/", `${P.name} ${P.kind} · ${P.region}`, `${P.kind} in ${P.
 <section class="band" aria-labelledby="why">
   <div class="wrap intro">
     <h2 class="statement" id="why">${esc(P.intro)}</h2>
-    <dl class="facts">
-      <div><dt>Since</dt><dd>${P.founded}</dd></div>
-      <div><dt>Doctors</dt><dd>2, both New York Chiropractic College, 1987</dd></div>
-      <div><dt>Google rating</dt><dd>${P.rating.value} from ${P.rating.count} reviews</dd></div>
-      <div><dt>Access</dt><dd>Wheelchair accessible</dd></div>
-    </dl>
+    <dl class="facts">${(P.homeFacts || []).map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>
   </div>
 </section>
 
@@ -211,10 +213,10 @@ page("index.html", "/", `${P.name} ${P.kind} · ${P.region}`, `${P.kind} in ${P.
   <div class="wrap split">
     <div class="split-media">${img("consult", "A chiropractor explaining the spine to a patient with a spine model", "round")}</div>
     <div>
-      <h2 class="h2" id="doc-h">Two doctors who know Naugatuck</h2>
-      <p class="lede">${P.doctors.map((d) => esc(d.name)).join(" and ")} have practiced together on Church Street since ${P.founded}. Both earned their Doctor of Chiropractic at New York Chiropractic College in 1987.</p>
-      <ul class="doc-mini">${P.doctors.map((d) => `<li><span class="mark sm" aria-hidden="true">${esc(d.short.replace("Dr. ", "")[0])}</span><span><b>${esc(d.name)}</b><small>“${esc(d.quote.text.split(". ").slice(-1)[0])}”</small></span></li>`).join("")}</ul>
-      <a class="btn btn-line" href="/doctors">Meet the doctors ${icon("arrow")}</a>
+      <h2 class="h2" id="doc-h">${esc(P.doctorsHomeTitle || (P.doctors.length > 1 ? `Meet the doctors` : `Meet ${P.doctors[0].name}`))}</h2>
+      <p class="lede">${esc(P.doctorsIntro)}</p>
+      <ul class="doc-mini">${P.doctors.map((d) => `<li><span class="mark sm" aria-hidden="true">${esc(d.short.replace("Dr. ", "")[0])}</span><span><b>${esc(d.name)}</b><small>${d.quote ? `“${esc(d.quote.text.split(". ").slice(-1)[0])}”` : esc(d.facts?.[0]?.[1] || "Doctor of Chiropractic")}</small></span></li>`).join("")}</ul>
+      <a class="btn btn-line" href="/doctors">${P.doctors.length > 1 ? "Meet the doctors" : `Meet ${esc(P.doctors[0].short)}`} ${icon("arrow")}</a>
     </div>
   </div>
 </section>
@@ -265,7 +267,7 @@ ${reviewsBlock(5)}
 page("care.html", "/care", `Care · ${P.name}`, `What ${P.name} helps with and how the doctors treat.`, `
 <section class="page-head"><div class="wrap">
   <h1 class="h1">Care, explained plainly</h1>
-  <p class="lede">The reasons patients come in most, and the treatments listed for the practice. If chiropractic care isn't the right fit for you, the doctor will tell you.</p>
+  <p class="lede">The reasons patients come in most, and the care the practice offers.</p>
 </div></section>
 <section class="band"><div class="wrap">
   <h2 class="h2">What brings people in</h2>
@@ -276,7 +278,7 @@ page("care.html", "/care", `Care · ${P.name}`, `What ${P.name} helps with and h
     <h2 class="h2">How the doctors treat</h2>
     <ul class="treat">${P.treatments.map((t) => `<li><h3 class="h3">${esc(t.title)}</h3><p>${esc(t.text)}</p></li>`).join("")}</ul>
   </div>
-  <div class="split-media">${img("tens", "Electrical muscle stimulation pads on a patient's thigh", "round tall")}</div>
+  <div class="split-media">${img(P.treatImg?.name || "tens", P.treatImg?.alt || "Electrical muscle stimulation pads on a patient's thigh", "round tall")}</div>
 </div></section>
 <section class="band"><div class="wrap">
   <p class="fine big">Chiropractic care is not a cure for disease, and results differ from person to person. For sudden or severe symptoms, call 911 or your doctor.</p>
@@ -286,16 +288,16 @@ ${bookingBlock()}`);
 // ---------- Doctors ----------
 page("doctors.html", "/doctors", `The doctors · ${P.name}`, `Meet ${P.doctors.map((d) => d.name).join(" and ")}.`, `
 <section class="page-head"><div class="wrap">
-  <h1 class="h1">The two names on the door</h1>
-  <p class="lede">${P.doctors.map((d) => esc(d.name)).join(" and ")} have practiced together in ${esc(P.city)} since ${P.founded}.</p>
+  <h1 class="h1">${esc(P.doctorsTitle || (P.doctors.length > 1 ? "The doctors" : P.doctors[0].name))}</h1>
+  <p class="lede">${esc(P.doctorsIntro)}</p>
 </div></section>
 <section class="band"><div class="wrap docs">${P.doctors.map((d, i) => `
   <article class="doc">
-    <div class="doc-photo">${img(i === 0 ? "shoulder" : "care-hands", "Illustrative photo of chiropractic care", "")}<span class="ph-note">Portrait of ${esc(d.short)} to be photographed</span></div>
+    <div class="doc-photo">${img(fs.existsSync(path.join(here, "practices", slug, "img", `doctor-${i + 1}.jpg`)) ? `doctor-${i + 1}` : i === 0 ? "shoulder" : "care-hands", "Illustrative photo of chiropractic care", "")}<span class="ph-note">Portrait of ${esc(d.short)} to be photographed</span></div>
     <div class="doc-body">
       <h2 class="h2">${esc(d.name)}</h2>
       <dl class="facts tight">${d.facts.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>
-      <blockquote class="doc-q"><p>“${esc(d.quote.text)}”</p><footer>${esc(d.quote.by)}</footer></blockquote>
+      ${d.quote ? `<blockquote class="doc-q"><p>“${esc(d.quote.text)}”</p><footer>${esc(d.quote.by)}</footer></blockquote>` : ""}
       <a class="btn btn-brand" href="/new-patients#book">${icon("cal")}Book with ${esc(d.short)}</a>
     </div>
   </article>`).join("")}

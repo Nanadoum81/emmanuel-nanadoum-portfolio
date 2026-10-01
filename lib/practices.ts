@@ -23,7 +23,7 @@ export const PRACTICES: Record<string, PracticeProfile> = {
     address: "331 Church Street, Naugatuck, CT 06770",
     doctors: [
       "Dr. Terry A. Palmer, D.C. (New York Chiropractic College, 1987)",
-      "Dr. Glenn S. Herman, D.C. (New York Chiropractic College, 1987)",
+      "Dr. Glenn S. Herman, D.C. (New York Chiropractic College, 1987). Both doctors are registered as chiropractor–sports physicians.",
     ],
     hours:
       "Listed hours: Monday, Tuesday, Wednesday and Friday 8 to 12 and 2 to 5:30; Thursday and Saturday 8:30 to 10:30; closed Sunday. Always add that callers should confirm hours with the office.",
