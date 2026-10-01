@@ -56,7 +56,7 @@ export default {
   hoursNote: "Hours as listed on Google. Please call to confirm before your visit.",
 
   hero: {
-    title: "Hands-on chiropractic in Tempe, from 7 a.m. on weekdays.",
+    title: "Hands-on chiropractic in Tempe, from 7\u00a0a.m. on weekdays.",
     lede: "Dr. Donald L. Nelson has been a Doctor of Chiropractic since 1983. Back pain, neck pain, lifting strains and care after a car accident, on South Rural Road.",
     img: "hero",
     alt: "A chiropractor adjusting a seated patient's shoulder in a treatment room",
