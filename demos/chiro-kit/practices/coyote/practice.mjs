@@ -25,18 +25,18 @@ export default {
 
   // Sonoran palette from their own cues: the coyote-and-spiral sign on stucco, terracotta, turquoise.
   theme: {
-    bg: "#fbf6ef",
+    bg: "#f8f7f4",
     surface: "#ffffff",
-    sand: "#f4eadc",
-    sand2: "#eadbc6",
-    ink: "#2a201b",
-    ink2: "#5b4c43",
-    rule: "#e2d4c1",
-    brand: "#9a4528",
-    brandDeep: "#6b2c17",
+    sand: "#eeecf3",
+    sand2: "#dedbe8",
+    ink: "#1d1f2b",
+    ink2: "#4c4f60",
+    rule: "#dad8e2",
+    brand: "#2c3557",
+    brandDeep: "#1b2140",
     brandInk: "#ffffff",
-    accent: "#2f6f6a",
-    accentSoft: "#dcece8",
+    accent: "#b8622c",
+    accentSoft: "#f6e3d4",
     display: "Bricolage Grotesque",
     body: "Public Sans",
     fontsHref:
