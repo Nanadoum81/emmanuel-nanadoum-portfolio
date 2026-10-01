@@ -82,8 +82,8 @@ export async function POST(req: Request) {
     if (res?.ok) break;
     const detail = res ? await res.text().catch(() => "") : "network error";
     console.error("receptionist upstream", model, res?.status, detail.slice(0, 300));
-    // Only a missing model is worth retrying with the next name.
-    if (res?.status !== 404) break;
+    // A retired (404) or overloaded (500/503) model is worth retrying with the next name.
+    if (res && ![404, 500, 503].includes(res.status)) break;
   }
 
   if (!res || !res.ok) {
