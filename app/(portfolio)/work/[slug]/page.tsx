@@ -12,7 +12,7 @@ import { CaseRail } from "@/components/CaseRail";
 import { Reveal } from "@/components/motion/Reveal";
 import { TrackLink } from "@/components/TrackLink";
 
-const letters = ["A", "B", "C", "D"];
+const letters = ["A", "B", "C", "D", "E"];
 
 export function generateStaticParams() {
   return caseStudies.map((c) => ({ slug: c.slug }));
