@@ -2,9 +2,9 @@ export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://emmanuel-na
 
 export const person = {
   name: "Emmanuel Nanadoum",
-  role: "AI Consultant / Solutions Engineer",
-  roles: ["AI Consultant", "Solutions Engineer", "Sales Engineer"],
-  focus: "AI, CRM & Automation",
+  role: "AI Implementation / Solutions Engineer",
+  roles: ["AI Implementation Specialist", "Solutions Engineer", "Implementation Consultant"],
+  focus: "AI Implementation, Automation & Integrations",
   location: "Phoenix, Arizona",
   availability: "Remote / Hybrid",
   email: "nanadoum81@gmail.com",
@@ -13,7 +13,7 @@ export const person = {
   linkedin: "https://www.linkedin.com/in/emmanuel-nanadoum-7971b7a8",
   resume: "/Emmanuel_Nanadoum_Solutions_Engineer_Resume.pdf",
   summary:
-    "Customer-facing technical and sales professional with 8+ years of consultative selling and 4+ years designing CRM, automation, web, and AI-enabled solutions.",
+    "Customer-facing AI implementation and solutions professional with 8+ years of consultative experience and 4+ years designing CRM, automation, web, API, and AI-enabled solutions.",
 };
 
 export const mailto = (subject = "Role conversation") =>
@@ -76,16 +76,16 @@ export const runSheet = [
 
 export const capabilities = [
   {
-    group: "Pre-sales & discovery",
-    items: ["Consultative discovery", "Needs analysis", "Solution mapping", "Technical demos", "POCs", "Objection handling", "Value articulation", "Proposal support"],
+    group: "Discovery & implementation",
+    items: ["Consultative discovery", "Requirements gathering", "Workflow mapping", "Technical demos", "POCs", "Implementation planning", "User enablement", "Documentation"],
   },
   {
     group: "Solution design",
-    items: ["Workflow architecture", "Integration maps", "Implementation planning", "Technical documentation", "Stakeholder communication", "Presentations"],
+    items: ["Workflow architecture", "Integration maps", "API / webhook design", "Technical validation", "Technical documentation", "Stakeholder communication"],
   },
   {
     group: "Technical foundations",
-    items: ["REST APIs", "Webhooks", "SQL", "Python", "HTML / CSS / JavaScript", "Supabase", "AWS fundamentals", "Troubleshooting"],
+    items: ["REST APIs", "Webhooks", "SQL", "Python", "JavaScript / TypeScript", "Supabase", "AWS fundamentals", "Troubleshooting"],
   },
   {
     group: "Platforms",
