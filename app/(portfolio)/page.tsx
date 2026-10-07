@@ -21,7 +21,7 @@ const tabs = [
   { id: "contact", label: "Sign-off", color: "#142c95", ink: "#fff" },
 ];
 
-const insertion = "I find where revenue and process break, and design the connected systems that fix them.";
+const insertion = "I turn business workflows into deployed AI systems, automations and integrations.";
 const letters = ["A", "B", "C", "D"];
 
 export default function Home() {
@@ -39,9 +39,9 @@ export default function Home() {
               <tbody>
                 {[
                   ["Prepared for", "Hiring teams in AI, SaaS and automation"],
-                  ["Prepared by", "Emmanuel Nanadoum · rev. September 2026"],
+                  ["Prepared by", "Emmanuel Nanadoum · rev. October 2026"],
                   ["Based in", `${person.location} · ${person.availability}`],
-                  ["Roles", "Solutions Engineer · Sales Engineer · AI Consultant"],
+                  ["Roles", "AI Implementation · Solutions Engineering · Automation"],
                 ].map(([k, v]) => (
                   <tr key={k} className="border-b border-rule first:border-t">
                     <th scope="row" className="w-[124px] py-1.5 pr-3 text-left align-top font-normal text-ink-2 lg:[@media(max-height:860px)]:py-1">{k}</th>
@@ -74,7 +74,7 @@ export default function Home() {
               </ins>
             </p>
             <p className="mt-4 max-w-[52ch] text-[16px] text-ink-2">
-              Customer discovery → solution architecture → working demo → implementation.
+              Discovery → requirements → architecture → working AI solution → implementation → enablement.
             </p>
 
             <div data-cover-keys className="mt-7 lg:[@media(max-height:860px)]:mt-5 flex flex-wrap items-center gap-3">
@@ -146,11 +146,11 @@ export default function Home() {
             <dl className="mt-10 grid grid-cols-1 gap-x-10 gap-y-6 sm:grid-cols-2">
               <div className="border-t border-ink pt-3">
                 <dt className="text-[14px] text-ink-2">Roles I am pursuing</dt>
-                <dd className="mt-1 font-semibold">Solutions Engineer · Sales Engineer · AI Consultant · Solutions Consultant · Technical Presales · Implementation Consultant</dd>
+                <dd className="mt-1 font-semibold">AI Implementation Specialist · Solutions Engineer · Implementation Consultant · AI Automation Specialist · Solutions Consultant</dd>
               </div>
               <div className="border-t border-ink pt-3">
                 <dt className="text-[14px] text-ink-2">Where I add value</dt>
-                <dd className="mt-1 font-semibold">The space between the customer, the sales team and the build: discovery, demos, architecture and handoff.</dd>
+                <dd className="mt-1 font-semibold">The bridge between business problems and deployed AI: discovery, workflow mapping, integrations, validation, implementation and enablement.</dd>
               </div>
             </dl>
           </div>
@@ -513,7 +513,7 @@ export default function Home() {
               <span className="num mr-4 font-bold text-white/40">7</span>Sign-off
             </h2>
             <p className="mt-6 max-w-[40ch] text-[19px] text-white/80">
-              If your team needs someone who can run discovery, build the demo and carry it into implementation, the next step is a conversation.
+              If your team needs someone who can translate business workflows into working AI solutions and carry them through implementation and enablement, the next step is a conversation.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Key href={mailto("Discuss a role")} event="contact_email" data={{ from: "signoff" }} variant="inverse">Discuss a role <Arrow /></Key>
