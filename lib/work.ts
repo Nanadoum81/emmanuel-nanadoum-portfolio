@@ -407,6 +407,95 @@ export const caseStudies: CaseStudy[] = [
     ],
     next: "vybe",
   },
+  {
+    slug: "knowledgeos",
+    title: "KnowledgeOS",
+    client: "Portfolio implementation — enterprise knowledge assistant",
+    kind: "Retrieval-augmented generation / AI implementation",
+    role: "Requirements, architecture, retrieval design, grounding, API implementation, evaluation design and deployment",
+    headline: "Ask the company. See the evidence behind the answer.",
+    summary: "A working enterprise RAG implementation that retrieves approved company knowledge before generation, constrains answers to retrieved evidence, exposes citations, and refuses unsupported policy questions.",
+    source: "emmanuel-nanadoum.vercel.app/knowledgeos",
+    links: [
+      { label: "Explore enterprise product", href: "/knowledgeos/enterprise", primary: true, event: "knowledgeos_enterprise" },
+      { label: "Try KnowledgeOS", href: "/knowledgeos", event: "knowledgeos_demo" },
+      { label: "Request enterprise demo", href: "/knowledgeos/demo", event: "knowledgeos_request_demo" },
+    ],
+    cover: { src: "/shots/knowledgeos-architecture.svg", alt: "KnowledgeOS architecture: documents to embeddings, retrieval, grounded generation, and cited answers.", w: 1600, h: 900 },
+    status: [
+      { label: "Interactive RAG demo", tally: "live", note: "Question, retrieval, grounded answer and source evidence are implemented." },
+      { label: "Embedding retrieval", tally: "live", note: "Gemini embeddings when configured, with deterministic lexical fallback." },
+      { label: "Enterprise multi-tenant controls", tally: "inactive", note: "Production architecture is documented; organization auth, RLS and ingestion are the next product phase." },
+    ],
+    problem: [
+      "Company knowledge is fragmented across policies, playbooks, implementation guides and operational systems, forcing employees to search manually or rely on memory.",
+      "A generic chatbot can answer confidently without evidence. For business policy and operations, an unsupported answer can be worse than no answer.",
+    ],
+    discovery: [
+      "The useful unit is not merely an answer; it is an answer plus the evidence that supports it.",
+      "Unsupported policy generation is a failure mode, so refusal behavior is a product requirement rather than an edge case.",
+      "A synthetic demonstration corpus proves the architecture without exposing private company data.",
+    ],
+    requirements: [
+      "Retrieve relevant evidence before generation.",
+      "Use semantic embeddings when available with a resilient deterministic retrieval fallback.",
+      "Constrain generation to retrieved evidence and refuse unsupported questions.",
+      "Keep model credentials and AI execution server-side.",
+      "Expose sources, architecture, limitations and production extension points.",
+      "Design the production path for precomputed vectors, Postgres/pgvector and permission-aware retrieval.",
+    ],
+    architecture: {
+      intro: "KnowledgeOS separates retrieval from generation so the model receives a bounded evidence set before it is allowed to answer.",
+      flows: [
+        { title: "Live RAG path", steps: [
+          { label: "User question" },
+          { label: "Query embedding" },
+          { label: "Retrieve + rank" },
+          { label: "Grounded generation" },
+          { label: "Answer + citations" },
+        ]},
+        { title: "Production ingestion path", steps: [
+          { label: "Upload" },
+          { label: "Parse + normalize" },
+          { label: "Chunk + metadata" },
+          { label: "Embeddings" },
+          { label: "Postgres / pgvector" },
+          { label: "Permission filter" },
+          { label: "Evaluation + monitoring" },
+        ]},
+      ],
+    },
+    demo: {
+      intro: "The public demo includes answerable questions and an intentionally unsupported parental-leave question to make refusal behavior visible.",
+      shots: [
+        { src: "/shots/knowledgeos-architecture.svg", alt: "KnowledgeOS retrieval-augmented generation architecture.", w: 1600, h: 900, caption: "Evidence is retrieved before generation; unsupported answers are refused." },
+      ],
+    },
+    technologies: ["Next.js", "TypeScript", "Gemini API", "Gemini embeddings", "RAG", "REST API", "Vercel Functions", "Source citations", "Lexical fallback", "Postgres / pgvector production design"],
+    integrations: [
+      { from: "Browser", to: "/api/knowledgeos", note: "Question in; grounded answer, retrieval mode and sources out." },
+      { from: "RAG API", to: "Embedding model", note: "Semantic query and knowledge representations when configured." },
+      { from: "Retrieved evidence", to: "Generative model", note: "Only ranked source context is supplied for answering." },
+      { from: "Production design", to: "Postgres / pgvector + RLS", note: "Precomputed vectors and permission-aware retrieval." },
+    ],
+    tradeoffs: [
+      { choice: "Synthetic public corpus", over: "Private company documents", why: "Demonstrates the system safely without exposing customer or employer information." },
+      { choice: "Evidence-first refusal", over: "Always produce an answer", why: "Trust requires the system to expose when the knowledge base cannot support a claim." },
+      { choice: "Embeddings plus lexical fallback", over: "Single-provider dependency", why: "The demo remains testable if embedding service availability changes." },
+      { choice: "Compact live corpus", over: "Premature ingestion platform", why: "Proves the core RAG loop first; production ingestion is the next product phase." },
+    ],
+    handoff: [
+      "Production rollout adds authenticated organization workspaces, document upload, asynchronous parsing/chunking and precomputed embeddings.",
+      "Postgres/pgvector plus row-level security provides organization and user-aware retrieval boundaries.",
+      "Evaluation sets, latency/cost monitoring, source administration and controlled re-indexing become operational controls.",
+    ],
+    demonstrates: [
+      "Implements the complete retrieval → ranking → grounded generation → citation/refusal loop.",
+      "Treats hallucination control, evidence visibility and failure behavior as implementation requirements.",
+      "Documents production architecture and tradeoffs without presenting unbuilt enterprise controls as shipped.",
+    ],
+    next: "vybe",
+  },
 ];
 
 export const getCase = (slug: string) => caseStudies.find((c) => c.slug === slug);
