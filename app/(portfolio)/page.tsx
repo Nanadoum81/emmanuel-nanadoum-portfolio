@@ -22,7 +22,7 @@ const tabs = [
 ];
 
 const insertion = "I turn business workflows into deployed AI systems, automations and integrations.";
-const letters = ["A", "B", "C", "D"];
+const letters = ["A", "B", "C", "D", "E"];
 
 export default function Home() {
   const [vybe, cactus, palmer, blair] = caseStudies;
@@ -56,8 +56,8 @@ export default function Home() {
               <span className="block overflow-hidden pb-[0.06em]"><span data-name-line className="block">Nanadoum</span></span>
             </h1>
             <p data-cover-role className="mt-5 lg:[@media(max-height:860px)]:mt-3 text-[clamp(21px,2.3vw,28px)] font-semibold leading-tight tracking-[-0.015em]">
-              AI Consultant / Solutions Engineer
-              <span className="mt-1 block text-[17px] font-normal tracking-normal text-ink-2">Sales Engineer · AI, CRM &amp; Automation</span>
+              AI Implementation / Solutions Engineer
+              <span className="mt-1 block text-[17px] font-normal tracking-normal text-ink-2">AI Automation · APIs · CRM · Customer Enablement</span>
             </p>
 
             <p className="mt-7 lg:[@media(max-height:860px)]:mt-5 max-w-[34ch] text-[clamp(20px,2vw,24px)] font-medium leading-[1.35] tracking-[-0.01em]">
@@ -196,7 +196,7 @@ export default function Home() {
               <span className="num mr-4 font-bold text-white/55">3</span>Exhibits
             </h2>
             <p className="max-w-[44ch] self-end text-[18px] text-white/85 lg:col-span-5">
-              Four engagements, each attached as a working build you can open. Status is stamped plainly: <strong className="text-white">live</strong>, <strong className="text-white">demo data</strong>, or <strong className="text-white">not activated</strong>.
+              Five implementations, each attached as a working build or interactive demonstration you can open. Status is stamped plainly: <strong className="text-white">live</strong>, <strong className="text-white">demo data</strong>, or <strong className="text-white">not activated</strong>.
             </p>
           </div>
         </div>
