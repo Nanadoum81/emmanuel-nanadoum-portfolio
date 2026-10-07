@@ -8,11 +8,11 @@ import { Reveal } from "@/components/motion/Reveal";
 
 export const metadata: Metadata = {
   title: "Work — exhibits",
-  description: "Case studies: VYBE AI passenger experience, Cactus Chiropractic AI patient acquisition, Palmer & Herman reusable solution architecture, and Blair Digital Studios revenue systems.",
+  description: "Case studies in AI implementation, RAG, voice AI, CRM automation, solution architecture and connected revenue systems.",
   alternates: { canonical: "/work" },
 };
 
-const letters = ["A", "B", "C", "D"];
+const letters = ["A", "B", "C", "D", "E"];
 
 export default function WorkIndex() {
   return (
