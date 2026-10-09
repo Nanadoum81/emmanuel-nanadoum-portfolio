@@ -16,10 +16,13 @@ export default function KnowledgeOS(){
   const [sources,setSources]=useState<Source[]>([]); const [mode,setMode]=useState("");
   const [loading,setLoading]=useState(false);
   async function ask(question=q){
-    setQ(question); setLoading(true); setAnswer(""); setSources([]);
+    if(loading) return;
+    setQ(question); setLoading(true); setAnswer(""); setSources([]); setMode("");
     try{
       const r=await fetch("/api/knowledgeos",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({question})});
-      const j=await r.json(); setAnswer(j.answer||"The demo could not answer that request."); setSources(j.sources||[]); setMode(j.retrieval||"");
+      const j=await r.json();
+      if(!r.ok) throw new Error("request_failed");
+      setAnswer(j.answer||"The demo could not answer that request."); setSources(j.sources||[]); setMode(j.retrieval||"");
     }catch{setAnswer("The demo is temporarily unavailable.");} finally{setLoading(false);}
   }
   return <main className="min-h-screen bg-[#f3f0e8] text-[#151515]">
@@ -46,9 +49,9 @@ export default function KnowledgeOS(){
           <div className="border-b border-black/15 px-6 py-4 flex items-center justify-between"><b>Knowledge query</b><span className="text-xs uppercase tracking-wider text-black/45">{mode?mode+" retrieval":"ready"}</span></div>
           <div className="p-6">
             <label className="text-sm font-bold" htmlFor="q">Ask about company policy or implementation</label>
-            <textarea id="q" value={q} onChange={e=>setQ(e.target.value)} rows={3} className="mt-2 w-full resize-none border border-black/25 bg-[#faf9f5] p-4 outline-none focus:border-black"/>
+            <textarea id="q" value={q} onChange={e=>setQ(e.target.value)} maxLength={600} disabled={loading} rows={3} className="mt-2 w-full resize-none border border-black/25 bg-[#faf9f5] p-4 outline-none focus:border-black"/>
             <button onClick={()=>ask()} disabled={loading} className="mt-3 bg-black px-5 py-3 text-sm font-bold text-white disabled:opacity-40">{loading?"Retrieving evidence…":"Ask KnowledgeOS"}</button>
-            <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-sm">{prompts.map(p=><button key={p} onClick={()=>ask(p)} className="text-left underline decoration-black/25 underline-offset-4 hover:decoration-black">{p}</button>)}</div>
+            <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2 text-sm">{prompts.map(p=><button key={p} disabled={loading} onClick={()=>ask(p)} className="text-left underline decoration-black/25 underline-offset-4 hover:decoration-black disabled:opacity-40">{p}</button>)}</div>
             <div className="mt-7 min-h-[120px] border-t border-black/15 pt-5">
               <div className="text-xs font-bold uppercase tracking-[.16em] text-black/45">Grounded response</div>
               <p className="mt-3 text-[17px] leading-7">{answer||"Ask a question to run retrieval, grounding and citation generation."}</p>

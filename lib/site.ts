@@ -118,19 +118,19 @@ export const experience = [
     role: "Sales Representative",
     org: "A Better Way Wholesale Autos",
     where: "Naugatuck, CT",
-    when: "Sep 2017 – 2025",
+    when: "2017 – 2024",
     points: [
       "Managed a high-volume, high-ticket pipeline from discovery through close, matching customer needs to vehicle and financing options.",
       "Delivered product presentations, handled objections, and coordinated finance, service and operations to remove barriers to purchase; consistently ranked among top performers.",
     ],
   },
   {
-    role: "Customer Success Specialist",
+    role: "Life Insurance Producer",
     org: "Family First Life",
     where: "Manchester, CT (Remote)",
-    when: "Jan 2023 – Jan 2024",
+    when: "2023 – 2024",
     points: [
-      "Onboarded and educated 15–20 new customers a month, translating complex product options into clear, needs-based recommendations.",
+      "Educated customers about life insurance options through consultative, needs-based recommendations.",
       "Owned renewal conversations and resolved concerns in a regulated environment through consistent follow-up and value-based communication.",
     ],
   },
