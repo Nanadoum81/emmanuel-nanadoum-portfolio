@@ -25,7 +25,7 @@ export default function KnowledgeOS(){
       setAnswer(j.answer||"The demo could not answer that request."); setSources(j.sources||[]); setMode(j.retrieval||"");
     }catch{setAnswer("The demo is temporarily unavailable.");} finally{setLoading(false);}
   }
-  return <main className="min-h-screen bg-[#f3f0e8] text-[#151515]">
+  return <section className="min-h-screen bg-[#f3f0e8] text-[#151515]">
     <header className="border-b border-black/20 bg-[#101418] text-white">
       <div className="mx-auto max-w-[1320px] px-6 py-5 flex items-center justify-between gap-6">
         <div><div className="text-xs tracking-[.22em] uppercase text-white/55">Enterprise AI implementation</div><div className="text-xl font-bold">KnowledgeOS</div></div>
@@ -69,5 +69,5 @@ export default function KnowledgeOS(){
         </div>
       </section>
     </section>
-  </main>
+  </section>
 }
