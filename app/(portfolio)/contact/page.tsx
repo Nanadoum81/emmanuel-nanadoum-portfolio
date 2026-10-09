@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { person, mailto } from "@/lib/site";
 import { Key, Arrow } from "@/components/Key";
 import { TrackLink } from "@/components/TrackLink";
+import { ContactForm } from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -30,7 +31,7 @@ export default function Contact() {
           <Key href="/work" event="view_work" data={{ from: "contact" }} variant="secondary">View technical work</Key>
         </div>
       </div>
-      <dl className="border-t-2 border-ink lg:col-span-7">
+      <div className="min-w-0 lg:col-span-7"><dl className="border-t-2 border-ink">
         {rows.map((r) => (
           <div key={r.k} className="grid grid-cols-1 gap-1 border-b border-rule py-5 sm:grid-cols-[120px_1fr]">
             <dt className="text-[15px] text-ink-2">{r.k}</dt>
@@ -43,6 +44,7 @@ export default function Contact() {
           </div>
         ))}
       </dl>
+      <ContactForm /></div>
     </section>
   );
 }

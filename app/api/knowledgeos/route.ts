@@ -1,8 +1,9 @@
 import { NextResponse } from "next/server";
+import { REFUSAL, supportedChunks, hasValidCitations, type Chunk } from "@/lib/knowledgeos-retrieval";
 
 export const runtime = "nodejs";
-
-type Chunk = { id: string; source: string; section: string; text: string };
+export const maxDuration = 60;
+const requests=new Map<string,{count:number;expires:number}>();
 
 const KB: Chunk[] = [
   { id:"hb-pto", source:"Employee Handbook", section:"Paid Time Off", text:"Full-time employees receive 15 days of paid vacation during their first year. Vacation requests should be submitted at least two weeks in advance when possible." },
@@ -23,15 +24,27 @@ const lexical = (q:string,c:Chunk) => {
 const dot=(a:number[],b:number[])=>a.reduce((s,x,i)=>s+x*(b[i]||0),0);
 const norm=(a:number[])=>Math.sqrt(dot(a,a))||1;
 const cosine=(a:number[],b:number[])=>dot(a,b)/(norm(a)*norm(b));
+let documentVectors: {key:string; expires:number; promise:Promise<{c:Chunk;v:number[]}[]>}|undefined;
+
+function vectors(key:string){
+  if(!documentVectors || documentVectors.key!==key || documentVectors.expires<Date.now()){
+    const entry={key,expires:Date.now()+3600000,promise:Promise.all(KB.map(async c=>({c,v:await embed(key,c.text)})))};
+    documentVectors=entry;
+    entry.promise.catch(()=>{if(documentVectors===entry) documentVectors=undefined;});
+  }
+  return documentVectors.promise;
+}
 
 async function embed(key:string,text:string) {
   const r=await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-embedding-001:embedContent",{
     method:"POST", headers:{"content-type":"application/json","x-goog-api-key":key},
-    body:JSON.stringify({content:{parts:[{text}]}})
+    body:JSON.stringify({content:{parts:[{text}]}}), signal:AbortSignal.timeout(8000)
   });
   if(!r.ok) throw new Error("embedding unavailable");
   const j=await r.json();
-  return j?.embedding?.values as number[];
+  const values=j?.embedding?.values;
+  if(!Array.isArray(values)||!values.length||!values.every((value:unknown)=>typeof value==="number"&&Number.isFinite(value))) throw new Error("invalid embedding");
+  return values as number[];
 }
 
 async function generate(key:string,question:string,chunks:Chunk[]) {
@@ -40,7 +53,7 @@ async function generate(key:string,question:string,chunks:Chunk[]) {
   for(const model of [process.env.GEMINI_MODEL,"gemini-flash-latest","gemini-flash-lite-latest"].filter(Boolean)){
     const r=await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,{
       method:"POST",headers:{"content-type":"application/json","x-goog-api-key":key},
-      body:JSON.stringify({contents:[{role:"user",parts:[{text:prompt}]}],generationConfig:{temperature:0.1,maxOutputTokens:500}})
+      body:JSON.stringify({contents:[{role:"user",parts:[{text:prompt}]}],generationConfig:{temperature:0.1,maxOutputTokens:500}}),signal:AbortSignal.timeout(10000)
     }).catch(()=>null);
     if(r?.ok){
       const j=await r.json();
@@ -51,33 +64,43 @@ async function generate(key:string,question:string,chunks:Chunk[]) {
 }
 
 export async function POST(req:Request){
-  let body:{question?:string};
+  let body:unknown;
   try{ body=await req.json(); }catch{ return NextResponse.json({error:"bad_request"},{status:400}); }
-  const question=(body.question||"").trim().slice(0,600);
+  if(!body||typeof body!=="object"||!("question" in body)||typeof body.question!=="string") return NextResponse.json({error:"question_required"},{status:400});
+  if(body.question.length>600) return NextResponse.json({error:"question_too_long"},{status:400});
+  const question=body.question.trim();
   if(!question) return NextResponse.json({error:"question_required"},{status:400});
+  const ip=(req.headers.get("x-forwarded-for")||"anonymous").split(",")[0].trim(),now=Date.now();
+  for(const [id,hit] of requests) if(hit.expires<now) requests.delete(id);
+  const hit=requests.get(ip)||{count:0,expires:now+300000};
+  if(++hit.count>20) return NextResponse.json({error:"rate_limited"},{status:429});
+  requests.set(ip,hit);
   const key=process.env.GEMINI_API_KEY;
 
-  let ranked=KB.map(c=>({c,score:lexical(question,c)})).sort((a,b)=>b.score-a.score);
+  const candidates=supportedChunks(question,KB);
+  if(!candidates.length) return NextResponse.json({answer:REFUSAL,retrieval:"lexical",sources:[]});
+  let ranked=candidates.map(c=>({c,score:lexical(question,c)})).sort((a,b)=>b.score-a.score);
   let retrieval:"vector"|"lexical"="lexical";
   if(key){
     try{
       const qv=await embed(key,question);
-      const docs=await Promise.all(KB.map(async c=>({c,v:await embed(key,c.text)})));
+      const docs=(await vectors(key)).filter(x=>candidates.includes(x.c));
       ranked=docs.map(x=>({c:x.c,score:cosine(qv,x.v)})).sort((a,b)=>b.score-a.score);
       retrieval="vector";
     }catch{}
   }
   const top=ranked.slice(0,3);
-  const supported = retrieval==="vector" ? top[0].score >= 0.42 : top[0].score > 0;
+  const supported = top.length > 0;
   if(!supported){
-    return NextResponse.json({answer:"I can't verify that from the current knowledge base.",retrieval,sources:[]});
+    return NextResponse.json({answer:REFUSAL,retrieval,sources:[]});
   }
   const chunks=top.map(x=>x.c);
   let answer="";
   if(key){
     try{ answer=await generate(key,question,chunks); }catch{}
   }
-  if(!answer) answer=`The most relevant policy says: ${chunks[0].text} [S1]`;
+  if(answer===REFUSAL) return NextResponse.json({answer,retrieval,sources:[]});
+  if(!answer||!hasValidCitations(answer,chunks.length)) answer=`The sample document says: ${chunks[0].text} [S1]`;
   return NextResponse.json({
     answer,retrieval,
     sources:chunks.map((c,i)=>({ref:`S${i+1}`,source:c.source,section:c.section,excerpt:c.text}))
