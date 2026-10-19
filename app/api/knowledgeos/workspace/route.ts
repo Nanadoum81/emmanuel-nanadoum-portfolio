@@ -23,7 +23,9 @@ export async function GET() {
 }
 export async function POST(req: Request) {
   // All browser mutations require exact same-origin requests, including sign-in.
-  if (req.headers.get('origin') !== new URL(req.url).origin) return json({error:'Invalid origin.'},403);
+  let origin: URL;
+  try { origin = new URL(req.headers.get('origin') || ''); } catch { return json({error:'Invalid origin.'},403); }
+  if (!['http:', 'https:'].includes(origin.protocol) || origin.host !== req.headers.get('host')) return json({error:'Invalid origin.'},403);
   try {
     const data = await body(req);
     if (!data || typeof data !== 'object') return json({error:'Invalid request.'},400);

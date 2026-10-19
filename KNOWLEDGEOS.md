@@ -21,6 +21,8 @@ Workspace IDs come from verified server configuration, never request bodies. Eve
 
 Run `node --experimental-strip-types --test test/knowledgeos-workspace.test.mjs` and `npm run typecheck` / `npm run build`.
 
+Also run `node test/knowledgeos-http.test.mjs` after building. With a private Blob token supplied through the environment, run `node test/knowledgeos-blob.test.mjs` for real storage persistence, source fidelity, two-workspace isolation, cross-workspace delete protection, and retrieval cleanup. These checks passed against the configured private store on 2026-10-19; all temporary documents were deleted.
+
 After deployment, use two generated workspaces to validate the real service:
 
 1. Signed-out inventory, upload, search, and delete must return 401.
