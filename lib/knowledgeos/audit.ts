@@ -32,3 +32,8 @@ export async function reserveAI(tenant:string){
  }
  throw Error('ai_budget');
 }
+export async function usage(tenant:string){
+ const day=new Date().toISOString().slice(0,10);
+ const page=await list({prefix:`knowledgeos/v1/${tenant}/budget/${day}/`,limit:100});
+ return {used:page.blobs.length,limit:50,resetsAt:new Date(Date.parse(day+'T00:00:00Z')+86400000).toISOString()};
+}

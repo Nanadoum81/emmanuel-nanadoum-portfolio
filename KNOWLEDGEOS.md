@@ -50,3 +50,7 @@ node --import tsx test/knowledgeos-budget.test.mjs
 The release suite checks real storage, PDF upload, per-role permissions, invite revocation with existing sessions, audit isolation, AI budget conflicts and source deletion. Provider-specific behavior must also be checked against a deployed Vercel environment with the server-only Gemini key. A compile or unit-test pass alone is not evidence of a working deployed model.
 
 Production smoke checks: sign in, upload a synthetic source, enable semantic search, ask a paraphrased supported question, verify the excerpt/citation, ask an unsupported question, verify viewer mutation rejection, revoke a test invitation, then delete the synthetic source and test member record. Never use customer documents as deployment test fixtures.
+
+## Product experience
+
+The workspace includes an overview and first-run guide, a searchable source library, an authenticated full-text preview with text download, a separate question workspace, copyable evidence and recent questions held only for the current page session. The overview displays actual document/index counts and the current UTC-day AI usage. A read-only tour at `/knowledgeos/workspace?demo=1` uses explicitly synthetic documents and the public sample-query API. It does not call private inventory or membership endpoints, bypass private authentication, or enable writes. `/knowledgeos` directs visitors to this tour.

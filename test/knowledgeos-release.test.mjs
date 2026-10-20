@@ -25,6 +25,11 @@ try{
  for(const action of ['invite','revoke'])assert.equal((await post({action},editor)).status,403,action);
  assert.equal((await get(viewer,'members')).status,403);assert.equal((await get(editor,'audit')).status,403);
  const pdf=await post({action:'upload',title:'PDF release policy',pdf:makePDF()},editor);assert.equal(pdf.status,201,await pdf.clone().text());const {id}=await pdf.json();
+ const sourceURL=base+'/api/knowledgeos/workspace?view=document&id='+id;
+ const preview=await fetch(sourceURL,{headers:{cookie:viewer}});assert.equal(preview.status,200);assert.match((await preview.json()).document.text,/release captain/);
+ assert.equal((await fetch(sourceURL,{headers:{cookie:other}})).status,404);
+ assert.equal((await fetch(sourceURL)).status,401);
+ const invalid=await fetch(base+'/api/knowledgeos/workspace?view=document&id=invalid',{headers:{cookie:viewer}});assert.equal(invalid.status,400);
  const inventory=await (await get(viewer)).json();assert.ok(inventory.documents.some(d=>d.id===id));assert.ok(!JSON.stringify(inventory).includes('release captain approves'));
  const ask=await post({action:'ask',question:'release captain production launches'},viewer);assert.equal(ask.status,200);const evidence=await ask.json();assert.match(evidence.sources[0].excerpt,/release captain/);assert.match(evidence.sources[0].excerpt,/Page 1/);
  assert.equal((await (await get(other)).json()).documents.length,0);

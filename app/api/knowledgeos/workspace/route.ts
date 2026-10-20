@@ -3,7 +3,7 @@ import {cookies} from 'next/headers';
 import {COOKIE,canManage,isOwner,validateDocument,retrieve,validId} from '@/lib/knowledgeos/core';
 import {current,signin,members,invite,revoke} from '@/lib/knowledgeos/members';
 import {documents,save,remove,saveIndex,withIndexes,indexedIds} from '@/lib/knowledgeos/store';
-import {audited,history,reserveAI} from '@/lib/knowledgeos/audit';
+import {audited,history,reserveAI,usage} from '@/lib/knowledgeos/audit';
 import {answerQuestion,indexDocument} from '@/lib/knowledgeos/ai';
 import {extractPDF} from '@/lib/knowledgeos/pdf';
 export const runtime='nodejs';
@@ -21,12 +21,19 @@ export async function GET(req:Request){
  try{
   const w=await session();if(!w)return json({error:'Sign in with your access key.'},401);
   const view=new URL(req.url).searchParams.get('view');
+  if(view==='document'){
+   const id=new URL(req.url).searchParams.get('id');
+   if(!validId(id))return json({error:'Valid document ID required.'},400);
+   const doc=(await documents(w.id)).find(d=>d.id===id);
+   if(!doc)return json({error:'Source not found.'},404);
+   return json({document:{id:doc.id,title:doc.title,text:doc.text,createdAt:doc.createdAt}});
+  }
   if(view==='members'||view==='audit'){
    if(!isOwner(w))return json({error:'Owner access required.'},403);
    return json(view==='members'?{members:await members(w.id)}:{audit:await history(w.id)});
   }
-  const [docs,indexed]=await Promise.all([documents(w.id),indexedIds(w.id)]);
-  return json({workspace:{id:w.id,name:w.name,role:w.role||'owner',memberId:w.memberId||'root'},aiAvailable:Boolean(process.env.GEMINI_API_KEY),documents:docs.map(({text,index,...metadata})=>({...metadata,characters:text.length,indexed:indexed.has(metadata.id)}))});
+  const [docs,indexed,aiUsage]=await Promise.all([documents(w.id),indexedIds(w.id),usage(w.id)]);
+  return json({workspace:{id:w.id,name:w.name,role:w.role||'owner',memberId:w.memberId||'root'},aiAvailable:Boolean(process.env.GEMINI_API_KEY),usage:aiUsage,documents:docs.map(({text,index,...metadata})=>({...metadata,characters:text.length,indexed:indexed.has(metadata.id)}))});
  }catch{return json({error:'Workspace storage or configuration is unavailable.'},503);}
 }
 export async function POST(req:Request){
