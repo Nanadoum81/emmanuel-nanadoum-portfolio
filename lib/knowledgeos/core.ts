@@ -1,7 +1,10 @@
 import { createHmac, createHash, timingSafeEqual } from 'node:crypto';
 
-export type Workspace = { id: string; name: string; key: string };
-export type Document = { id: string; title: string; text: string; createdAt: string };
+export type Workspace = { id: string; name: string; key: string; memberId?: string; role?: Role };
+export type Role = 'owner' | 'editor' | 'viewer';
+export const canManage = (w: Workspace) => (w.role || 'owner') !== 'viewer';
+export const isOwner = (w: Workspace) => (w.role || 'owner') === 'owner';
+export type Document = { id: string; title: string; text: string; createdAt: string; index?: { model: string; chunks: { offset: number; vector: number[] }[] }; };
 export const COOKIE = 'knowledgeos_session';
 export const REFUSAL = "I can't verify that from the current knowledge base.";
 export function workspaces(raw = process.env.KNOWLEDGEOS_WORKSPACES): Workspace[] {
@@ -22,7 +25,7 @@ function secret() {
   return value;
 }
 export function issue(workspace: Workspace, now = Date.now()) {
-  const payload = Buffer.from(JSON.stringify({ id: workspace.id, exp: now + 8 * 3600000, version: digest(workspace.key).toString('hex') })).toString('base64url');
+  const payload = Buffer.from(JSON.stringify({ id: workspace.id, memberId: workspace.memberId || 'root', exp: now + 8 * 3600000, version: digest(workspace.key).toString('hex') })).toString('base64url');
   return payload + '.' + createHmac('sha256', secret()).update(payload).digest('base64url');
 }
 export function verify(token: string, rows: Workspace[], now = Date.now()): Workspace | null {
@@ -32,7 +35,7 @@ export function verify(token: string, rows: Workspace[], now = Date.now()): Work
     if (!payload || !signature || extra || !equal(signature, createHmac('sha256', secret()).update(payload).digest('base64url'))) return null;
     const data = JSON.parse(Buffer.from(payload, 'base64url').toString());
     if (typeof data.exp !== 'number' || data.exp <= now || data.exp > now + 8 * 3600000) return null;
-    return rows.find(w => w.id === data.id && data.version === digest(w.key).toString('hex')) || null;
+    return rows.find(w => w.id === data.id && (w.memberId || 'root') === (data.memberId || 'root') && data.version === digest(w.key).toString('hex')) || null;
   } catch { return null; }
 }
 export function validateDocument(input: unknown): { title: string; text: string } {
@@ -60,3 +63,15 @@ export function retrieve(question: string, docs: Document[]) {
   const sources = passages.filter((p,i,all) => all.findIndex(q => q.documentId === p.documentId) === i).slice(0,3).map((p,i) => ({...p,ref:`S${i+1}`}));
   return {answer: sources.length ? 'Matching passages are shown below. These are verbatim document excerpts; check them before using them as an answer.' : REFUSAL, sources};
 }
+
+export function sessionIdentity(token: string): {id:string;memberId:string}|null {
+ try {
+  const [payload,signature,extra]=token.split('.');
+  if(token.length>1024||!payload||!signature||extra||!equal(signature,createHmac('sha256',secret()).update(payload).digest('base64url')))return null;
+  const d=JSON.parse(Buffer.from(payload,'base64url').toString());
+  if(!/^[a-z0-9-]{1,60}$/.test(d.id)||!validId(d.memberId)||typeof d.exp!=='number'||d.exp<=Date.now())return null;
+  return {id:d.id,memberId:d.memberId};
+ }catch{return null;}
+}
+export function validId(id: unknown): id is string {return typeof id==='string'&&/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.test(id);}
+export function keyHash(key: string) {return digest(key).toString('hex');}

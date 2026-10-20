@@ -1,11 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  serverExternalPackages: ['pdfjs-dist'],
   images: {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [390, 640, 828, 1080, 1280, 1600, 2000],
   },
-  outputFileTracingIncludes: { "/opengraph-image": ["./assets/fonts/**"] },
+  outputFileTracingIncludes: { "/opengraph-image": ["./assets/fonts/**"], "/api/knowledgeos/workspace": ["./node_modules/pdfjs-dist/legacy/build/**", "./node_modules/pdfjs-dist/standard_fonts/**", "./node_modules/pdfjs-dist/cmaps/**"] },
   async headers() {
     return [
       {
