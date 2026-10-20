@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [390, 640, 828, 1080, 1280, 1600, 2000],
   },
-  outputFileTracingIncludes: { "/opengraph-image": ["./assets/fonts/**"], "/api/knowledgeos/workspace": ["./node_modules/pdfjs-dist/legacy/build/**", "./node_modules/pdfjs-dist/standard_fonts/**", "./node_modules/pdfjs-dist/cmaps/**", "./node_modules/@napi-rs/canvas/**", "./node_modules/@napi-rs/canvas-linux-x64-gnu/**"] },
+  outputFileTracingIncludes: { "/opengraph-image": ["./assets/fonts/**"], "/api/knowledgeos/workspace": ["./node_modules/pdfjs-dist/package.json", "./node_modules/pdfjs-dist/legacy/build/**", "./node_modules/pdfjs-dist/standard_fonts/**", "./node_modules/pdfjs-dist/cmaps/**", "./node_modules/@napi-rs/canvas/**", "./node_modules/@napi-rs/canvas-linux-x64-gnu/**"] },
   async headers() {
     return [
       {
