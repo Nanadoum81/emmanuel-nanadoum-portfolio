@@ -18,8 +18,8 @@ h1{font-family:Archivo,Arial,sans-serif;font-weight:900;font-size:64px;line-heig
 .btn{display:inline-block;margin-top:28px;background:#c8a24a;color:#fff;padding:16px 24px;font-weight:800;border-radius:4px;font-size:16px}
 .sub{margin-top:14px;font-size:13px;color:#8b8d90}
 .portrait{background:#17181b;border:1px solid #2a2c30;padding:18px;border-radius:8px}
-.portrait .ph{height:340px;background:linear-gradient(160deg,#23252a,#101114);display:flex;align-items:flex-end;padding:20px;border-radius:4px}
-.portrait .ph strong{font-family:Archivo,Arial,sans-serif;font-size:28px;line-height:1}.portrait .cap{padding:14px 4px 2px;color:#a9abae;font-size:13px;line-height:1.5}
+.portrait .phimg{display:block;width:100%;height:340px;object-fit:cover;object-position:center 25%;border:1px solid #c8a24a;border-radius:4px}
+.portrait .cap{padding:14px 4px 2px;color:#a9abae;font-size:13px;line-height:1.5}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #26282c;border-bottom:1px solid #26282c}
 .stat{padding:26px 18px;border-right:1px solid #26282c}.stat:last-child{border:0}.stat b{font-family:Archivo,Arial,sans-serif;font-size:36px;display:block}.stat span{color:#9a9c9f;font-size:13px}
 section{padding:64px 0}h2{font-family:Archivo,Arial,sans-serif;font-weight:900;font-size:44px;line-height:1;margin-bottom:16px}h2 em{color:#c8a24a;font-style:normal}
@@ -31,7 +31,7 @@ section{padding:64px 0}h2{font-family:Archivo,Arial,sans-serif;font-weight:900;f
 .final{background:#c8a24a;padding:52px;border-radius:8px;color:#fff}.final h2{color:#fff}.final .btn{background:#0c0d0f}
 html{scroll-behavior:smooth}footer a{text-decoration:underline;text-underline-offset:3px}.work a.cardlink{display:block;height:100%}.lablinks{margin-top:12px;font-size:13px;font-weight:700}.lablinks a{text-decoration:underline;text-underline-offset:3px;margin-right:10px}
 footer{padding:28px 0;color:#777;font-size:13px;display:flex;justify-content:space-between}
-@media(max-width:700px){nav div+div span{display:none}.hero{grid-template-columns:1fr}h1{font-size:46px}.grid,.work,.stats{grid-template-columns:1fr 1fr}.portrait .ph{height:240px}}
+@media(max-width:700px){nav div+div span{display:none}.hero{grid-template-columns:1fr}h1{font-size:46px}.grid,.work,.stats{grid-template-columns:1fr 1fr}.portrait .phimg{height:240px}}
 </style><div class="wrap">
 <nav><div class="logo">EMMANUEL <span>NANADOUM</span></div><div style="display:flex;gap:22px;align-items:center;font-size:14px;color:#c9c7c1"><span><a href="#work">Work</a></span><span><a href="#services">Services</a></span><span><a href="#about">About</a></span><a class="navcta" href="Emmanuel_Nanadoum_Solutions_Engineer_Resume.pdf" download>Download résumé</a></div></nav>
 
@@ -40,7 +40,7 @@ footer{padding:28px 0;color:#777;font-size:13px;display:flex;justify-content:spa
 <h1>Hi, I'm Emmanuel.<br>I build AI systems that <em>actually answer, book &amp; follow up.</em></h1>
 <p>8+ years in consultative sales. 4+ years building CRM, API and automation systems. <b>I'm looking for a full-time AI Implementation / Solutions role</b> — and I bring a builder's portfolio you can open and test, not just a résumé you have to take on faith.</p>
 <a class="btn" href="mailto:nanadoum81@gmail.com?subject=Full-Time%20Role%20—%20Emmanuel%20Nanadoum">Hire me — let's talk →</a> &nbsp; <a class="btn" href="#work" style="background:transparent;border:2px solid #f2f0eb;color:#f2f0eb">View my work ↓</a><div class="sub">Available now · Phoenix, AZ · Remote / Hybrid · U.S. work authorized</div>
-</div><div class="portrait"><div class="ph"><strong>Builder.<br>Operator.<br>Closer.</strong></div><div class="cap"><b style="color:#fff">Emmanuel Nanadoum</b><br>Founder, Blair Digital Studios<br>AI Implementation · CRM · Automation</div></div></div>
+</div><div class="portrait"><img class="phimg" src="/images/emmanuel-cafe.jpg" alt="Emmanuel Nanadoum" width="1296" height="1616"><div class="cap"><b style="color:#fff">Emmanuel Nanadoum</b><br>Founder, Blair Digital Studios<br>AI Implementation · CRM · Automation</div></div></div>
 
 <div class="stats"><div class="stat"><b>8+</b><span>Years consultative<br>client experience</span></div><div class="stat"><b>4+</b><span>Years CRM / API /<br>AI implementation</span></div><div class="stat"><b>20+</b><span>Live demos &amp;<br>systems built</span></div><div class="stat"><b>7</b><span>Step method: discovery<br>to enablement</span></div></div>
 
