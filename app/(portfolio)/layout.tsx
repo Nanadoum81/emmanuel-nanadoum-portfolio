@@ -1,3 +1,13 @@
-export default function PortfolioLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+import type { ReactNode } from "react";
+
+import { SiteFooter, SiteHeader } from "./SiteChrome";
+
+export default function PortfolioLayout({ children }: { children: ReactNode }) {
+  return (
+    <>
+      <SiteHeader />
+      {children}
+      <SiteFooter />
+    </>
+  );
 }
