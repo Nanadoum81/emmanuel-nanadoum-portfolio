@@ -1,1 +1,3 @@
-ZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gUG9ydGZvbGlvTGF5b3V0KHsgY2hpbGRyZW4gfTogeyBjaGlsZHJlbjogUmVhY3QuUmVhY3ROb2RlIH0pIHsKICByZXR1cm4gPD57Y2hpbGRyZW59PC8+Owp9Cg==
+export default function PortfolioLayout({ children }: { children: React.ReactNode }) {
+  return <>{children}</>;
+}
