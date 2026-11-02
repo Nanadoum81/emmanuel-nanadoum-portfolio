@@ -1,16 +1,1 @@
-import { SiteHeader } from "@/components/SiteHeader";
-import { SiteFooter } from "@/components/SiteFooter";
-import { MobileActionBar } from "@/components/MobileActionBar";
-
-export default function PortfolioLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <>
-      <SiteHeader />
-      <main id="main" tabIndex={-1} className="outline-none">
-        {children}
-      </main>
-      <SiteFooter />
-      <MobileActionBar />
-    </>
-  );
-}
+ZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gUG9ydGZvbGlvTGF5b3V0KHsgY2hpbGRyZW4gfTogeyBjaGlsZHJlbjogUmVhY3QuUmVhY3ROb2RlIH0pIHsKICByZXR1cm4gPD57Y2hpbGRyZW59PC8+Owp9Cg==
